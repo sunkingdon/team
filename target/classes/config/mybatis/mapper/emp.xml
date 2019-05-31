@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="emp">
+	<select id="emp_list" resultType = "com.web.project.emp.vo.EmpVo">
+		select id,
+		birth,
+		pw,
+		name,
+		email,
+		address,
+		addressinfo from emp
+	</select>
+	</mapper>

@@ -5,13 +5,6 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<!--  context-3-dao.xml -->
-	<bean id = "purchaseDao" class = "com.web.project.purchase.dao.PurchaseDao">
-		<property name="sqlSession" ref="sqlSession"/>
-	</bean>
-	<bean id = "amountDao" class = "com.web.project.purchase.dao.AmountDao">
-		<property name="sqlSession" ref="sqlSession"/>
-	</bean>
-	<bean id = "gameDao" class = "com.web.project.game.dao.GameDao">
-		<property name="sqlSession" ref="sqlSession"/>
-	</bean>
+	<bean id="empservice" class="com.web.project.emp.service.EmpServiceImpl"/>
+	
 </beans>
