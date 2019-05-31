@@ -1,5 +1,11 @@
 package com.web.project.game.dao;
 
-public class GameDao {
+import org.apache.ibatis.session.SqlSession;
 
+public class GameDao {
+	SqlSession sqlSession;
+	
+	public void setSqlsession(SqlSession s) {
+		sqlSession = s;
+	}
 }
