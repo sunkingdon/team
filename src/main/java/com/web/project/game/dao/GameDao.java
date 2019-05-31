@@ -5,7 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 public class GameDao {
 	SqlSession sqlSession;
 	
-	public void setSqlsession(SqlSession s) {
+	public void setSqlSession(SqlSession s) {
 		sqlSession = s;
 	}
 }
