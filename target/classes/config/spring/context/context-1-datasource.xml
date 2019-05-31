@@ -26,9 +26,6 @@
 		ds.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
 		ds.setUsername("web1400");
 	 -->
-	
-	
-	<!-- mvnrepository.com => dbcp 검색 => Commons DBCP => 1.4 => pom.xml에 코드 복붙-->
 </beans>
 
 
