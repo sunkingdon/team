@@ -4,8 +4,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="purchase">
-	<insert id="purchase" parameterType="vo.PurchaseVo">
+	<select id="purchaseSelect" resultType="com.web.project.purchase.vo.PurchaseVo">
+		SELECT * FROM purchase;
+	</select>
+	
+	<insert id="purchase" parameterType="com.web.project.purchase.vo.PurchaseVo">
 		insert into purchase values(#{purchaseno}, #{id}, #{regdate}, #{amount}, #{itemno}, #{genreno})
 	</insert>
-
+	
 </mapper>

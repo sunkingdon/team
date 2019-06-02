@@ -9,13 +9,7 @@
 	
 	<bean id="empservice" class="com.web.project.emp.service.EmpServiceImpl"/>
 
-	<bean id = "purchaseDao" class = "com.web.project.purchase.dao.PurchaseDao">
-		<property name="sqlSession" ref="sqlSession"/>
-	</bean>
-	
-	<bean id = "amountDao" class = "com.web.project.purchase.dao.AmountDao">
-		<property name="sqlSession" ref="sqlSession"/>
-	</bean>
+	<bean id = "purchaseservice" class = "com.web.project.purchase.service.PurchaseService" />
 	
 	<bean id = "gameservice" class = "com.web.project.game.service.GameService" />
 	

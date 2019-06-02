@@ -1,5 +1,6 @@
 package com.web.project.purchase.controller;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -10,10 +11,12 @@ import com.web.project.purchase.service.PurchaseService;
 
 @Controller
 public class PurchaseController {
-	PurchaseDao Dao;
 	
 	@Autowired
 	PurchaseService purchase_serivce;
+	
+	@Autowired
+	ServletContext application;
 	
 	@Autowired
 	HttpServletRequest request;
@@ -21,10 +24,4 @@ public class PurchaseController {
 	@Autowired
 	HttpSession session;
 	
-	public PurchaseController() {
-		
-	}
-	public PurchaseController(PurchaseDao Dao) {
-		this.Dao = Dao;
-	}
 }
