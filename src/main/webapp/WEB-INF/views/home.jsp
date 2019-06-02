@@ -14,10 +14,11 @@
     <title>GAMESPOT | Welcome</title>
 
     <!-- Favicon (브라우저 탭에 로고 노출) -->
-    <link rel="icon" type="image/png" sizes="16x16" href="img/core-img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/img/core-img/favicon.ico">
 
     <!-- Stylesheet(css파일 따로 작성, 임포트 해서 적용.) -->
-    <link rel="stylesheet" href="style.css">
+    
+    <link href="src="${pageContext.request.contextPath}/resources/style.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -40,7 +41,7 @@
                     <div class="col-12 d-flex align-items-center justify-content-between">
                         <!-- Logo 영역 -->
                         <div class="logo">
-                            <a href="index.html"><img src="img/core-img/logo2.png" alt="gamespot"></a>
+                            <a href="index.html"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt="gamespot"></a>
                         </div>
 
                         <!-- Search & Login 영역 -->
@@ -114,7 +115,7 @@
         <div class="hero-post-slides owl-carousel">
 
             <!-- Single Slide -->
-            <div class="single-slide bg-img bg-overlay" style="background-image: url(img/bg-img/1.jpg);">
+<%--             <div class="single-slide bg-img bg-overlay" style="background-image: url(src="${pageContext.request.contextPath}/resources/img/bg-img/1.jpg);"> --%>
                 <!-- Blog Content -->
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -205,7 +206,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/50.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/50.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Grand Theft Auto V</a>
                             <div class="meta-data">
@@ -217,7 +218,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/51.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/51.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Doom</a>
                             <div class="meta-data">
@@ -229,7 +230,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/52.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/52.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">God of War</a>
                             <div class="meta-data">
@@ -241,7 +242,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/53.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/53.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Bloodborne</a>
                             <div class="meta-data">
@@ -253,7 +254,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/54.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/54.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Persona 5</a>
                             <div class="meta-data">
@@ -265,7 +266,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/52.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/52.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">God of War</a>
                             <div class="meta-data">
@@ -277,7 +278,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/53.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/53.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Bloodborne</a>
                             <div class="meta-data">
@@ -289,7 +290,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/54.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/54.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Persona 5</a>
                             <div class="meta-data">
@@ -307,7 +308,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/50.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/50.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Grand Theft Auto V</a>
                             <div class="meta-data">
@@ -319,7 +320,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/51.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/51.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Doom</a>
                             <div class="meta-data">
@@ -331,7 +332,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/52.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/52.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">God of War</a>
                             <div class="meta-data">
@@ -343,7 +344,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/53.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/53.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Bloodborne</a>
                             <div class="meta-data">
@@ -355,7 +356,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/54.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/54.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Persona 5</a>
                             <div class="meta-data">
@@ -367,7 +368,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/52.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/52.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">God of War</a>
                             <div class="meta-data">
@@ -379,7 +380,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/53.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/53.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Bloodborne</a>
                             <div class="meta-data">
@@ -391,7 +392,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="img/bg-img/54.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/54.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Persona 5</a>
                             <div class="meta-data">
@@ -418,7 +419,7 @@
                                 <!-- Single Video Widget -->
                                 <div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="100ms">
                                     <div class="video-thumbnail">
-                                        <img src="img/bg-img/14.jpg" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/14.jpg" alt="">
                                     </div>
                                     <div class="video-text">
                                         <p class="video-title mb-0">Assemble Your Squad and Join the Battle</p>
@@ -432,7 +433,7 @@
                                 <!-- Single Video Widget -->
                                 <div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="200ms">
                                     <div class="video-thumbnail">
-                                        <img src="img/bg-img/15.jpg" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/15.jpg" alt="">
                                     </div>
                                     <div class="video-text">
                                         <p class="video-title mb-0">Tips to improve your game</p>
@@ -446,7 +447,7 @@
                                 <!-- Single Video Widget -->
                                 <div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="300ms">
                                     <div class="video-thumbnail">
-                                        <img src="img/bg-img/16.jpg" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/16.jpg" alt="">
                                     </div>
                                     <div class="video-text">
                                         <p class="video-title mb-0">Game reviews: the best of 2018</p>
@@ -460,7 +461,7 @@
                                 <!-- Single Video Widget -->
                                 <div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="400ms">
                                     <div class="video-thumbnail">
-                                        <img src="img/bg-img/17.jpg" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/17.jpg" alt="">
                                     </div>
                                     <div class="video-text">
                                         <p class="video-title mb-0">Assemble Your Squad and Join the Battle</p>
@@ -474,7 +475,7 @@
                                 <!-- Single Video Widget -->
                                 <div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="500ms">
                                     <div class="video-thumbnail">
-                                        <img src="img/bg-img/18.jpg" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/18.jpg" alt="">
                                     </div>
                                     <div class="video-text">
                                         <p class="video-title mb-0">Tips to improve your game</p>
@@ -488,7 +489,7 @@
                                 <!-- Single Video Widget -->
                                 <div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="600ms">
                                     <div class="video-thumbnail">
-                                        <img src="img/bg-img/14.jpg" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/14.jpg" alt="">
                                     </div>
                                     <div class="video-text">
                                         <p class="video-title mb-0">Game reviews: the best of 2018</p>
@@ -502,7 +503,7 @@
                                 <!-- Single Video Widget -->
                                 <div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="700ms">
                                     <div class="video-thumbnail">
-                                        <img src="img/bg-img/15.jpg" alt="">
+                                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/15.jpg" alt="">
                                     </div>
                                     <div class="video-text">
                                         <p class="video-title mb-0">Tips to improve your game</p>
@@ -521,7 +522,7 @@
                             <div class="video-playground bg-img" style="background-image: url(img/bg-img/45.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
-                                    <a href="https://www.youtube.com/watch?v=K0u_kAWLJOA" class="play-button"><img src="img/core-img/play.png" alt=""></a>
+                                    <a href="https://www.youtube.com/watch?v=K0u_kAWLJOA" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -529,7 +530,7 @@
                             <div class="video-playground bg-img" style="background-image: url(img/bg-img/46.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
-                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="img/core-img/play.png" alt=""></a>
+                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -537,7 +538,7 @@
                             <div class="video-playground bg-img" style="background-image: url(img/bg-img/47.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
-                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="img/core-img/play.png" alt=""></a>
+                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -545,7 +546,7 @@
                             <div class="video-playground bg-img" style="background-image: url(img/bg-img/48.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
-                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="img/core-img/play.png" alt=""></a>
+                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -553,7 +554,7 @@
                             <div class="video-playground bg-img" style="background-image: url(img/bg-img/49.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
-                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="img/core-img/play.png" alt=""></a>
+                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -561,7 +562,7 @@
                             <div class="video-playground bg-img" style="background-image: url(img/bg-img/45.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
-                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="img/core-img/play.png" alt=""></a>
+                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -569,7 +570,7 @@
                             <div class="video-playground bg-img" style="background-image: url(img/bg-img/46.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
-                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="img/core-img/play.png" alt=""></a>
+                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -577,7 +578,7 @@
                             <div class="video-playground bg-img" style="background-image: url(img/bg-img/47.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
-                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="img/core-img/play.png" alt=""></a>
+                                    <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -600,7 +601,7 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-70 wow fadeInUp" data-wow-delay="100ms">
                             <div class="widget-title">
-                                <a href="index.html"><img src="img/core-img/logo2.png" alt=""></a>
+                                <a href="index.html"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt=""></a>
                             </div>
                             <div class="widget-content">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat volutpat. Sed efficitur diam ut interdum ultricies.</p>
@@ -686,15 +687,15 @@
 
     <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/plugins/plugins.js"></script>
     <!-- Active js -->
-    <script src="js/active.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/active.js"></script>
 </body>
 
 </html>

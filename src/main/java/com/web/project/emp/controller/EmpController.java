@@ -15,7 +15,7 @@ public class EmpController {
 	@Autowired
 	EmpService empservice;
 
-	@RequestMapping("")
+	@RequestMapping("/test")
 	public String list(Model m) {
 		List<EmpVo> list = empservice.selectList();
 		m.addAttribute("list", list);

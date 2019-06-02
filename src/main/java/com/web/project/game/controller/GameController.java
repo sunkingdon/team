@@ -25,11 +25,6 @@ public class GameController {
 	@Autowired
 	HttpServletRequest request;
 	
-	public GameController(GameService gameService) {
-		this.gameService = gameService;
-		System.out.println("Controller ½ÇÇà--");
-	}
-	
 	@RequestMapping("/")
 	public String main() {
 		return "home";
