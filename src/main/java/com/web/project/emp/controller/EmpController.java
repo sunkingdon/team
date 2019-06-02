@@ -12,12 +12,13 @@ import com.web.project.emp.vo.EmpVo;
 
 @Controller
 public class EmpController {
-@Autowired
+	@Autowired
 	EmpService empservice;
-@RequestMapping("")
-public String list(Model m) {
-	List<EmpVo> list=empservice.selectList();
-	m.addAttribute("list",list);
-	return null;
-}
+
+	@RequestMapping("")
+	public String list(Model m) {
+		List<EmpVo> list = empservice.selectList();
+		m.addAttribute("list", list);
+		return null;
+	}
 }
