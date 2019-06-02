@@ -3,7 +3,7 @@ package com.web.project.game.dao;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-@Repository("category_dao")
+@Repository("categoryDao")
 public class CategoryDao {
 	SqlSession sqlSession;
 

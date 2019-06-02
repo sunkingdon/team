@@ -19,13 +19,7 @@
 		<property name="defaultAutoCommit" value = "false"/>
 		<property name="maxActive" value = "10"/>
 	</bean>
-	
-	<!-- 
-		BasicDataSource ds = new BasicDataSource();
-		ds.setDriverClassName("oracle.jdbc.OracleDriver");
-		ds.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
-		ds.setUsername("web1400");
-	 -->
+
 </beans>
 
 

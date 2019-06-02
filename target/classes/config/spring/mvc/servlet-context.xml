@@ -20,14 +20,9 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-	
 
-	<context:component-scan base-package="com.web.project.*.controller.*Controller" />
-	
-	
+	<context:component-scan base-package="com.web.project.*.controller.*Controller, dao" />
 
-<!-- 	<context:component-scan base-package="com.web.project" /> -->
-	<context:annotation-config/>
-
+<!-- <context:component-scan base-package="com.web.project" /> -->
 	
 </beans:beans>

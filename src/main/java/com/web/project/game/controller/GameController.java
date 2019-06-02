@@ -6,13 +6,18 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.web.project.game.dao.CategoryDao;
 import com.web.project.game.dao.GameDao;
 import com.web.project.game.dao.ImageDao;
+import com.web.project.game.service.GameService;
 
 @Controller
 public class GameController {
+	@Autowired
+	private GameService gameService;
+	
 	@Autowired
 	ServletContext application;
 	@Autowired
@@ -20,11 +25,13 @@ public class GameController {
 	@Autowired
 	HttpServletRequest request;
 	
-	private GameDao game_dao;
-	private ImageDao image_dao;
-	private CategoryDao category_dao;
+	public GameController(GameService gameService) {
+		this.gameService = gameService;
+		System.out.println("Controller ½ÇÇà--");
+	}
 	
-	public GameController(GameDao dao) {
-		game_dao = dao;
+	@RequestMapping("/")
+	public String main() {
+		return "home";
 	}
 }

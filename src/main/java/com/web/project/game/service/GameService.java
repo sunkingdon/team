@@ -10,17 +10,26 @@ import com.web.project.game.dao.GameDao;
 import com.web.project.game.dao.ImageDao;
 import com.web.project.game.vo.GameVo;
 
-@Service("game_service")
+@Service
 public class GameService implements GameServiceImpl {
+	
+	public GameService() {
+		System.out.println("service ½ÇÇà--");
+	}
 	@Autowired
-	GameDao gamedao;
+	private GameDao gameDao;
 	@Autowired
-	CategoryDao categorydao;
+	private CategoryDao categoryDao;
 	@Autowired
-	ImageDao imagedao;
+	private ImageDao imageDao;
+	
+	
+	public void setGameDao(GameDao d) {
+		gameDao = d;
+	}
 	
 	@Override
 	public List<GameVo> selectList() {
-		return gamedao.selectList();
+		return gameDao.selectList();
 	}
 }
