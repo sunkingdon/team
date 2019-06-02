@@ -16,7 +16,7 @@
 		<mapper resource="config/mybatis/mapper/image.xml"/>
 		<mapper resource="config/mybatis/mapper/game.xml"/>
 		<mapper resource="config/mybatis/mapper/category.xml"/>
-		<mapper resource="config/mybatis/mapper/amount.xml"/>
 		<mapper resource="config/mybatis/mapper/purchase.xml"/>
+		<mapper resource="config/mybatis/mapper/amount.xml"/>
 	</mappers>
 </configuration>
