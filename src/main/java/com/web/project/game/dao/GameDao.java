@@ -15,7 +15,7 @@ public class GameDao {
 		sqlSession = s;
 	}
 	
-	public List<GameVo> selectList(){
+	public List<GameVo> selectList(){ 
 		return sqlSession.selectList("game.gameSelect");
 	}
 }
