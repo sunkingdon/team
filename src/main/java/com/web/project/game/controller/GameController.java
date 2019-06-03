@@ -12,11 +12,12 @@ import com.web.project.game.dao.CategoryDao;
 import com.web.project.game.dao.GameDao;
 import com.web.project.game.dao.ImageDao;
 import com.web.project.game.service.GameService;
+import com.web.project.game.service.GameServiceImpl;
 
 @Controller
 public class GameController {
 	@Autowired
-	private GameService gameService;
+	GameServiceImpl game_service;
 	
 	@Autowired
 	ServletContext application;

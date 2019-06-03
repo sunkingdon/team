@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.web.project.game.vo.GameVo;
 
-@Repository
+@Repository("gameDao")
 public class GameDao {
 	SqlSession sqlSession;
 //	
