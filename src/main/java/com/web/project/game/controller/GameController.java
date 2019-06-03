@@ -16,7 +16,7 @@ import com.web.project.game.service.GameService;
 @Controller
 public class GameController {
 	@Autowired
-	private GameService gameService;
+	GameService gameService;
 	
 	@Autowired
 	ServletContext application;
@@ -25,8 +25,8 @@ public class GameController {
 	@Autowired
 	HttpServletRequest request;
 	
-	@RequestMapping("/")
-	public String main() {
-		return "home";
+	@RequestMapping("/test")
+	public String list() {
+		return null;
 	}
 }

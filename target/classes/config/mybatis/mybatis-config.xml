@@ -13,6 +13,7 @@
 	</typeAliases>
 	
 	<mappers>
+		<mapper resource="config/mybatis/mapper/emp.xml"/>
 		<mapper resource="config/mybatis/mapper/image.xml"/>
 		<mapper resource="config/mybatis/mapper/game.xml"/>
 		<mapper resource="config/mybatis/mapper/category.xml"/>
