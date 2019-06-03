@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import com.web.project.game.vo.GameVo;
 
-@Repository
+@Repository("gameDao")
 public class GameDao {
 	@Autowired
 	SqlSession sqlSession;
@@ -18,7 +18,6 @@ public class GameDao {
 	}
 	
 	public List<GameVo> selectList(){
-		System.out.println("dao¿« select");
 		return sqlSession.selectList("game.gameSelect");
 	}
 }

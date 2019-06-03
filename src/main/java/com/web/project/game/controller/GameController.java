@@ -17,7 +17,7 @@ import com.web.project.game.vo.GameVo;
 @Controller
 public class GameController {
 	@Autowired
-	GameServiceImpl game_service;
+	GameServiceImpl gameService;
 
 	GameVo vo;
 	
@@ -35,8 +35,7 @@ public class GameController {
 	
 	@RequestMapping("/gamelist.do")
 	public String selectList(Model m) {
-		System.out.println("controller¿« select");
-		List<GameVo> list = game_service.selectList();
+		List<GameVo> list = gameService.selectList();
 		m.addAttribute("list",list);
 		return "gamelist";
 	}
