@@ -10,7 +10,7 @@ import com.web.project.game.dao.GameDao;
 import com.web.project.game.dao.ImageDao;
 import com.web.project.game.vo.GameVo;
 
-@Service("game_service")
+@Service
 public class GameServiceImpl implements GameService {
 	
 	public GameServiceImpl() {
@@ -30,6 +30,7 @@ public class GameServiceImpl implements GameService {
 	
 	@Override
 	public List<GameVo> selectList() {
+		System.out.println("service¿« select");
 		return gameDao.selectList();
 	}
 }

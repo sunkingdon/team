@@ -3,7 +3,7 @@
 
 <mapper namespace="game">
 	<select id="gameSelect" resultType="com.web.project.game.vo.GameVo">
-		SELECT * FROM item;
+		SELECT * FROM item
 	</select>
 </mapper>
 

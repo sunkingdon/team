@@ -17,6 +17,7 @@ public class PurchaseServiceImpl implements PurchaseService {
 	@Autowired
 	PurchaseDao purchase_dao;
 	
+	
 	@Autowired
 	AmountDao amount_dao;
 

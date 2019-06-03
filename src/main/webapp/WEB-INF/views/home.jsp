@@ -87,7 +87,8 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="store.html">Store</a></li>                          
+<!--                                     <li><a href="store.html">Store</a></li>                           -->
+                                    <li><a href="location.href='gamelist.do'">Store</a></li>                          
                                     <li><a href="reviews.html">Reviews</a></li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="support.html">Support</li>
