@@ -12,7 +12,7 @@
 
     // :: 2.0 Nav Active Code
     if ($.fn.classyNav) {
-        $('#egamesNav').classyNav();
+        $('#gamespotNav').classyNav();
     }
 
     // :: 3.0 Sticky Active Code
@@ -201,7 +201,7 @@
 
     // :: 11.0 niceScroll Active Code
     if ($.fn.niceScroll) {
-        $(".egames-nav-btn").niceScroll({
+        $(".gamespot-nav-btn").niceScroll({
             cursorborder: "none",
             cursorcolor: "#20d8da",
             scrollspeed: 200

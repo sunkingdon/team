@@ -123,7 +123,7 @@ iframe {
 }
 
 .container-login100 {
-  background: #424242;
+  background: #3e3e3e;
   width: 100%;
   
   margin: 0 auto;
@@ -470,7 +470,8 @@ iframe {
 
 
 
-/* Alert validate */
+/*------------------------------------------------------------------
+[ Alert validate ]*/
 
 .validate-input {
   position: relative;
@@ -481,7 +482,7 @@ iframe {
   position: absolute;
   max-width: 70%;
   background-color: #fff;
-  border: 1px solid #545454;
+  border: 1px solid #c80000;
   border-radius: 2px;
   padding: 4px 25px 4px 10px;
   top: 50%;
@@ -493,9 +494,9 @@ iframe {
   right: 0px;
   pointer-events: none;
 
-  font-family: "Open Sans", sans-serif;
-  color: #545454;
-  font-size: 12px;
+  font-family: Poppins-Regular;
+  color: #c80000;
+  font-size: 13px;
   line-height: 1.4;
   text-align: left;
 
@@ -512,7 +513,7 @@ iframe {
   content: "\f12a";
   font-family: FontAwesome;
   font-size: 16px;
-  color: #545454;
+  color: #c80000;
 
   display: block;
   position: absolute;
@@ -536,6 +537,7 @@ iframe {
     opacity: 1;
   }
 }
+
 
 
 
