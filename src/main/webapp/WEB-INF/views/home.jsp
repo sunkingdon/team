@@ -43,7 +43,7 @@
                         <div class="logo">
                             <a href="index.html"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt="gamespot"></a>
                         </div>
-
+		
                         <!-- Search & Login 영역 -->
                         <div class="search-login-area d-flex align-items-center">
                             <!-- 상단 Search 영역 -->
@@ -55,8 +55,17 @@
                             </div>
                             <!-- Login 영역 -->
                             <div class="login-area">
-                                <a href="#"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
+							<!-- login session -->
+                            <c:choose>
+                            <c:when test="${sessionScope.id eq null }">
+                                <a href="/project/loginView"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
+                            </c:when>
+                            <c:otherwise><a href="/project/myInfo?id=${sessionScope.id }">${sessionScope.name } 접속중</a><br/> 
+                            <button onclick="location.href='/project/logout'">로그아웃</button>
+                            </c:otherwise>
+                            </c:choose>
                             </div>
+                         
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="emp">
+		<!-- 전체조회 -->
 	<select id="emp_list" resultType = "com.web.project.emp.vo.EmpVo">
 		select id,
 		birth,
@@ -10,5 +11,15 @@
 		email,
 		address,
 		addressinfo from emp
+	</select>
+		<!-- 해당 아이디만 조회-->
+		<select id="emp_select" resultType = "com.web.project.emp.vo.EmpVo">
+		select id,
+		birth,
+		pw,
+		name,
+		email,
+		address,
+		addressinfo from emp where id=#{id}
 	</select>
 	</mapper>
