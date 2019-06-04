@@ -10,6 +10,7 @@ import com.web.project.game.dao.GameDao;
 import com.web.project.game.dao.ImageDao;
 import com.web.project.game.vo.GameVo;
 
+
 @Service
 public class GameServiceImpl implements GameService{
 	@Autowired
@@ -18,7 +19,6 @@ public class GameServiceImpl implements GameService{
 	private CategoryDao categoryDao;
 	@Autowired
 	private ImageDao imageDao;
-	
 	
 	public void setGameDao(GameDao d) {
 		gameDao = d;

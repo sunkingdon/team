@@ -2,6 +2,7 @@ package com.web.project.emp.controller;
 
 import java.util.List;
 
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -14,7 +15,7 @@ import com.web.project.emp.service.EmpService;
 import com.web.project.emp.vo.EmpVo;
 
 @Controller
-public class EmpController {
+public class EmpController{
 	@Autowired
 	EmpService empService;
 	public EmpController() {
@@ -34,8 +35,8 @@ public class EmpController {
 	@RequestMapping("/login")
 	public String login(EmpVo empVo,HttpSession session,HttpServletRequest req) {
 		try {
-			String id=req.getParameter("id");
-			String pw=req.getParameter("pw");
+			String id=req.getParameter("username");
+			String pw=req.getParameter("pass");
 			empVo=empService.login(id, pw);
 		if(empVo!=null) {
 			req.getSession().setAttribute("id",empVo.getId());

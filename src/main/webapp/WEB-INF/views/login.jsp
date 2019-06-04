@@ -8,9 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/project/login" method="post">
-<input type="text" name="id"><br/>
-<input type="password" name="pw"><br/>
+<form action="/project/login">
+<input type="text" name="username"><br/>
+<input type="password" name="pass"><br/>
 <input type="submit" value="로그인">
 <input type="button" onclick="location.href='/project/'" value="홈으로">
 </form>

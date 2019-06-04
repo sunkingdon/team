@@ -12,7 +12,7 @@
 
     // :: 2.0 Nav Active Code
     if ($.fn.classyNav) {
-        $('#gamespotNav').classyNav();
+        $('#egamesNav').classyNav();
     }
 
     // :: 3.0 Sticky Active Code
@@ -34,6 +34,7 @@
         var welcomeSlide = $('.hero-post-slides');
         var popularSlide = $('.popular-games-slideshow');
         var latestSlide = $('.latest-games-slideshow');
+        var editorSlide = $('.editor-games-slideshow');
 
         welcomeSlide.owlCarousel({
             items: 1,
@@ -126,6 +127,33 @@
                 }
             }
         });
+
+        editorSlide.owlCarousel({
+            items: 6,
+            margin: 30,
+            loop: true,
+            center: true,
+            nav: true,
+            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 7000,
+            smartSpeed: 1000,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                992: {
+                    items: 4
+                },
+                1200: {
+                    items: 6
+                }
+            }
+        });
     }
 
     // :: 6.0 ScrollUp Active Code
@@ -154,28 +182,28 @@
     // :: 10.0 barfiller Active Code
     if ($.fn.barfiller) {
         $('#bar1').barfiller({
-            barColor: '#8AB839',
+            barColor: '#20d8da',
             duration: 5000
         });
         $('#bar2').barfiller({
-            barColor: '#8AB839',
+            barColor: '#20d8da',
             duration: 5000
         });
         $('#bar3').barfiller({
-            barColor: '#8AB839',
+            barColor: '#20d8da',
             duration: 5000
         });
         $('#bar4').barfiller({
-            barColor: '#8AB839',
+            barColor: '#20d8da',
             duration: 5000
         });
     }
 
     // :: 11.0 niceScroll Active Code
     if ($.fn.niceScroll) {
-        $(".gamespot-nav-btn").niceScroll({
+        $(".egames-nav-btn").niceScroll({
             cursorborder: "none",
-            cursorcolor: "#8AB839",
+            cursorcolor: "#20d8da",
             scrollspeed: 200
         });
     }

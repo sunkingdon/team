@@ -22,4 +22,15 @@
 		address,
 		addressinfo from emp where id=#{id}
 	</select>
+	<insert id="emp_insert" parameterType="com.web.project.emp.vo.EmpVo">
+		insert into emp values(
+		#{id},
+		#{birth},
+		#{pw},
+		#{name},
+		#{email},
+		#{address},
+		#{addressinfo}
+		)
+	</insert>
 	</mapper>
