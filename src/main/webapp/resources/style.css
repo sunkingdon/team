@@ -828,7 +828,7 @@ img {
   color: #8ab839;
 }
 
-/* :: 8.0 Blog Area CSS */
+/* :: 8.0 Reviews Area CSS */
 .single-articles-area {
   position: relative;
   z-index: 1;
@@ -866,7 +866,7 @@ img {
   top: 0;
   left: 0;
   content: "";
-  background-color: rgba(32, 216, 218, 0.6);
+  background-color: rgba(54, 54, 54, 0.6);
   position: absolute;
   visibility: hidden;
   opacity: 0;
@@ -1582,7 +1582,7 @@ img {
   top: 0;
   left: 0;
   content: "";
-  background-color: rgba(32, 216, 218, 0.6);
+  background-color: rgba(84, 84, 84, 0.6);
   position: absolute;
   visibility: hidden;
   opacity: 0;
@@ -1866,10 +1866,7 @@ img {
     font-size: 24px;
   }
 }
-.breadcrumb-area:hover .breadcrumb-text {
-  border-left: 2px solid #fff;
-  background-color: #8ab839;
-}
+
 
 /* :: 13.0 Contact Area CSS */
 .contact-content {
