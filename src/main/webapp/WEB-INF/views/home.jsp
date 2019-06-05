@@ -18,8 +18,8 @@
 
     <!-- Stylesheet(css파일 따로 작성, 임포트 해서 적용.) -->
     
-    <link href="src="${pageContext.request.contextPath}/resources/style.css" rel="stylesheet" type="text/css">
-
+    <link href="${pageContext.request.contextPath}/resources/style.css" rel="stylesheet" type="text/css">
+	
 </head>
 
 <body>
@@ -90,7 +90,6 @@
 <!--                                     <li><a href="store.html">Store</a></li>                           -->
                                     <li><a href="location.href='gamelist.do'">Store</a></li>                          
                                     <li><a href="reviews.html">Reviews</a></li>
-                                    <li><a href="about.html">About</a></li>
                                     <li><a href="support.html">Support</li>
                                 </ul>
                             </div>
@@ -116,7 +115,7 @@
         <div class="hero-post-slides owl-carousel">
 
             <!-- Single Slide -->
-<%--             <div class="single-slide bg-img bg-overlay" style="background-image: url(src="${pageContext.request.contextPath}/resources/img/bg-img/1.jpg);"> --%>
+             <div class="single-slide bg-img bg-overlay" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/1.jpg);">
                 <!-- Blog Content -->
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -133,7 +132,7 @@
             </div>
 
             <!-- Single Slide -->
-            <div class="single-slide bg-img bg-overlay" style="background-image: url(img/bg-img/2.jpg);">
+            <div class="single-slide bg-img bg-overlay" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/2.jpg);">
                 <!-- Blog Content -->
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -148,7 +147,7 @@
             </div>
 
             <!-- Single Slide -->
-            <div class="single-slide bg-img bg-overlay" style="background-image: url(img/bg-img/3.jpg);">
+            <div class="single-slide bg-img bg-overlay" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/3.jpg);">
                 <!-- Blog Content -->
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -520,7 +519,7 @@
                 <div class="col-12 col-md-6 col-lg-8">
                     <div class="tab-content" id="video-tabContent">
                         <div class="tab-pane fade show active" id="video-1" role="tabpanel" aria-labelledby="video1">
-                            <div class="video-playground bg-img" style="background-image: url(img/bg-img/45.jpg);">
+                            <div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/45.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
                                     <a href="https://www.youtube.com/watch?v=K0u_kAWLJOA" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
@@ -528,7 +527,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="video-2" role="tabpanel" aria-labelledby="video2">
-                            <div class="video-playground bg-img" style="background-image: url(img/bg-img/46.jpg);">
+                            <div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/46.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
                                     <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
@@ -536,7 +535,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="video-3" role="tabpanel" aria-labelledby="video3">
-                            <div class="video-playground bg-img" style="background-image: url(img/bg-img/47.jpg);">
+                            <div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/47.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
                                     <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
@@ -544,7 +543,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="video-4" role="tabpanel" aria-labelledby="video4">
-                            <div class="video-playground bg-img" style="background-image: url(img/bg-img/48.jpg);">
+                            <div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/48.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
                                     <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
@@ -552,7 +551,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="video-5" role="tabpanel" aria-labelledby="video5">
-                            <div class="video-playground bg-img" style="background-image: url(img/bg-img/49.jpg);">
+                            <div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/49.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
                                     <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
@@ -560,7 +559,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="video-6" role="tabpanel" aria-labelledby="video6">
-                            <div class="video-playground bg-img" style="background-image: url(img/bg-img/45.jpg);">
+                            <div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/45.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
                                     <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
@@ -568,7 +567,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="video-7" role="tabpanel" aria-labelledby="video7">
-                            <div class="video-playground bg-img" style="background-image: url(img/bg-img/46.jpg);">
+                            <div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/46.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
                                     <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
@@ -576,7 +575,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="video-8" role="tabpanel" aria-labelledby="video8">
-                            <div class="video-playground bg-img" style="background-image: url(img/bg-img/47.jpg);">
+                            <div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/47.jpg);">
                                 <!-- Play Button -->
                                 <div class="play-btn">
                                     <a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button"><img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt=""></a>
