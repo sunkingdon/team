@@ -21,4 +21,7 @@ public class EmpDao {
 	public EmpVo selectList(String id) { //Á¶È¸
 		return sqlSession.selectOne("emp.emp_select",id);
 	}
+	public int insert(EmpVo empVo) {
+		return sqlSession.insert("emp.emp_insert",empVo);
+	}
 }

@@ -49,4 +49,9 @@ public class EmpServiceImpl implements EmpService{
 		// TODO Auto-generated method stub
 		return empDao.selectList(id);
 	}
+	@Override
+	public int insert(EmpVo empVo) {
+		// TODO Auto-generated method stub
+		return empDao.insert(empVo);
+	}
 }

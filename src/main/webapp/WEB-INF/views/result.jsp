@@ -9,7 +9,7 @@
 </head>
 <body>
 <c:forEach var="list" items="${list }">
-${list.id } / ${list.pw }
+${list.id } / ${list.pw }<br/>
 </c:forEach>
 </body>
 </html>

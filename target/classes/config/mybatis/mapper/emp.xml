@@ -33,4 +33,7 @@
 		#{addressinfo}
 		)
 	</insert>
+	<update id="emp_update" parameterType="com.web.project.emp.vo.EmpVo">
+		update emp set pw=#{pw},email=#{email} where id=#{id}
+	</update>
 	</mapper>

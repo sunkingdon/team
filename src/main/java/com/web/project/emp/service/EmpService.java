@@ -12,4 +12,5 @@ public interface EmpService {
 	public List<EmpVo> selectList();
 	public EmpVo login(String id,String pw)throws IdNotFoundException, PwMissMatchException,BlankException;
 	public EmpVo selectList(String id);
+	public int insert(EmpVo empVo);
 }
