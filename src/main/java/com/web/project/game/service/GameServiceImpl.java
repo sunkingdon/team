@@ -28,7 +28,7 @@ public class GameServiceImpl implements GameService{
 		return gameDao.selectList();
 	}
 	@Override 
-	public List<GameVo> categoryList() {
-		return gameDao.categoryList();
+	public List<GameVo> categoryList(int genreno) {
+		return gameDao.categoryList(genreno);
 	}
 }

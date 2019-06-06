@@ -20,8 +20,8 @@ public class GameDao {
 		return sqlSession.selectList("game.gameSelect");
 	}
 	
-	public List<GameVo> categoryList(){
-		return sqlSession.selectList("game.categorySelect");
+	public List<GameVo> categoryList(int genreno){
+		return sqlSession.selectList("game.categorySelect",genreno);
 	}
 	
 	

@@ -22,7 +22,6 @@ public class GameController {
 	GameService gameService;
 
 	GameVo vo;
-
 	
 	@Autowired
 	ServletContext application;
@@ -39,8 +38,8 @@ public class GameController {
 	}
 	
 	@RequestMapping("/categorylist.do")
-	public String category(Model m) {
-		List<GameVo> list = gameService.categoryList();
+	public String category(int genreno, Model m) {
+		List<GameVo> list = gameService.categoryList(genreno);
 		m.addAttribute("list",list);
 		return "categorylist";
 	}

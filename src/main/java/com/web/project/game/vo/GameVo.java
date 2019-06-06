@@ -6,24 +6,7 @@ public class GameVo {
 	private String info;
 	private int price;
 	private String regdate;
-	private int genreno;
-	private int imgno;
 	
-	ImageVo imagevo;
-	CategoryVo categoryvo;
-	
-	public ImageVo getImagevo() {
-		return imagevo;
-	}
-	public void setImagevo(ImageVo imagevo) {
-		this.imagevo = imagevo;
-	}
-	public CategoryVo getCategoryvo() {
-		return categoryvo;
-	}
-	public void setCategoryvo(CategoryVo categoryvo) {
-		this.categoryvo = categoryvo;
-	}
 	public int getItemno() {
 		return itemno;
 	}
@@ -54,16 +37,42 @@ public class GameVo {
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
 	}
+	
+	// 카테고리 Vo
+	
+	private String genrename;
+	private int genreno;
+	
+	public String getGenrename() {
+		return genrename;
+	}
+	public void setGenrename(String genrename) {
+		this.genrename = genrename;
+	}
 	public int getGenreno() {
 		return genreno;
 	}
 	public void setGenreno(int genreno) {
 		this.genreno = genreno;
 	}
+	
+	// 이미지 Vo
+	
+	private int imgno;
+	private String path;
+	
 	public int getImgno() {
 		return imgno;
 	}
 	public void setImgno(int imgno) {
 		this.imgno = imgno;
 	}
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
+	}
+	
+	
 }
