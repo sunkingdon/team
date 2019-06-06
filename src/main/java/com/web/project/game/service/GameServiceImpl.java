@@ -10,7 +10,7 @@ import com.web.project.game.dao.GameDao;
 import com.web.project.game.dao.ImageDao;
 import com.web.project.game.vo.GameVo;
 
-@Service
+@Service("gameService")
 public class GameServiceImpl implements GameService{
 	@Autowired
 	private GameDao gameDao;

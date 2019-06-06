@@ -30,7 +30,7 @@ public class PurchaseServiceImpl implements PurchaseService {
 	}
 	
 	@Override
-	public List<PurchaseVo> selectList() {
-		return purchase_dao.selectList();
+	public List<PurchaseVo> selectList(String id) {
+		return purchase_dao.selectList(id);
 	}
 }

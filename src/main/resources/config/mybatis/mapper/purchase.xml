@@ -9,7 +9,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<insert id="purchase" parameterType="com.web.project.purchase.vo.PurchaseVo">
-		insert into purchase values(#{purchaseno}, #{id}, #{regdate}, #{amount}, #{itemno}, #{genreno})
+		INSERT INTO purchase VALUES(seq_purno.nextval, #{id}, sysdate, #{amount}, #{itemno}, #{genreno})
 	</insert>
+	
+	<select id="purchased" resultType="com.web.project.purchase.vo.PurchaseVo" parameterType="String">
+		SELECT p.purchaseno AS purchaseno, p.regdate AS regdate , g.title AS title, c.genrename as genrename
+		FROM item g, purchase p, category c
+		WHERE g.itemno = p.itemno AND c.genreno = p.genreno AND p.id=#{id}
+	</select>
 	
 </mapper>

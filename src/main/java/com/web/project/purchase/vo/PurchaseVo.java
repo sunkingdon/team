@@ -6,7 +6,10 @@ public class PurchaseVo {
 	private String id;
 	private String regdate;
 	private int amount;
+	private String title;
 	private int genreno;
+	private String genrename;
+	
 	
 	public int getPurchaseno() {
 		return purchaseno;
@@ -44,4 +47,18 @@ public class PurchaseVo {
 	public void setGenreno(int genreno) {
 		this.genreno = genreno;
 	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getGenrename() {
+		return genrename;
+	}
+	public void setGenrename(String genrename) {
+		this.genrename = genrename;
+	}
+	
+	
 }

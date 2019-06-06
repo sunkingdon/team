@@ -13,7 +13,7 @@ public class PurchaseDao {
 	@Autowired
 	SqlSession sqlSession;
 	
-	public List<PurchaseVo> selectList(){
-		return sqlSession.selectList("purchase.purchaseSelect");
+	public List<PurchaseVo> selectList(String id){
+		return sqlSession.selectList("purchase.purchased", id);
 	}
 }

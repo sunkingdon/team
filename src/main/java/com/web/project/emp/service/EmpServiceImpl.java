@@ -16,18 +16,14 @@ public class EmpServiceImpl implements EmpService{
 	private EmpDao empDao;
 	
 	public EmpServiceImpl() {
-				// TODO Auto-generated constructor stub
-				System.out.println("22222222222222Service");
 			}
 	@Override
 	public List<EmpVo> selectList() {
-		// TODO Auto-generated method stub
 		return empDao.selectList();
 	}
 	//로그인 Exception처리 => e.getMessage()
 	@Override
 	public EmpVo login(String id, String pw) throws IdNotFoundException, PwMissMatchException,BlankException{
-		// TODO Auto-generated method stub
 		EmpVo vo=empDao.selectList(id);
 		if(id==""||pw=="")
 			throw new BlankException("빈칸이 있습니다.");
@@ -46,12 +42,10 @@ public class EmpServiceImpl implements EmpService{
 	//자기정보 조회
 	@Override
 	public EmpVo selectList(String id) {
-		// TODO Auto-generated method stub
 		return empDao.selectList(id);
 	}
 	@Override
 	public int insert(EmpVo empVo) {
-		// TODO Auto-generated method stub
 		return empDao.insert(empVo);
 	}
 }
