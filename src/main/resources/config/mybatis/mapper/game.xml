@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="game">
 	<select id="gameSelect" resultType="com.web.project.game.vo.GameVo">
 		SELECT * FROM item
+	</select>
+	
+	<select id="categorySelect" resultType="com.web.project.game.vo.GameVo" parameterType="java.lang.Integer">
+		SELECT g.title as title, g.price as price, c.genrename as genrename,i.path as path 
+		from item g, category c, image i 
+		where i.imgno=g.imgno and c.genreno=g.genreno and c.genreno=#{genreno}
 	</select>
 </mapper>
 

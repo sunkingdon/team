@@ -6,6 +6,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,15 +31,17 @@ public class GameController {
 	@Autowired
 	HttpServletRequest request;
 	
-	@RequestMapping("/test")
-	public String list() {
-		return null;
-	}
-	
 	@RequestMapping("/gamelist.do")
 	public String selectList(Model m) {
 		List<GameVo> list = gameService.selectList();
 		m.addAttribute("list",list);
 		return "gamelist";
+	}
+	
+	@RequestMapping("/categorylist.do")
+	public String category(Model m) {
+		List<GameVo> list = gameService.categoryList();
+		m.addAttribute("list",list);
+		return "categorylist";
 	}
 }

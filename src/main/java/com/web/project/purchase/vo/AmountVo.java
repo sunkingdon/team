@@ -1,19 +1,19 @@
 package com.web.project.purchase.vo;
 
 public class AmountVo {
-	private String month;
-	private String amount;
+	private int month;
+	private int amount;
 	
-	public String getMonth() {
+	public int getMonth() {
 		return month;
 	}
-	public void setMonth(String month) {
+	public void setMonth(int month) {
 		this.month = month;
 	}
-	public String getAmount() {
+	public int getAmount() {
 		return amount;
 	}
-	public void setAmount(String amount) {
+	public void setAmount(int amount) {
 		this.amount = amount;
 	}
 }

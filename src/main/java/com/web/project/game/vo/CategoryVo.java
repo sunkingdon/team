@@ -1,13 +1,13 @@
 package com.web.project.game.vo;
 
 public class CategoryVo {
-	private String genreno;
+	private int genreno;
 	private String genrename;
 	
-	public String getGenreno() {
+	public int getGenreno() {
 		return genreno;
 	}
-	public void setGenreno(String genreno) {
+	public void setGenreno(int genreno) {
 		this.genreno = genreno;
 	}
 	public String getGenrename() {

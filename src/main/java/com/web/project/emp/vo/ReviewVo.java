@@ -1,16 +1,14 @@
 package com.web.project.emp.vo;
 
 public class ReviewVo {
-	private String reviewno,
-	reviewcontent,
-	id,
-	genreno;
+	private String reviewcontent,id;
+	private int reviewno, genreno;
 
-	public String getReviewno() {
+	public int getReviewno() {
 		return reviewno;
 	}
 
-	public void setReviewno(String reviewno) {
+	public void setReviewno(int reviewno) {
 		this.reviewno = reviewno;
 	}
 
@@ -30,11 +28,11 @@ public class ReviewVo {
 		this.id = id;
 	}
 
-	public String getGenreno() {
+	public int getGenreno() {
 		return genreno;
 	}
 
-	public void setGenreno(String genreno) {
+	public void setGenreno(int genreno) {
 		this.genreno = genreno;
 	}
 }

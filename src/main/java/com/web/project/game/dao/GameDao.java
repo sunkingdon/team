@@ -14,10 +14,15 @@ public class GameDao {
 	SqlSession sqlSession;
 	
 	public GameDao() {
-		System.out.println("dao °´Ã¼ »ý¼º--");
 	}
 	
 	public List<GameVo> selectList(){
 		return sqlSession.selectList("game.gameSelect");
 	}
+	
+	public List<GameVo> categoryList(){
+		return sqlSession.selectList("game.categorySelect");
+	}
+	
+	
 }

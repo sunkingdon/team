@@ -1,19 +1,33 @@
 package com.web.project.game.vo;
 
 public class GameVo {
-	private String itemno;
+	private int itemno;
 	private String title;
 	private String info;
-	private String price;
-	private String os;
+	private int price;
 	private String regdate;
-	private String genreno;
-	private String imgno;
+	private int genreno;
+	private int imgno;
 	
-	public String getItemno() {
+	ImageVo imagevo;
+	CategoryVo categoryvo;
+	
+	public ImageVo getImagevo() {
+		return imagevo;
+	}
+	public void setImagevo(ImageVo imagevo) {
+		this.imagevo = imagevo;
+	}
+	public CategoryVo getCategoryvo() {
+		return categoryvo;
+	}
+	public void setCategoryvo(CategoryVo categoryvo) {
+		this.categoryvo = categoryvo;
+	}
+	public int getItemno() {
 		return itemno;
 	}
-	public void setItemno(String itemno) {
+	public void setItemno(int itemno) {
 		this.itemno = itemno;
 	}
 	public String getTitle() {
@@ -28,17 +42,11 @@ public class GameVo {
 	public void setInfo(String info) {
 		this.info = info;
 	}
-	public String getPrice() {
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
-	}
-	public String getOs() {
-		return os;
-	}
-	public void setOs(String os) {
-		this.os = os;
 	}
 	public String getRegdate() {
 		return regdate;
@@ -46,16 +54,16 @@ public class GameVo {
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
 	}
-	public String getGenreno() {
+	public int getGenreno() {
 		return genreno;
 	}
-	public void setGenreno(String genreno) {
+	public void setGenreno(int genreno) {
 		this.genreno = genreno;
 	}
-	public String getImgno() {
+	public int getImgno() {
 		return imgno;
 	}
-	public void setImgno(String imgno) {
+	public void setImgno(int imgno) {
 		this.imgno = imgno;
 	}
 }

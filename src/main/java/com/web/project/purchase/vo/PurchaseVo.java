@@ -1,23 +1,23 @@
 package com.web.project.purchase.vo;
 
 public class PurchaseVo {
-	private String purchaseno;
-	private String itemmno;
+	private int purchaseno;
+	private int itemmno;
 	private String id;
 	private String regdate;
-	private String amount;
-	private String genreno;
+	private int amount;
+	private int genreno;
 	
-	public String getPurchaseno() {
+	public int getPurchaseno() {
 		return purchaseno;
 	}
-	public void setPurchaseno(String purchaseno) {
+	public void setPurchaseno(int purchaseno) {
 		this.purchaseno = purchaseno;
 	}
-	public String getItemmno() {
+	public int getItemmno() {
 		return itemmno;
 	}
-	public void setItemmno(String itemmno) {
+	public void setItemmno(int itemmno) {
 		this.itemmno = itemmno;
 	}
 	public String getId() {
@@ -32,16 +32,16 @@ public class PurchaseVo {
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
 	}
-	public String getAmount() {
+	public int getAmount() {
 		return amount;
 	}
-	public void setAmount(String amount) {
+	public void setAmount(int amount) {
 		this.amount = amount;
 	}
-	public String getGenreno() {
+	public int getGenreno() {
 		return genreno;
 	}
-	public void setGenreno(String genreno) {
+	public void setGenreno(int genreno) {
 		this.genreno = genreno;
 	}
 }

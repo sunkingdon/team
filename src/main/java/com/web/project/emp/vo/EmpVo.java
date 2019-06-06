@@ -5,10 +5,8 @@ public class EmpVo {
 	birth,
 	pw,
 	name,
-	email,
-	address,
-	addressinfo;
-
+	email;
+	
 	public String getId() {
 		return id;
 	}
@@ -47,21 +45,5 @@ public class EmpVo {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getAddressinfo() {
-		return addressinfo;
-	}
-
-	public void setAddressinfo(String addressinfo) {
-		this.addressinfo = addressinfo;
 	}
 }

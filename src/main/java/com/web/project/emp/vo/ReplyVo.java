@@ -1,19 +1,14 @@
 package com.web.project.emp.vo;
 
 public class ReplyVo {
-	private String replyno,
-	content,
-	regdate,
-	boardno,
-	parentno,
-	replyorder,
-	id;
+	private String content, regdate, id;
+	private int replyno, boardno, parentno, replyorder;
 
-	public String getReplyno() {
+	public int getReplyno() {
 		return replyno;
 	}
 
-	public void setReplyno(String replyno) {
+	public void setReplyno(int replyno) {
 		this.replyno = replyno;
 	}
 
@@ -33,27 +28,27 @@ public class ReplyVo {
 		this.regdate = regdate;
 	}
 
-	public String getBoardno() {
+	public int getBoardno() {
 		return boardno;
 	}
 
-	public void setBoardno(String boardno) {
+	public void setBoardno(int boardno) {
 		this.boardno = boardno;
 	}
 
-	public String getParentno() {
+	public int getParentno() {
 		return parentno;
 	}
 
-	public void setParentno(String parentno) {
+	public void setParentno(int parentno) {
 		this.parentno = parentno;
 	}
 
-	public String getReplyorder() {
+	public int getReplyorder() {
 		return replyorder;
 	}
 
-	public void setReplyorder(String replyorder) {
+	public void setReplyorder(int replyorder) {
 		this.replyorder = replyorder;
 	}
 
