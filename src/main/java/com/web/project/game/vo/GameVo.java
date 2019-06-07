@@ -39,7 +39,6 @@ public class GameVo {
 	}
 	
 	// 카테고리 Vo
-	
 	private String genrename;
 	private int genreno;
 	
@@ -57,7 +56,6 @@ public class GameVo {
 	}
 	
 	// 이미지 Vo
-	
 	private int imgno;
 	private String path;
 	
@@ -73,6 +71,4 @@ public class GameVo {
 	public void setPath(String path) {
 		this.path = path;
 	}
-	
-	
 }
