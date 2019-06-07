@@ -30,11 +30,11 @@ public class GameController {
 		return "home";
 	}
 	
-	@RequestMapping("/gamelist.do")
+	@RequestMapping("/store.do")
 	public String selectList(Model m) {
-		List<GameVo> list = gameService.selectList();
-		m.addAttribute("list",list);
-		return "gamelist";
+		//List<GameVo> list = gameService.selectList();
+		//m.addAttribute("list",list);
+		return "store";
 	}
 	
 	@RequestMapping("/categorylist.do")

@@ -26,57 +26,57 @@ public class EmpController {
 		return "login";
 	}
 
-	@RequestMapping("/insertView")
+	@RequestMapping("/signupView")
 	public String insertView() {
-		return "insert";
+		return "signup";
 	}
 
-	// ·Î±×ÀÎ
+	// ï¿½Î±ï¿½ï¿½ï¿½
 	@RequestMapping("/login")
 	public String login(EmpVo empVo, HttpSession session, HttpServletRequest req, HttpServletResponse resp) {
 		try {
 			String id = req.getParameter("username");
 			String pw = req.getParameter("pass");
 			empVo = empService.login(id, pw);
-			// ·Î±×ÀÎ checkbox ÄíÅ° ¼³Á¤
+			// ï¿½Î±ï¿½ï¿½ï¿½ checkbox ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½
 			String remember = req.getParameter("rememberId");
 			Cookie cookie = new Cookie("cookieId", id);
 			if (empVo != null) {
 				req.getSession().setAttribute("id", empVo.getId());
 				req.getSession().setAttribute("name", empVo.getName());
-				if (remember == null) { // Ã¼Å©¹Ú½º Ã¼Å© ¾ÈµÇ¾îÀÖÀ»¶§
+				if (remember == null) { // Ã¼Å©ï¿½Ú½ï¿½ Ã¼Å© ï¿½ÈµÇ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 					cookie.setPath("/");
-					cookie.setMaxAge(0); // 0À¸·Î ÃÊ±âÈ­
+					cookie.setMaxAge(0); // 0ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
 				} else {
 					cookie.setPath("/");
-					cookie.setMaxAge(60 * 60 * 24 * 7); // ÄíÅ° 7ÀÏ ¼³Á¤
+					cookie.setMaxAge(60 * 60 * 24 * 7); // ï¿½ï¿½Å° 7ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 				}
 				resp.addCookie(cookie);
 				///////////////////////////
 				return "home";
 			}
 
-		} catch (Exception e) { // EmpService¿¡¼­ Ã³¸®ÇÑ Exception
+		} catch (Exception e) { // EmpServiceï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ Exception
 			req.setAttribute("message", e.getMessage());
 		}
 		return "login";
 	}
 
-	// ·Î±×¾Æ¿ô
+	// ï¿½Î±×¾Æ¿ï¿½
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "home";
 	}
 
-	// ÀüÃ¼ Á¶È¸
+	// ï¿½ï¿½Ã¼ ï¿½ï¿½È¸
 	@RequestMapping("/list")
 	public String list(Model m) {
 		m.addAttribute("list", empService.selectList());
 		return "result";
 	}
 
-	// °³ÀÎ Á¤º¸ Á¶È¸
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸
 	@RequestMapping("/myInfo")
 	public String myInfo(String id, Model m) {
 		m.addAttribute("empVo", empService.selectList(id));
