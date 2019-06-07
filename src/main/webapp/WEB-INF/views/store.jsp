@@ -227,7 +227,7 @@
                                         <div class="product-caption">
                                             <span class="posted_in"><a href="#" rel="tag">Strategy</a></span>
                                             <h4 class="product-title">
-                                                <a href="game-single.html" title="">Total War: THREE KINGDOMS</a>
+                                                <a href="gamesingle.do" title="">Total War: THREE KINGDOMS</a>
                                             </h4>
                                             <div class="product-form-cart">
                                                 <div class="product-price">
