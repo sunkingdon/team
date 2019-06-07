@@ -57,7 +57,7 @@
                     <div class="col-12 d-flex align-items-center justify-content-between">
                         <!-- Logo 영역 -->
                         <div class="logo">
-                            <a href="index.html"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt="gamespot"></a>
+                            <a href="home.do"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt="gamespot"></a>
                         </div>
 		
                         <!-- Search & Login 영역 -->
@@ -75,7 +75,7 @@
 							<!-- login session -->
                             <c:choose>
                             <c:when test="${sessionScope.id eq null }">
-                                <a href="/project/loginView"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
+                                <a href="loginView"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
                             </c:when>
                             <c:otherwise><a href="/project/myInfo?id=${sessionScope.id }">${sessionScope.name } 접속중</a>
                             <button onclick="location.href='/project/logout'">로그아웃</button>
@@ -114,8 +114,8 @@
                                 <ul>
                                     <li><a href="home.do">Home</a></li>
 <!--                                     <li><a href="store.html">Store</a></li>                           -->
-                                    <li><a href="gamelist.do">Store</a></li>                          
-                                    <li><a href="reviews.html">Reviews</a></li>
+                                    <li><a href="store.do">Store</a></li>                          
+                                    <li><a href="reviews">Reviews</a></li>
                                     <li><a href="support.html">Support</li>
                                 </ul>
                             </div>
@@ -134,6 +134,7 @@
         </div>
     </header>
     <!-- ##### Header Area End ##### -->
+    
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area bg-img bg-overlay" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/27.jpg);">
         <div class="container h-100">
@@ -1175,7 +1176,7 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-70 wow fadeInUp" data-wow-delay="100ms">
                             <div class="widget-title">
-                                <a href="index.html"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt=""></a>
+                                <a href="home.do"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt=""></a>
                             </div>
                             <div class="widget-content">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit

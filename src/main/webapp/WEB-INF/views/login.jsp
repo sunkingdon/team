@@ -52,7 +52,7 @@
                     <div class="col-12 d-flex align-items-center justify-content-between">
                         <!-- Logo 영역 -->
                         <div class="logo">
-                            <a href="index.html"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt="gamespot"></a>
+                            <a href="home.do"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt="gamespot"></a>
                         </div>
 		
                         <!-- Search & Login 영역 -->
@@ -108,8 +108,8 @@
                                 <ul>
                                     <li><a href="home.do">Home</a></li>
 <!--                                     <li><a href="store.html">Store</a></li>                           -->
-                                    <li><a href="gamelist.do">Store</a></li>                          
-                                    <li><a href="reviews.html">Reviews</a></li>
+                                    <li><a href="store.do">Store</a></li>                          
+                                    <li><a href="reviews">Reviews</a></li>
                                     <li><a href="support.html">Support</li>
                                 </ul>
                             </div>
@@ -187,7 +187,7 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-70 wow fadeInUp" data-wow-delay="100ms">
                             <div class="widget-title">
-                                <a href="index.html"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt=""></a>
+                                <a href="home.do"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt=""></a>
                             </div>
                             <div class="widget-content">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit arcu,
