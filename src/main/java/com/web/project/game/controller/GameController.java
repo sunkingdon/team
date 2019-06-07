@@ -37,6 +37,11 @@ public class GameController {
 		return "store";
 	}
 	
+	@RequestMapping("/gamesingle.do")
+	public String single() {
+		return "game-single";
+	}
+	
 	@RequestMapping("/categorylist.do")
 	public String category(int genreno, Model m) {
 		List<GameVo> list = gameService.categoryList(genreno);

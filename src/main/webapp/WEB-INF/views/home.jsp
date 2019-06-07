@@ -215,7 +215,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/50.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/imageMain/Call of Duty 4.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Grand Theft Auto V</a>
                             <div class="meta-data">
@@ -227,7 +227,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/51.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/imageMain/Car Mechanic Simulator 2018.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Doom</a>
                             <div class="meta-data">
@@ -239,7 +239,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/52.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/imageMain/Dead by Daylight.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">God of War</a>
                             <div class="meta-data">
@@ -251,7 +251,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/53.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/imageMain/PLAYERUNKNOWN'S BATTLEGROUNDS" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Bloodborne</a>
                             <div class="meta-data">
@@ -263,7 +263,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/54.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/imageMain/SUPERHOT.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Persona 5</a>
                             <div class="meta-data">
@@ -275,7 +275,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/52.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/imageMain/Raft.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">God of War</a>
                             <div class="meta-data">
@@ -287,7 +287,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/53.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/imageMain/Forager.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Bloodborne</a>
                             <div class="meta-data">
@@ -299,7 +299,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/54.jpg" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/imageMain/MONSTER HUNTER WORLD.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Persona 5</a>
                             <div class="meta-data">
