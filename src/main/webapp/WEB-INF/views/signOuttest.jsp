@@ -9,7 +9,7 @@
 
 </head>
 <body>
-<form action="/project/delete">
+<form action="/project/delete.do">
 <input type="text" name="id">
 <input type="text" name="pw">
 <input type="submit" value="탈퇴">
