@@ -28,7 +28,7 @@ public class EmpServiceImpl implements EmpService{
 		if(id==""||pw=="")
 			throw new BlankException("빈칸이 있습니다.");
 		else{
-		if(vo==null){ //vo변수에 id 담음
+		if(vo==null){ //vo에 id 담음
 			throw new IdNotFoundException("해당 아이디가 없습니다.");
 		}else{
 			if(vo.getPw().equals(pw)){ //getPw()비밀번호 비교
@@ -47,5 +47,15 @@ public class EmpServiceImpl implements EmpService{
 	@Override
 	public int insert(EmpVo empVo) {
 		return empDao.insert(empVo);
+	}
+	@Override
+	public int update(EmpVo empVo) {
+		// TODO Auto-generated method stub
+		return empDao.update(empVo);
+	}
+	@Override
+	public void delete(EmpVo empVo) {
+		// TODO Auto-generated method stub
+		empDao.delete(empVo);
 	}
 }

@@ -31,9 +31,11 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/main.css">
     
     <title>GAMESPOT | Sign in</title>
+ 
 </head>
 
 <body>
+
     <!-- Preloader (로딩 애니메이션)-->
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="spinner">
@@ -71,8 +73,8 @@
                             <c:when test="${sessionScope.id eq null }">
                                 <a href="loginView"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
                             </c:when>
-                            <c:otherwise><a href="/project/myInfo?id=${sessionScope.id }">${sessionScope.name } 접속중</a>
-                            <button onclick="location.href='/project/logout'">로그아웃</button>
+                            <c:otherwise><a href="/project/myInfo.do?id=${sessionScope.id }">${sessionScope.name } 접속중</a>
+                            <button onclick="location.href='/project/logout.do'">로그아웃</button>
                             </c:otherwise>
                             </c:choose>
                             </div>
@@ -130,10 +132,11 @@
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Login Area Start ##### -->
+ 
     <div class="limiter">
             <div class="container-login100">
                 <div class="wrap-login100">
-                    <form class="login100-form validate-form">
+                    <form class="login100-form validate-form" action="/project/login.do">
                         <span class="login100-form-logo">
                             <img src="${pageContext.request.contextPath}/resources/img/core-img/logo.png">
                         </span>
@@ -141,9 +144,9 @@
                         <span class="login100-form-title p-b-34 p-t-27">
                             Log in
                         </span>
-    
+    					
                         <div class="wrap-input100 validate-input" data-validate = "Enter username">
-                            <input class="input100" type="text" name="username" placeholder="Username">
+                            <input class="input100" type="text" name="username" placeholder="Username" value="${cookie.cookieId.value }">
                             <span class="focus-input100" data-placeholder="&#xf207;"></span>
                         </div>
     
@@ -158,13 +161,14 @@
                                 Remember me
                             </label>
                         </div>
-    
                         <div class="container-login100-form-btn">
-                            <button class="login100-form-btn">
+                        
+                            <button class="login100-form-btn" type="submit">
                                 Login
                             </button>
+                        
                         </div>
-    
+    					
                         <div class="text-center p-t-50">
                             <a class="txt1" href="#">Forgot Password</a> | <a class="txt1" href="signupView">Sign Up</a>
                         </div>

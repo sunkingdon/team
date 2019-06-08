@@ -2,25 +2,23 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="emp">
-		<!-- 전체조회 -->
+<!-- 		전체조회 -->
 	<select id="emp_list" resultType = "com.web.project.emp.vo.EmpVo">
 		select id,
 		birth,
 		pw,
 		name,
-		email,
-		address,
-		addressinfo from emp
+		email 
+		from emp
 	</select>
-		<!-- 해당 아이디만 조회-->
+<!-- 		회원상세조회 -->
 		<select id="emp_select" resultType = "com.web.project.emp.vo.EmpVo">
 		select id,
 		birth,
 		pw,
 		name,
-		email,
-		address,
-		addressinfo from emp where id=#{id}
+		email
+		from emp where id=#{id}
 	</select>
 	<insert id="emp_insert" parameterType="com.web.project.emp.vo.EmpVo">
 		insert into emp values(
@@ -28,12 +26,18 @@
 		#{birth},
 		#{pw},
 		#{name},
-		#{email},
-		#{address},
-		#{addressinfo}
+		#{email}
 		)
 	</insert>
+<!-- 	수정 -->
 	<update id="emp_update" parameterType="com.web.project.emp.vo.EmpVo">
-		update emp set pw=#{pw},email=#{email} where id=#{id}
+		update emp set
+		pw=#{pw},
+		email=#{email}
+		where id=#{id}
 	</update>
+<!-- 	삭제 -->
+	<delete id="emp_delete" parameterType="com.web.project.emp.vo.EmpVo">
+		delete from emp where id=#{id} and pw=#{pw}
+	</delete>
 	</mapper>
