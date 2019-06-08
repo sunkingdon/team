@@ -39,6 +39,9 @@
 	 window.open(url,name,"width=300,height=150")
  }
  </script>
+ <style type="text/css">
+ p{color:white;}
+ </style>
 </head>
 
 <body>
@@ -168,12 +171,13 @@
                                 Remember me
                             </label>
                         </div>
+                        <div align="center"><p>${message }</p></div><br/>
                         <div class="container-login100-form-btn">
-                        
+                        	
                             <button class="login100-form-btn" type="submit">
                                 Login
                             </button>
-                        
+                        	
                         </div>
     					
                         <div class="text-center p-t-50">
