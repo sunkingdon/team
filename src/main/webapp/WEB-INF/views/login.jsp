@@ -31,7 +31,14 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/main.css">
     
     <title>GAMESPOT | Sign in</title>
- 
+<!--     비밀번호 찾기 팝업 -->
+ <script>
+ function popup(){
+	 var url="findPw";
+	 var name="popup";
+	 window.open(url,name,"width=300,height=150")
+ }
+ </script>
 </head>
 
 <body>
@@ -170,7 +177,7 @@
                         </div>
     					
                         <div class="text-center p-t-50">
-                            <a class="txt1" href="#">Forgot Password</a> | <a class="txt1" href="signupView">Sign Up</a>
+                            <a class="txt1" onclick="popup()">Forgot Password</a> | <a class="txt1" href="signupView">Sign Up</a>
                         </div>
                     </form>
                 </div>

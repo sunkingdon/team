@@ -39,6 +39,11 @@ public class EmpController {
 	public String signOutView() {
 		return "signOuttest";
 	}
+	//비밀번호 찾기 팝업
+	@RequestMapping("findPw")
+	public String findPw() {
+		return "findPwpopuptest";
+	}
 //////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////                		 							       ///////////////////
 ///////////////////						      코딩						   ///////////////////
@@ -74,7 +79,21 @@ public class EmpController {
 		}
 		return "login";
 	}
-
+	//비밀번호 찾기
+	@RequestMapping("/findPw.do")
+	public String findPw(EmpVo empVo,Model m,HttpServletRequest req) {
+		try {
+			String id=req.getParameter("id");
+			String email=req.getParameter("email");
+			empVo=empService.findPw(id, email);
+			if(empVo!=null) {
+				m.addAttribute("empVo",empVo);
+			}
+		}catch(Exception e) {
+			req.setAttribute("message", e.getMessage());
+		}
+		return "findPwpopuptest";
+	}
 	// 로그아웃
 	@RequestMapping("/logout.do")
 	public String logout(HttpSession session) {
@@ -102,7 +121,7 @@ public class EmpController {
 		empService.insert(empVo);
 		return "login";
 	}
-	
+	//회원수정
 	@RequestMapping("/update.do")
 	public String update(EmpVo empVo) {
 		empService.update(empVo);
