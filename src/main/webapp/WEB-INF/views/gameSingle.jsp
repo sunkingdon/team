@@ -31,13 +31,6 @@
     <!-- Stylesheet(css파일 따로 작성, 임포트 해서 적용.) -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/style.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/game-single.css">
-
-
-
-
-
-
-	
 </head>
 
 <body>
@@ -115,7 +108,6 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="home.do">Home</a></li>
-<!--                                     <li><a href="store.html">Store</a></li>                           -->
                                     <li><a href="store.do">Store</a></li>                          
                                     <li><a href="reviews">Reviews</a></li>
                                     <li><a href="support.html">Support</li>

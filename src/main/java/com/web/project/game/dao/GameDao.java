@@ -16,13 +16,23 @@ public class GameDao {
 	public GameDao() {
 	}
 	
-	public List<GameVo> selectList(){
+	public List<GameVo> recentList(){
+		return sqlSession.selectList("game.recentSelect");
+	}
+	
+	public List<GameVo> popularList() {
+		return sqlSession.selectList("game.popularSelect");
+	}
+	
+	public List<GameVo> gameList(){
 		return sqlSession.selectList("game.gameSelect");
 	}
 	
-	public List<GameVo> categoryList(int genreno){
-		return sqlSession.selectList("game.categorySelect",genreno);
+	public List<GameVo> categoryList(String genrename){
+		return sqlSession.selectList("game.categorySelect",genrename);
 	}
-	
-	
+
+	public List<GameVo> singleList(String title) {
+		return sqlSession.selectOne("game.singleSelect", title);
+	}
 }

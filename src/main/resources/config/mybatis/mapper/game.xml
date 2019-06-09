@@ -5,14 +5,39 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="game">
 	<select id="gameSelect" resultType="com.web.project.game.vo.GameVo">
-		SELECT * FROM item
+		SELECT g.title AS title, g.price AS price, c.genrename AS genrename, g.info AS info, i.path AS path 
+		FROM item g, image i, category c
+		WHERE i.imgno=g.imgno AND c.genreno=g.genreno
 	</select>
 	
-	<select id="categorySelect" resultType="com.web.project.game.vo.GameVo" parameterType="java.lang.Integer">
-		SELECT g.title as title, g.price as price, c.genrename as genrename,i.path as path 
-		from item g, category c, image i 
-		where i.imgno=g.imgno and c.genreno=g.genreno and c.genreno=#{genreno}
+	<select id="categorySelect" resultType="com.web.project.game.vo.GameVo" parameterType="java.lang.String">
+		SELECT g.title AS title, g.price AS price, c.genrename AS genrename,i.path AS path 
+		FROM item g, category c, image i 
+		WHERE i.imgno=g.imgno AND c.genreno=g.genreno AND c.genrename=#{genrename }
 	</select>
+
+	<select id="singleSelect" resultType="com.web.project.game.vo.GameVo" parameterType="java.lang.String">
+		SELECT g.title AS title, g.price AS price, g.info AS info, c.genrename AS genrename, i.path AS path
+		FROM item g, category c, image i
+		WHERE i.imgno=g.imgno AND c.genreno=g.genreno AND g.title=#{title }
+	</select>
+	
+	<select id="recentSelect" resultType="com.web.project.game.vo.GameVo">
+		SELECT * FROM (SELECT i.path AS path, g.title AS title, c.genrename AS genrename, g.regdate AS regdate
+		FROM item g, category c, image i
+        WHERE i.imgno=g.imgno AND c.genreno=g.genreno
+        ORDER BY regdate DESC)
+        WHERE rownum BETWEEN 1 AND 8
+	</select>
+	
+	<select id="popularSelect" resultType="com.web.project.game.vo.GameVo">
+		SELECT * FROM (SELECT i.path AS path, g.title AS title, c.genrename AS genrename, a.amount AS amount
+		FROM item g, category c, image i, amount a
+        WHERE i.imgno=g.imgno AND  a.itemno = g.itemno AND c.genreno=g.genreno AND a.genreno = c.genreno
+        ORDER BY amount DESC)
+        WHERE rownum BETWEEN 1 AND 8
+	</select>
+
 </mapper>
 
 
