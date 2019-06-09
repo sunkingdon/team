@@ -1,14 +1,19 @@
 package com.web.project.emp.controller;
 
 import javax.servlet.http.Cookie;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.RequestMapping;
+
+
 
 import com.web.project.emp.service.EmpService;
 import com.web.project.emp.vo.EmpVo;
@@ -18,74 +23,115 @@ public class EmpController {
 	@Autowired
 	EmpService empService;
 
-	public EmpController() {
-	}
-
+	
+	//·Î±×ÀÎÆû
 	@RequestMapping("/loginView")
 	public String loginView() {
 		return "login";
 	}
-
+	//È¸¿ø°¡ÀÔÆû
 	@RequestMapping("/signupView")
 	public String insertView() {
 		return "signup";
 	}
-
-	// ï¿½Î±ï¿½ï¿½ï¿½
-	@RequestMapping("/login")
+	//È¸¿øÅ»ÅðÆû
+	@RequestMapping("/signOutView")
+	public String signOutView() {
+		return "signOuttest";
+	}
+	//ºñ¹Ð¹øÈ£ Ã£±â ÆË¾÷
+	@RequestMapping("findPw")
+	public String findPw() {
+		return "findPwpopuptest";
+	}
+//////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////                		 							       ///////////////////
+///////////////////						      ÄÚµù						   ///////////////////
+///////////////////														   ///////////////////	
+//////////////////////////////////////////////////////////////////////////////////////////////	
+	// ·Î±×ÀÎ
+	@RequestMapping("/login.do")
 	public String login(EmpVo empVo, HttpSession session, HttpServletRequest req, HttpServletResponse resp) {
 		try {
 			String id = req.getParameter("username");
 			String pw = req.getParameter("pass");
 			empVo = empService.login(id, pw);
-			// ï¿½Î±ï¿½ï¿½ï¿½ checkbox ï¿½ï¿½Å° ï¿½ï¿½ï¿½ï¿½
-			String remember = req.getParameter("rememberId");
+			// ·Î±×ÀÎ checkbox ÄíÅ° ¼³Á¤
+			String remember = req.getParameter("remember-me");
 			Cookie cookie = new Cookie("cookieId", id);
 			if (empVo != null) {
 				req.getSession().setAttribute("id", empVo.getId());
 				req.getSession().setAttribute("name", empVo.getName());
-				if (remember == null) { // Ã¼Å©ï¿½Ú½ï¿½ Ã¼Å© ï¿½ÈµÇ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				if (remember == null) { // Ã¼Å©¹Ú½º Ã¼Å© ¾ÈµÇ¾îÀÖÀ»¶§
 					cookie.setPath("/");
-					cookie.setMaxAge(0); // 0ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
+					cookie.setMaxAge(0); // 0À¸·Î ÃÊ±âÈ­
 				} else {
 					cookie.setPath("/");
-					cookie.setMaxAge(60 * 60 * 24 * 7); // ï¿½ï¿½Å° 7ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+					cookie.setMaxAge(60 * 60 * 24 * 7); // ÄíÅ° 7ÀÏ ¼³Á¤
 				}
 				resp.addCookie(cookie);
 				///////////////////////////
 				return "home";
 			}
 
-		} catch (Exception e) { // EmpServiceï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ Exception
+		} catch (Exception e) { // EmpService¿¡¼­ Ã³¸®ÇÑ Exception
 			req.setAttribute("message", e.getMessage());
 		}
 		return "login";
 	}
-
-	// ï¿½Î±×¾Æ¿ï¿½
-	@RequestMapping("/logout")
+	//ºñ¹Ð¹øÈ£ Ã£±â
+	@RequestMapping("/findPw.do")
+	public String findPw(EmpVo empVo,Model m,HttpServletRequest req) {
+		try {
+			String id=req.getParameter("id");
+			String email=req.getParameter("email");
+			empVo=empService.findPw(id, email);
+			if(empVo!=null) {
+				m.addAttribute("empVo",empVo);
+			}
+		}catch(Exception e) {
+			req.setAttribute("message", e.getMessage());
+		}
+		return "findPwpopuptest";
+	}
+	// ·Î±×¾Æ¿ô
+	@RequestMapping("/logout.do")
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "home";
 	}
 
-	// ï¿½ï¿½Ã¼ ï¿½ï¿½È¸
-	@RequestMapping("/list")
+	// ÀüÃ¼ Á¶È¸
+	@RequestMapping("/list.do")
 	public String list(Model m) {
 		m.addAttribute("list", empService.selectList());
-		return "result";
+		return "resulttest";
 	}
 
-	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸
-	@RequestMapping("/myInfo")
+	// °³ÀÎ Á¤º¸ Á¶È¸
+	@RequestMapping("/myInfo.do")
 	public String myInfo(String id, Model m) {
 		m.addAttribute("empVo", empService.selectList(id));
-		return "myPage";
+		return "myPagetest";
 	}
-
-	@RequestMapping("/insert")
-	public String signUp(EmpVo empVo) {
+	//È¸¿ø°¡ÀÔ
+	@RequestMapping("/signUp.do")
+	public String signUp(EmpVo empVo,HttpServletRequest req) {
+	
 		empService.insert(empVo);
-		return "redirect:list";
+		return "login";
+	}
+	//È¸¿ø¼öÁ¤
+	@RequestMapping("/update.do")
+	public String update(EmpVo empVo) {
+		empService.update(empVo);
+		return "home";
+	}
+	//Å»Åð
+	@RequestMapping("/delete.do")
+	public String delete(EmpVo empVo,HttpSession session) {
+		empService.delete(empVo);
+		session.invalidate();
+		return "home";
 	}
 }

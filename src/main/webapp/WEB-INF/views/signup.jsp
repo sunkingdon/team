@@ -133,19 +133,23 @@
     <div class="wrap">
         <div class="container-login100">
             <div class="form-wrap">
-                <form>
+                <form action="/project/signUp.do">
                     <div class="row">
                         <h4>Create Account</h4>
-                        <div class="input-group input-group-icon">
-                            <input type="text" placeholder="Full Name" />
+                           <div class="input-group input-group-icon">
+                            <input type="text" placeholder="ID" name="id"/>
                             <div class="input-icon"><i class="fa fa-user"></i></div>
                         </div>
                         <div class="input-group input-group-icon">
-                            <input type="email" placeholder="Email Adress" />
+                            <input type="text" placeholder="Full Name" name="name"/>
+                            <div class="input-icon"><i class="fa fa-user"></i></div>
+                        </div>
+                        <div class="input-group input-group-icon">
+                            <input type="email" placeholder="Email Adress" name="email"/>
                             <div class="input-icon"><i class="fa fa-envelope"></i></div>
                         </div>
                         <div class="input-group input-group-icon">
-                            <input type="password" placeholder="Password" />
+                            <input type="password" placeholder="Password" name="pw"/>
                             <div class="input-icon"><i class="fa fa-key"></i></div>
                         </div>
                         <div class="input-group input-group-icon">
@@ -158,13 +162,13 @@
                             <h4>Date of Birth</h4>
                             <div class="input-group">
                                 <div class="col-third">
-                                    <input type="text" placeholder="DD" />
+                                    <input type="text" placeholder="DD" name="birth" />
                                 </div>
                                 <div class="col-third">
-                                    <input type="text" placeholder="MM" />
+                                    <input type="text" placeholder="MM" name="birth"/>
                                 </div>
                                 <div class="col-third">
-                                    <input type="text" placeholder="YYYY" />
+                                    <input type="text" placeholder="YYYY" name="birth" />
                                 </div>
                             </div>
                         </div>
@@ -179,7 +183,7 @@
                         </div>
                     </div>
                     <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
                             Sign Up
                         </button>
                     </div>
