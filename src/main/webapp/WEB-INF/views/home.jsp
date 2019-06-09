@@ -251,7 +251,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="${pageContext.request.contextPath}/resources/imageMain/PLAYERUNKNOWN'S BATTLEGROUNDS" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/imageMain/PLAYERUNKNOWN'S BATTLEGROUNDS.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Bloodborne</a>
                             <div class="meta-data">
