@@ -60,8 +60,8 @@
                             <c:when test="${sessionScope.id eq null }">
                                 <a href="loginView"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
                             </c:when>
-                            <c:otherwise><a href="/project/myInfo?id=${sessionScope.id }">${sessionScope.name } 접속중</a>
-                            <button onclick="location.href='/project/logout'">로그아웃</button>
+                            <c:otherwise><a href="/project/myInfo.do?id=${sessionScope.id }">${sessionScope.name } 접속중</a>
+                            <button onclick="location.href='/project/logout.do'">로그아웃</button>
                             </c:otherwise>
                             </c:choose>
                             </div>
@@ -251,7 +251,7 @@
 
                     <!-- Single Games -->
                     <div class="single-games-slide">
-                        <img src="${pageContext.request.contextPath}/resources/imageMain/PLAYERUNKNOWN'S BATTLEGROUNDS" alt="">
+                        <img src="${pageContext.request.contextPath}/resources/imageMain/PLAYERUNKNOWN'S BATTLEGROUNDS.jpg" alt="">
                         <div class="slide-text">
                             <a href="#" class="game-title">Bloodborne</a>
                             <div class="meta-data">

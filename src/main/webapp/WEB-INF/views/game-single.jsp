@@ -152,7 +152,8 @@
     </div>
     <!-- ##### Breadcrumb Area End ##### -->
 
-    <!-- ##### Game-single Area Start #####-->
+    
+    <!-- ##### Start single-product ##### -->
     <div class="main-content">
         <div class="single-product">
             <!-- Container -->
@@ -180,23 +181,8 @@
                         <div class="row product-slider">
                             <div class="col-lg-6 col-md-12">
                                 <div class="main_image_product">
-                                    <div class="slider slider-for">
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/47.jpg" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/48.jpg" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/49.jpg" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt=""></div>
-                                    </div>
-                                    <div class="slider slider-nav">
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/47.jpg" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/48.jpg" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/49.jpg" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt=""></div>
+                                    <div class="slider slider-for" style="text-align: center; margin-top: 20px;">
+                                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/gamesingle1.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -233,17 +219,9 @@
                                         </ul>
                                     </div>
                                     <div class="form_cart">
-                                        <div class="form_cart__number">
-                                            <span>Quantity :</span>
-                                            <form action="#" class="add-to-cart" method="post"
-                                                enctype="multipart/form-data">
-                                                <input class="cart-qty-box" type="number" name="qtybutton" value="0">
-                                                <input type="hidden" name="id" value="">
-                                            </form>
-                                        </div>
                                         <div class="container-cart-form-btn">
                                             <button class="cart-form-btn">
-                                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>Add to Cart
+                                                <i class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now
                                             </button>
                                         </div>
                                     </div>
@@ -255,25 +233,7 @@
                                                 <a href="#" rel="tag">Electronics</a>,
                                                 <a href="#" rel="tag">Men's Grooming</a>
                                             </div>
-                                            <div class="tagged_as">
-                                                <span>Tags:</span>
-                                                <a href="#" rel="tag">Luxury</a>,
-                                                <a href="#" rel="tag">Skin Care</a>,
-                                                <a href="#" rel="tag">Men's Grooming</a>
-                                                <a href="#" rel="tag">Hair Care</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="product_social-sharing">
-                                        <div class="social-icons share-row">
-                                            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                                                <a class="a2a_button_facebook"></a>
-                                                <a class="a2a_button_twitter"></a>
-                                                <a class="a2a_button_google_plus"></a>
-                                                <a class="a2a_button_google_gmail"></a>
-                                                <a class="a2a_button_print"></a>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div><!-- /.product-meta -->
@@ -374,7 +334,8 @@
                                                 veniam, quis nost.</div>
                                         </div>
                                     </div>
-                                    <form class="form-product-review" action="" method="post">
+                                    <form class="form-product-review"
+                                        action="http://themes.fuznet.com/punibor/html/v_black/do_action" method="post">
                                         <h5>ADD YOUR REVIEW</h5>
                                         <div class="form-group">
                                             <label class="control-label">Your Rating</label>
@@ -400,18 +361,18 @@
                                                     value="" size="30" aria-required="true">
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="email" class="control-label">Password
+                                                <label for="email" class="control-label">Email
                                                     <span class="required">*</span>
                                                 </label>
-                                            
-                                                <input class="form-control" type="password" name="pass" value=""
+                                                <input id="email" class="form-control" name="email" type="text" value=""
                                                     size="30" aria-required="true">
-                                                    
                                             </div>
                                             <div class="form-submit col-md-12">
                                                 <input name="submit" type="submit" id="submit" class="btn btn-primary"
                                                     value="Send">
-                                                
+                                                <input type="hidden" name="comment_post_ID" value=""
+                                                    id="comment_post_ID">
+                                                <input type="hidden" name="comment_parent" id="comment_parent" value="">
                                             </div>
                                         </div>
                                     </form>
@@ -430,7 +391,7 @@
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt="">
+                                            <img src="assets/images/product/product_1.jpg" alt="">
                                         </a>
                                         <div class="product-content">
                                             <h3 class="product-title">
@@ -455,10 +416,11 @@
                                         </div>
                                     </div>
                                 </li>
+                                
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt="">
+                                            <img src="assets/images/product/product_4.jpg" alt="">
                                         </a>
                                         <div class="product-content">
                                             <h3 class="product-title">
@@ -486,7 +448,7 @@
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/47.jpg" alt="">
+                                            <img src="assets/images/product/product_5.jpg" alt="">
                                         </a>
                                         <div class="product-content">
                                             <h3 class="product-title">
@@ -514,7 +476,7 @@
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/47.jpg" alt="">
+                                            <img src="assets/images/product/product_8.jpg" alt="">
                                         </a>
                                         <div class="product-content">
                                             <h3 class="product-title">
@@ -542,7 +504,7 @@
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/48.jpg" alt="">
+                                            <img src="assets/images/product/product_9.jpg" alt="">
                                         </a>
                                         <div class="product-content">
                                             <h3 class="product-title">
@@ -570,7 +532,7 @@
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/49.jpg" alt="">
+                                            <img src="assets/images/product/product_6.jpg" alt="">
                                         </a>
                                         <div class="product-content">
                                             <h3 class="product-title">
@@ -598,63 +560,7 @@
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <h3 class="product-title">
-                                                <a href="#">Game 1</a>
-                                            </h3>
-                                            <div class="star-rating">
-                                                <span class="product-rating" data-rating="">
-                                                    <span class="star-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="product-price">
-                                                <ins>
-                                                    <span class="amout">$14.38</span>
-                                                </ins>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inner">
-                                        <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <h3 class="product-title">
-                                                <a href="#">Game 1</a>
-                                            </h3>
-                                            <div class="star-rating">
-                                                <span class="product-rating" data-rating="">
-                                                    <span class="star-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="product-price">
-                                                <ins>
-                                                    <span class="amout">$14.38</span>
-                                                </ins>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inner">
-                                        <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt="">
+                                            <img src="assets/images/product/product_7.jpg" alt="">
                                         </a>
                                         <div class="product-content">
                                             <h3 class="product-title">

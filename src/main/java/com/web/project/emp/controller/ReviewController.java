@@ -12,4 +12,11 @@ public class ReviewController {
 		//m.addAttribute("list",list);
 		return "reviews";
 	}
+		
+		@RequestMapping("/reviewSingle")
+		public String selectReview(Model m) {
+			//List<GameVo> list = gameService.selectList();
+			//m.addAttribute("list",list);
+			return "review-single";
+	}
 }
