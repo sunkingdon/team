@@ -133,7 +133,7 @@
     <div class="wrap">
         <div class="container-login100">
             <div class="form-wrap">
-                <form action="/project/signUp.do">
+                <form action="/project/signUp.do" method="post">
                     <div class="row">
                         <h4>Create Account</h4>
                            <div class="input-group input-group-icon">

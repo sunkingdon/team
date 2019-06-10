@@ -22,8 +22,11 @@ import com.web.project.emp.vo.EmpVo;
 public class EmpController {
 	@Autowired
 	EmpService empService;
-
-	
+//////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////                		 							       ///////////////////
+///////////////////						      폼						       ///////////////////
+///////////////////														   ///////////////////	
+//////////////////////////////////////////////////////////////////////////////////////////////
 	//로그인폼
 	@RequestMapping("/loginView")
 	public String loginView() {
@@ -74,7 +77,7 @@ public class EmpController {
 				return "home";
 			}
 
-		} catch (Exception e) { // EmpService에서 처리한 Exception
+		} catch (Exception e) { // EmpService에서 세팅한 Exception처리
 			req.setAttribute("message", e.getMessage());
 		}
 		return "login";
@@ -117,7 +120,6 @@ public class EmpController {
 	//회원가입
 	@RequestMapping("/signUp.do")
 	public String signUp(EmpVo empVo,HttpServletRequest req) {
-	
 		empService.insert(empVo);
 		return "login";
 	}

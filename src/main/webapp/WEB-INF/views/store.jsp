@@ -53,6 +53,48 @@
 		</div>
 	</div>
 
+<<<<<<< HEAD
+    <!-- ##### Header 영역 시작 ##### -->
+    <header class="header-area wow fadeInDown" data-wow-delay="500ms">
+        <!-- Header 상단 영역 -->
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 d-flex align-items-center justify-content-between">
+                        <!-- Logo 영역 -->
+                        <div class="logo">
+                            <a href="home.do"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt="gamespot"></a>
+                        </div>
+		
+                        <!-- Search & Login 영역 -->
+                        <div class="search-login-area d-flex align-items-center">
+                            <!-- 상단 Search 영역 -->
+                            <div class="top-search-area"> 
+                                <form action="#" method="post">
+                                    <input type="search" name="top-search" id="topSearch" placeholder="Search">
+                                    <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                            <!-- Login 영역 -->
+                            <div class="login-area">
+                              
+							<!-- login session -->
+                            <c:choose>
+                            <c:when test="${sessionScope.id eq null }">
+                                <a href="loginView"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
+                            </c:when>
+                            <c:otherwise><a href="/project/myInfo.do?id=${sessionScope.id }">${sessionScope.name } 접속중</a>
+                            <button onclick="location.href='/project/logout'">로그아웃</button>
+                            </c:otherwise>
+                            </c:choose>
+                            </div>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+=======
 	<!-- ##### Header 영역 시작 ##### -->
 	<header class="header-area wow fadeInDown" data-wow-delay="500ms">
 		<!-- Header 상단 영역 -->
@@ -67,6 +109,7 @@
 								src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png"
 								alt="gamespot"></a>
 						</div>
+>>>>>>> branch 'master' of https://github.com/sunkingdon/team.git
 
 						<!-- Search & Login 영역 -->
 						<div class="search-login-area d-flex align-items-center">
