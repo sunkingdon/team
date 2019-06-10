@@ -32,12 +32,12 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/style.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/game-single.css">
 
-
-
-
-
-
-	
+	<script>
+		function pur_click() {
+			alert("구매가 성공적으로 완료되었습니다.");
+			location.href="${pageContext.request.contextPath}/pur.do";
+		}
+	</script>
 </head>
 
 <body>
@@ -59,7 +59,9 @@
                     <div class="col-12 d-flex align-items-center justify-content-between">
                         <!-- Logo 영역 -->
                         <div class="logo">
-                            <a href="home.do"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt="gamespot"></a>
+                            <a href="home.do">
+                           	 	<img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt="gamespot">
+                            </a>
                         </div>
 		
                         <!-- Search & Login 영역 -->
@@ -79,7 +81,7 @@
                             <c:when test="${sessionScope.id eq null }">
                                 <a href="loginView"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
                             </c:when>
-                            <c:otherwise><a href="/project/myInfo.do?id=${sessionScope.id }">${sessionScope.name } 접속중</a>
+                            <c:otherwise><a href="/project/myInfo?id=${sessionScope.id }">${sessionScope.name } 접속중</a>
                             <button onclick="location.href='/project/logout'">로그아웃</button>
                             </c:otherwise>
                             </c:choose>
@@ -115,7 +117,6 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="home.do">Home</a></li>
-<!--                                     <li><a href="store.html">Store</a></li>                           -->
                                     <li><a href="store.do">Store</a></li>                          
                                     <li><a href="reviews">Reviews</a></li>
                                     <li><a href="support.html">Support</li>
@@ -126,9 +127,15 @@
 
                         <!-- Nav 소셜미디어 아이콘 -->
                         <div class="top-social-info">
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            	<a href="https://www.facebook.com/GamespotWeb-440364573418626"  target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
+								<i class="fa fa-facebook" aria-hidden="true"></i>
+							</a> 
+							<a href="https://twitter.com/hPKPXzq0fRwNZU3" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+							</a> 
+							<a href="https://instagram.com/game__spot?igshid=1xachyxg6ydfl" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
+								<i class="fa fa-instagram" aria-hidden="true"></i>
+							</a>
                         </div>
                     </nav>
                 </div>
@@ -152,8 +159,8 @@
     </div>
     <!-- ##### Breadcrumb Area End ##### -->
 
-    
-    <!-- ##### Start single-product ##### -->
+    <!-- ##### Game-single Area Start #####-->
+    <c:forEach var="g" items="${singlelist }">
     <div class="main-content">
         <div class="single-product">
             <!-- Container -->
@@ -163,16 +170,14 @@
                     <div class="col-lg-9 col-md-8 product-info">
                         <div class="product-header">
                             <div class="product-header__left">
-                                <h1 class="product-title">
-                                    The Witcher 3
-                                </h1><!-- /.product-title-->
+                                <h1 class="product-title"> ${g.title } </h1>
                             </div>
                             <div class="product-header__right">
                                 <div class="product-nav">
-                                    <a href="" class="left psnav">
+                                    <a href="product_single2.html" class="left psnav">
                                         <i class="fa fa-angle-left"></i>
                                     </a>
-                                    <a href="" class="right psnav">
+                                    <a href="product_single2.html" class="right psnav">
                                         <i class="fa fa-angle-right"></i>
                                     </a>
                                 </div>
@@ -181,17 +186,32 @@
                         <div class="row product-slider">
                             <div class="col-lg-6 col-md-12">
                                 <div class="main_image_product">
-                                    <div class="slider slider-for" style="text-align: center; margin-top: 20px;">
-<!--                                     <div class="slider slider-for" style="text-align: center; margin-top: 20px;"> -->
-                                        <img src="${pageContext.request.contextPath}/resources/img/bg-img/gamesingle1.jpg" alt="">
+                                    <div class="slider slider-for">
+                                        <div><img src="${pageContext.request.contextPath}/resources/image/${g.path }" alt=""></div>
+<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt=""></div> --%>
+<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/47.jpg" alt=""></div> --%>
+<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/48.jpg" alt=""></div> --%>
+<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/49.jpg" alt=""></div> --%>
+<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt=""></div> --%>
+<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt=""></div> --%>
+                                    </div>
+                                    <div class="slider slider-nav">
+                                        <div><img src="${pageContext.request.contextPath}/resources/image/${g.path }" alt=""></div>
+<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt=""></div> --%>
+<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/47.jpg" alt=""></div> --%>
+<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/48.jpg" alt=""></div> --%>
+<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/49.jpg" alt=""></div> --%>
+<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt=""></div> --%>
+<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt=""></div> --%>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="product-caption clearfix">
+                                    <p>${g.info }</p>
                                     <div class="product-price">
                                         <ins>
-                                            <span class="amout">$19.99</span>
+                                            <span class="amout">${g.price }</span>
                                         </ins>
                                         <del>
                                             <span class="amout">$44.45</span>
@@ -211,17 +231,22 @@
                                     <!-- end rating -->
                                     <div class="excerpt">
                                         <ul>
-                                            <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>FREE Shipping
-                                                on orders over $49.</li>
+                                            <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>FREE Shipping on orders over $49.</li>
                                             <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>In Stock.</li>
-                                            <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Gift-wrap
-                                                available.</li>
+                                            <li><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Gift-wrap available.</li>
                                         </ul>
                                     </div>
                                     <div class="form_cart">
+                                        <div class="form_cart__number">
+                                            <span>Quantity :</span>
+                                            <form action="#" class="add-to-cart" method="post" enctype="multipart/form-data">
+                                                <input class="cart-qty-box" type="number" name="qtybutton" value="0">
+                                                <input type="hidden" name="id" value="">
+                                            </form>
+                                        </div>
                                         <div class="container-cart-form-btn">
-                                            <button class="cart-form-btn">
-                                                <i class="fa fa-shopping-basket" aria-hidden="true"></i> Buy Now
+                                            <button class="cart-form-btn" onclick="pur_click();">
+                                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>Add to Cart
                                             </button>
                                         </div>
                                     </div>
@@ -230,14 +255,33 @@
                                         <div class="product_meta">
                                             <div class="posted_in">
                                                 <span>Category:</span>
-                                                <a href="#" rel="tag">Adventure</a>
+                                                <a href="${pageContext.request.contextPath}/categorylist.do?genrename=${g.genrename }" rel="tag">${g.genrename }</a>
                                             </div>
-                                            
+                                            <div class="tagged_as">
+                                                <span>Tags:</span>
+                                                <a href="#" rel="tag">Luxury</a>,
+                                                <a href="#" rel="tag">Skin Care</a>,
+                                                <a href="#" rel="tag">Men's Grooming</a>
+                                                <a href="#" rel="tag">Hair Care</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div><!-- /.product-meta -->
+
+                                    <div class="product_social-sharing">
+                                        <div class="social-icons share-row">
+                                            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                                                <a class="a2a_button_facebook"></a>
+                                                <a class="a2a_button_twitter"></a>
+                                                <a class="a2a_button_google_plus"></a>
+                                                <a class="a2a_button_google_gmail"></a>
+                                                <a class="a2a_button_print"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+     </c:forEach>
                         <!-- product-tab-description -->
                         <div class="product-description-tabs">
                             <ul class="nav">
@@ -246,7 +290,7 @@
                             </ul>
                             <div class="tab-content">
                                 <div id="tab_description" class="tab-pane fade show active">
-                                    For use pre-shaving, soak clean towel with hot water. For post-shaving, use cold
+                                    pre-shaving, soak clean towel with hot water. For post-shaving, use cold
                                     water instead. Ring out excess water and spray towel with the product. Apply to face
                                     for 30 seconds, avoiding eye area. Do not rinse. Product can also be used without a
                                     towel. Spray directly onto face after shaving, avoiding eye area. Do not rinse.
@@ -333,8 +377,7 @@
                                                 veniam, quis nost.</div>
                                         </div>
                                     </div>
-                                    <form class="form-product-review"
-                                        action="http://themes.fuznet.com/punibor/html/v_black/do_action" method="post">
+                                    <form class="form-product-review" action="" method="post">
                                         <h5>ADD YOUR REVIEW</h5>
                                         <div class="form-group">
                                             <label class="control-label">Your Rating</label>
@@ -360,18 +403,18 @@
                                                     value="" size="30" aria-required="true">
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="email" class="control-label">Email
+                                                <label for="email" class="control-label">Password
                                                     <span class="required">*</span>
                                                 </label>
-                                                <input id="email" class="form-control" name="email" type="text" value=""
+                                            
+                                                <input class="form-control" type="password" name="pass" value=""
                                                     size="30" aria-required="true">
+                                                    
                                             </div>
                                             <div class="form-submit col-md-12">
                                                 <input name="submit" type="submit" id="submit" class="btn btn-primary"
                                                     value="Send">
-                                                <input type="hidden" name="comment_post_ID" value=""
-                                                    id="comment_post_ID">
-                                                <input type="hidden" name="comment_parent" id="comment_parent" value="">
+                                                
                                             </div>
                                         </div>
                                     </form>
@@ -390,7 +433,7 @@
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">
-                                            <img src="assets/images/product/product_1.jpg" alt="">
+                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt="">
                                         </a>
                                         <div class="product-content">
                                             <h3 class="product-title">
@@ -415,11 +458,10 @@
                                         </div>
                                     </div>
                                 </li>
-                                
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">
-                                            <img src="assets/images/product/product_8.jpg" alt="">
+                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt="">
                                         </a>
                                         <div class="product-content">
                                             <h3 class="product-title">
@@ -447,7 +489,7 @@
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">
-                                            <img src="assets/images/product/product_9.jpg" alt="">
+                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/47.jpg" alt="">
                                         </a>
                                         <div class="product-content">
                                             <h3 class="product-title">
@@ -475,7 +517,7 @@
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">
-                                            <img src="assets/images/product/product_6.jpg" alt="">
+                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/47.jpg" alt="">
                                         </a>
                                         <div class="product-content">
                                             <h3 class="product-title">
@@ -503,7 +545,119 @@
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">
-                                            <img src="assets/images/product/product_7.jpg" alt="">
+                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/48.jpg" alt="">
+                                        </a>
+                                        <div class="product-content">
+                                            <h3 class="product-title">
+                                                <a href="#">Game 1</a>
+                                            </h3>
+                                            <div class="star-rating">
+                                                <span class="product-rating" data-rating="">
+                                                    <span class="star-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="product-price">
+                                                <ins>
+                                                    <span class="amout">$14.38</span>
+                                                </ins>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <a class="product-thumbnail" href="#">
+                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/49.jpg" alt="">
+                                        </a>
+                                        <div class="product-content">
+                                            <h3 class="product-title">
+                                                <a href="#">Game 1</a>
+                                            </h3>
+                                            <div class="star-rating">
+                                                <span class="product-rating" data-rating="">
+                                                    <span class="star-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="product-price">
+                                                <ins>
+                                                    <span class="amout">$14.38</span>
+                                                </ins>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <a class="product-thumbnail" href="#">
+                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt="">
+                                        </a>
+                                        <div class="product-content">
+                                            <h3 class="product-title">
+                                                <a href="#">Game 1</a>
+                                            </h3>
+                                            <div class="star-rating">
+                                                <span class="product-rating" data-rating="">
+                                                    <span class="star-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="product-price">
+                                                <ins>
+                                                    <span class="amout">$14.38</span>
+                                                </ins>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <a class="product-thumbnail" href="#">
+                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt="">
+                                        </a>
+                                        <div class="product-content">
+                                            <h3 class="product-title">
+                                                <a href="#">Game 1</a>
+                                            </h3>
+                                            <div class="star-rating">
+                                                <span class="product-rating" data-rating="">
+                                                    <span class="star-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="product-price">
+                                                <ins>
+                                                    <span class="amout">$14.38</span>
+                                                </ins>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <a class="product-thumbnail" href="#">
+                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt="">
                                         </a>
                                         <div class="product-content">
                                             <h3 class="product-title">

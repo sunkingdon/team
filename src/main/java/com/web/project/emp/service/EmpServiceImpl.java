@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.web.project.emp.dao.EmpDao;
 import com.web.project.emp.exception.BlankException;
-import com.web.project.emp.exception.EmailMissMachException;
+import com.web.project.emp.exception.EmailMissMatchException;
 import com.web.project.emp.exception.IdNotFoundException;
 import com.web.project.emp.exception.PwMissMatchException;
 import com.web.project.emp.vo.EmpVo;
@@ -42,7 +42,7 @@ public class EmpServiceImpl implements EmpService{
 	}
 	//비밀번호찾기
 	@Override
-	public EmpVo findPw(String id, String email) throws IdNotFoundException, BlankException, EmailMissMachException {
+	public EmpVo findPw(String id, String email) throws IdNotFoundException, BlankException, EmailMissMatchException {
 		// TODO Auto-generated method stub
 		EmpVo vo=empDao.selectList(id);
 		if(id==""||email=="")
@@ -54,7 +54,7 @@ public class EmpServiceImpl implements EmpService{
 			if(vo.getEmail().equals(email)){ //이메일 확인
 				return vo;	
 			}else{
-				throw new EmailMissMachException("이메일이 잘못 입력 되었습니다.");
+				throw new EmailMissMatchException("이메일이 잘못 입력 되었습니다.");
 			}
 		}
 	}

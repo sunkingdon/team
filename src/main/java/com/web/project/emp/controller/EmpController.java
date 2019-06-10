@@ -45,11 +45,7 @@ public class EmpController {
 		return "findPwpopuptest";
 	}
 	
-	//회원정보 페이지 확인용 맵핑
-	@RequestMapping("/userView")
-	public String userView() {
-		return "user";
-	}
+	
 	
 //////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////                		 							       ///////////////////

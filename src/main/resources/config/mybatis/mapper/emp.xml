@@ -20,6 +20,7 @@
 		email
 		from emp where id=#{id}
 	</select>
+<!-- 	추가 -->
 	<insert id="emp_insert" parameterType="com.web.project.emp.vo.EmpVo">
 		insert into emp values(
 		#{id},
