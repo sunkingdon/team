@@ -164,15 +164,15 @@
                         <div class="product-header">
                             <div class="product-header__left">
                                 <h1 class="product-title">
-                                    Adventures Bourne Conspiracy
+                                    The Witcher 3
                                 </h1><!-- /.product-title-->
                             </div>
                             <div class="product-header__right">
                                 <div class="product-nav">
-                                    <a href="product_single2.html" class="left psnav">
+                                    <a href="" class="left psnav">
                                         <i class="fa fa-angle-left"></i>
                                     </a>
-                                    <a href="product_single2.html" class="right psnav">
+                                    <a href="" class="right psnav">
                                         <i class="fa fa-angle-right"></i>
                                     </a>
                                 </div>
@@ -182,13 +182,13 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="main_image_product">
                                     <div class="slider slider-for" style="text-align: center; margin-top: 20px;">
+<!--                                     <div class="slider slider-for" style="text-align: center; margin-top: 20px;"> -->
                                         <img src="${pageContext.request.contextPath}/resources/img/bg-img/gamesingle1.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="product-caption clearfix">
-                                    <p>New shave duo featuring shave tonic & after shave balm shave tonic:</p>
                                     <div class="product-price">
                                         <ins>
                                             <span class="amout">$19.99</span>
@@ -230,8 +230,7 @@
                                         <div class="product_meta">
                                             <div class="posted_in">
                                                 <span>Category:</span>
-                                                <a href="#" rel="tag">Electronics</a>,
-                                                <a href="#" rel="tag">Men's Grooming</a>
+                                                <a href="#" rel="tag">Adventure</a>
                                             </div>
                                             
                                         </div>
@@ -417,62 +416,6 @@
                                     </div>
                                 </li>
                                 
-                                <li>
-                                    <div class="inner">
-                                        <a class="product-thumbnail" href="#">
-                                            <img src="assets/images/product/product_4.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <h3 class="product-title">
-                                                <a href="#">Game 1</a>
-                                            </h3>
-                                            <div class="star-rating">
-                                                <span class="product-rating" data-rating="">
-                                                    <span class="star-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="product-price">
-                                                <ins>
-                                                    <span class="amout">$14.38</span>
-                                                </ins>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inner">
-                                        <a class="product-thumbnail" href="#">
-                                            <img src="assets/images/product/product_5.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <h3 class="product-title">
-                                                <a href="#">Game 1</a>
-                                            </h3>
-                                            <div class="star-rating">
-                                                <span class="product-rating" data-rating="">
-                                                    <span class="star-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="product-price">
-                                                <ins>
-                                                    <span class="amout">$14.38</span>
-                                                </ins>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">

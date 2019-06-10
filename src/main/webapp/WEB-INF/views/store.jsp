@@ -245,7 +245,7 @@
                                     <div class="product-block">
                                         <div class="product-image ">
                                             <div class="product-thumbnail">
-                                                <a href="product_single.html" title="">
+                                                <a href="gamesingle.do" title="">
                                                     <img class="product-featured-image" src="${pageContext.request.contextPath}/resources/img/bg-img/store2.jpg"
                                                         alt="">
                                                 </a>

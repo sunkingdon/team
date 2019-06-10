@@ -89,6 +89,14 @@
                             <button onclick="location.href='/project/logout.do'">Log out</button>
                             </c:otherwise>
                             </c:choose>
+                            <!--
+                            <div class="login-area dropdown">
+                                <a href="signin.html"><span>Welcome, Username</span> <i class="fas fa-user" aria-hidden="true"></i><i class="fa fa-caret-down"></i></a>
+                                <div class="dropdown-content">
+                                    <a href=""><span>정보수정</span><i class="fas fa-user-edit" aria-hidden="true"></i></a>
+                                    <a href=""><span>로그아웃</span><i class="fas fa-sign-out-alt" aria-hidden="true"></i></a>
+                                </div>
+                            </div> -->
                             
                             </div>
                          
