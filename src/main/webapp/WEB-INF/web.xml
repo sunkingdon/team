@@ -43,6 +43,8 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
+	
 <!-- 	세션만료시간 5분 -->
 <session-config>
     <session-timeout>5</session-timeout> 

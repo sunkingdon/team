@@ -15,7 +15,6 @@ public class EmpDao {
 	SqlSession sqlSession;
 
 	public List<EmpVo> selectList(){ //전체 조회
-		System.out.println("33333333333333333Dao");
 		return sqlSession.selectList("emp.emp_list");
 	}
 	public EmpVo selectList(String id) { //조회

@@ -12,7 +12,7 @@
 @import url(css/magnific-popup.css);
 @import url(css/font-awesome.min.css);
 
-/* :: 3.0 기본 CSS */
+/* :: 3.0 湲곕낯 CSS */
 
 * {
   margin: 0;
@@ -179,7 +179,7 @@ img {
   padding-bottom: 70px;
 }
 
-/* :: 3.4.0 Preloader(로딩) */
+/* :: 3.4.0 Preloader(濡쒕뵫) */
 
 .preloader {
   background-color: #333f3f;
@@ -366,7 +366,7 @@ img {
   color: #ffffff;
 }
 
-/* :: 4.0 Header 영역 CSS */
+/* :: 4.0 Header �쁺�뿭 CSS */
 
 .header-area {
   position: relative;
@@ -587,7 +587,7 @@ img {
   box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* :: 5.0 Hero 영역 CSS */
+/* :: 5.0 Hero �쁺�뿭 CSS */
 
 .hero-area {
   position: relative;
@@ -691,7 +691,7 @@ img {
   }
 }
 
-/* :: 6.0 Games 영역 CSS */
+/* :: 6.0 Games �쁺�뿭 CSS */
 
 .pagination .page-item .page-link {
   background-color: transparent;
@@ -715,7 +715,7 @@ img {
   color: #8ab839;
 }
 
-/* :: 7.0 Footer 영역 CSS */
+/* :: 7.0 Footer �쁺�뿭 CSS */
 .footer-area {
   position: relative;
   z-index: 1;
@@ -1411,6 +1411,10 @@ img {
   }
 }
 
+.single-games-slide > img {
+  height : 400px;
+}
+
 .left-right-pattern {
   position: relative;
   z-index: 6000;
@@ -1468,7 +1472,7 @@ img {
   }
 }
 
-/* :: 10.0 Video 영역 CSS */
+/* :: 10.0 Video �쁺�뿭 CSS */
 .gamespot-video-area {
   position: relative;
   z-index: 1;
@@ -1544,7 +1548,7 @@ img {
   background-color: #8ab839;
 }
 
-/* :: 11.0 Game Review 영역 CSS */
+/* :: 11.0 Game Review �쁺�뿭 CSS */
 .single-game-review-area {
   position: relative;
   z-index: 1;
