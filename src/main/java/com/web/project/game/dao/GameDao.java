@@ -33,6 +33,10 @@ public class GameDao {
 	}
 
 	public List<GameVo> singleList(String title) {
-		return sqlSession.selectOne("game.singleSelect", title);
+		return sqlSession.selectList("game.singleSelect", title);
+	}
+	
+	public List<GameVo> mainList() {
+		return sqlSession.selectList("game.mainSelect");
 	}
 }

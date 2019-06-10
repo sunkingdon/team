@@ -43,7 +43,12 @@ public class GameServiceImpl implements GameService{
 		return gameDao.popularList();
 	}
 
+	@Override
 	public List<GameVo> singleList(String title) {
 		return gameDao.singleList(title);
+	}
+	@Override
+	public List<GameVo> mainList() {
+		return gameDao.mainList();
 	}
 }

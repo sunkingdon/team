@@ -129,7 +129,7 @@
 							<div class="classynav">
 								<ul>
 									<li><a href="home.do">Home</a></li>
-									<!--                                     <li><a href="store.html">Store</a></li>                           -->
+									<!-- <li><a href="store.html">Store</a></li>                           -->
 									<li><a href="store.do">Store</a></li>
 									<li><a href="reviews">Reviews</a></li>
 									<li><a href="support.html">Support</li>
@@ -140,13 +140,15 @@
 
 						<!-- Nav 소셜미디어 아이콘 -->
 						<div class="top-social-info">
-							<a href="#" data-toggle="tooltip" data-placement="top"
-								title="Facebook"><i class="fa fa-facebook"
-								aria-hidden="true"></i></a> <a href="#" data-toggle="tooltip"
-								data-placement="top" title="Twitter"><i
-								class="fa fa-twitter" aria-hidden="true"></i></a> <a href="#"
-								data-toggle="tooltip" data-placement="top" title="Instagram"><i
-								class="fa fa-instagram" aria-hidden="true"></i></a>
+								<a href="https://www.facebook.com/GamespotWeb-440364573418626"  target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
+								<i class="fa fa-facebook" aria-hidden="true"></i>
+							</a> 
+							<a href="https://twitter.com/hPKPXzq0fRwNZU3" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+							</a> 
+							<a href="https://instagram.com/game__spot?igshid=1xachyxg6ydfl" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
+								<i class="fa fa-instagram" aria-hidden="true"></i>
+							</a>
 						</div>
 					</nav>
 				</div>
@@ -219,8 +221,8 @@
 								href="#grid-view" role="tab" data-toggle="tab"> <i
 									class="fa fa-th"></i>
 							</a></li>
-							<li class="nav-item"><a class="nav-link" href="#list-view"
-								role="tab" data-toggle="tab"> <i class="fa fa-list-ul"></i>
+							<li class="nav-item"><a class="nav-link" href="#list-view" role="tab" data-toggle="tab"> 
+								<i class="fa fa-list-ul"></i>
 							</a></li>
 						</ul>
 					</div>
@@ -238,17 +240,15 @@
 										<div class="product-block">
 											<div class="product-image ">
 												<div class="product-thumbnail">
-													<a href="product_single.html" title=""> <img
-														class="product-featured-image"
-														src="${pageContext.request.contextPath}/resources/image/${g.path}"
-														alt="">
+													<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title=""> 
+														<img class="product-featured-image" src="${pageContext.request.contextPath}/resources/image/${g.path}" alt="">
 													</a>
 												</div>
 											</div>
 											<div class="product-caption">
 												<span class="posted_in"><a href="#" rel="tag">${g.genrename }</a></span>
 												<h4 class="product-title">
-													<a href="gamesingle.do" title="">${g.title }</a>
+													<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title="">${g.title }</a>
 												</h4>
 												<div class="product-form-cart">
 													<div class="product-price">
@@ -281,10 +281,8 @@
 											<div class="col-lg-4 col-md-12 col-sm-12">
 												<figure class="product-image">
 													<div class="product-thumbnail">
-														<a href="#" title=""> <img
-															class="product-featured-image"
-															src="${pageContext.request.contextPath}/resources/image/${g.path }"
-															alt="">
+														<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title=""> 
+															<img class="product-featured-image" src="${pageContext.request.contextPath}/resources/image/${g.path }" alt="">
 														</a>
 													</div>
 												</figure>
@@ -295,7 +293,7 @@
 													<span class="posted_in"><a href="#" rel="tag">${g.genrename }</a></span>
 													<div class="product-meta">
 														<h4 class="product-name">
-															<a href="product_single.html" title="">${g.title }</a>
+															<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title="">${g.title }</a>
 														</h4>
 														<div class="product-price">
 															<ins>
@@ -342,14 +340,14 @@
 							categories</h3>
 						<div class="widget-content">
 							<ul class="list-categories list-widget">
-								<li><a class="genre" href="#">Action</a></li>
-								<li><a class="genre" href="#">Adventure</a></li>
-								<li><a class="genre" href="#">Casual</a></li>
-								<li><a class="genre" href="#">Racing</a></li>
-								<li><a class="genre" href="#">Rhythm</a></li>
-								<li><a class="genre" href="#">Simulation</a></li>
-								<li><a class="genre" href="#">Sports</a></li>
-								<li><a class="genre" href="#">Strategy</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=액션">Action</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=어드벤쳐">Adventure</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=캐쥬얼">Casual</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=레이싱">Racing</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=리듬">Rhythm</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=시뮬레이션">Simulation</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=스포츠">Sports</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=전략">Strategy</a></li>
 							</ul>
 						</div>
 					</section>

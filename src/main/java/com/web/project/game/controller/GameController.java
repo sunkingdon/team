@@ -28,8 +28,10 @@ public class GameController {
 	// 메인 페이지 
 	@RequestMapping(value= {"/", "home.do"})
 	public String home(Model m) {
+		List<GameVo> mainlist = gameService.mainList();
 		List<GameVo> latestlist = gameService.recentList();
 		List<GameVo> popularlist = gameService.popularList();
+		m.addAttribute("mainlist", mainlist);
 		m.addAttribute("latestList", latestlist);
 		m.addAttribute("popularList", popularlist);
 		return "home";
@@ -46,6 +48,7 @@ public class GameController {
 	// 게임 상세 페이지
 	@RequestMapping("/gamesingle.do")
 	public String single(String title, Model m) {
+		System.out.println("title : " + title);
 		List<GameVo> singleList = gameService.singleList(title);
 		m.addAttribute("singlelist",singleList);
 		return "gameSingle";

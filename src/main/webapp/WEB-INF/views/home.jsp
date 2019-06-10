@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="kr">
 
@@ -39,7 +40,7 @@
 					<div class="col-12 d-flex align-items-center justify-content-between">
 						<!-- Logo 영역 -->
 						<div class="logo">
-							<a href="home.do">
+							<a href="../home.do">
 								<img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt="gamespot">
 							</a>
 						</div>
@@ -60,12 +61,11 @@
 								<!-- login session -->
 								<c:choose>
 									<c:when test="${sessionScope.id eq null }">
-										<a href="loginView"><span>Login / Register</span> <i
-											class="fa fa-lock" aria-hidden="true"></i></a>
+										<a href="loginView"><span>Login / Register</span><i class="fa fa-lock" aria-hidden="true"></i></a>
 									</c:when>
 									<c:otherwise>
 										<a href="/project/myInfo.do?id=${sessionScope.id }">${sessionScope.name } 접속중</a>
-										<button onclick="location.href='/project/logout.do'">로그아웃</button>
+										<button onclick="location.href='/project/logout.do'" class="btn">로그아웃</button>
 									</c:otherwise>
 								</c:choose>
 							</div>
@@ -81,27 +81,22 @@
 				<div class="container">
 					<!-- Menu -->
 					<nav class="classy-navbar justify-content-between" id="gamespotNav">
-
 						<!-- Navbar Toggler(모바일 화면시) -->
 						<div class="classy-navbar-toggler">
 							<span class="navbarToggler"><span></span><span></span><span></span></span>
 						</div>
-
 						<!-- Menu -->
 						<div class="classy-menu">
-
 							<!-- Close Button -->
 							<div class="classycloseIcon">
 								<div class="cross-wrap">
 									<span class="top"></span><span class="bottom"></span>
 								</div>
 							</div>
-
 							<!-- Nav Start -->
 							<div class="classynav">
 								<ul>
 									<li><a href="home.do">Home</a></li>
-									<!-- <li><a href="store.html">Store</a></li>  -->
 									<li><a href="store.do">Store</a></li>
 									<li><a href="reviews">Reviews</a></li>
 									<li><a href="support.html">Support</li>
@@ -112,13 +107,13 @@
 
 						<!-- Nav 소셜미디어 아이콘 -->
 						<div class="top-social-info">
-							<a href="#" data-toggle="tooltip" data-placement="top" title="Facebook">
+							<a href="https://www.facebook.com/GamespotWeb-440364573418626"  target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
 								<i class="fa fa-facebook" aria-hidden="true"></i>
 							</a> 
-							<a href="#" data-toggle="tooltip" data-placement="top" title="Twitter">
+							<a href="https://twitter.com/hPKPXzq0fRwNZU3" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
 								<i class="fa fa-twitter" aria-hidden="true"></i>
 							</a> 
-							<a href="#" data-toggle="tooltip" data-placement="top" title="Instagram">
+							<a href="https://instagram.com/game__spot?igshid=1xachyxg6ydfl" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
 								<i class="fa fa-instagram" aria-hidden="true"></i>
 							</a>
 						</div>
@@ -133,64 +128,21 @@
 	<div class="hero-area">
 		<!-- Hero Post Slides -->
 		<div class="hero-post-slides owl-carousel">
-
-			<!-- Single Slide -->
-			<div class="single-slide bg-img bg-overlay"
-				style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/1.jpg);">
+		<c:forEach var="g" items="${mainlist }">
+			<div class="single-slide bg-img bg-overlay" style="background-image: url(../resources/image/${g.path });">
 				<!-- Blog Content -->
 				<div class="container h-100">
 					<div class="row h-100 align-items-center">
 						<div class="col-12 col-lg-9">
 							<div class="blog-content" data-animation="fadeInUp" data-delay="100ms">
-								<h2 data-animation="fadeInUp" data-delay="400ms">Fortnite</h2>
-								<p data-animation="fadeInUp" data-delay="700ms">
-								Fortnite Battle Royale is the FREE 100-player PvP mode in Fortnite. One giant map. A battle bus. Fortnite building skills and destructible environments combined with intense PvP combat. 
-								The last one standing wins. Available on PC, PlayStation 4, Xbox One, Nintendo Switch, Android, iOS & Mac. 
-								This download also allows you to purchase Save the World co-op PVE campaign during Early Access. 
-								Join up to 3 players and lead the world's remaining heroes in a battle to save the world. Created by Epic Games
-								</p>
+								<h2 data-animation="fadeInUp" data-delay="400ms">${g.title }</h2>
+								<p data-animation="fadeInUp" data-delay="700ms">${g.info }</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<!-- Single Slide -->
-			<div class="single-slide bg-img bg-overlay"
-				style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/2.jpg);">
-				<!-- Blog Content -->
-				<div class="container h-100">
-					<div class="row h-100 align-items-center">
-						<div class="col-12 col-lg-9">
-							<div class="blog-content" data-animation="fadeInUp" data-delay="100ms">
-								<h2 data-animation="fadeInUp" data-delay="400ms">Gta 5</h2>
-								<p data-animation="fadeInUp" data-delay="700ms">
-								Los Santos: a sprawling sun-soaked metropolis full of self-help gurus, starlets and fading celebrities, 
-								once the envy of the Western world, now struggling to stay afloat in an era of economic uncertainty and cheap reality TV.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Single Slide -->
-			<div class="single-slide bg-img bg-overlay"
-				style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/3.jpg);">
-				<!-- Blog Content -->
-				<div class="container h-100">
-					<div class="row h-100 align-items-center">
-						<div class="col-12 col-lg-9">
-							<div class="blog-content" data-animation="fadeInUp" data-delay="100ms">
-								<h2 data-animation="fadeInUp" data-delay="400ms">Far Cry 5</h2>
-								<p data-animation="fadeInUp" data-delay="700ms">
-								Welcome to Hope County, Montana, home to a fanatical doomsday cult known as Eden’s Gate. 
-								Stand up to cult leader Joseph Seed & his siblings, the Heralds, 
-								to spark the fires of resistance & liberate the besieged community.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+		</c:forEach>
 		</div>
 	</div>
 	<!-- ##### Hero Area End ##### -->
@@ -364,10 +316,10 @@
 				<div class="col-12 col-md-6 col-lg-8">
 					<div class="tab-content" id="video-tabContent">
 						<div class="tab-pane fade show active" id="video-1" role="tabpanel" aria-labelledby="video1">
-							<div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/45.jpg);">
+							<div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/image/;">
 								<!-- Play Button -->
 								<div class="play-btn">
-									<a href="https://www.youtube.com/watch?v=K0u_kAWLJOA" class="play-button">
+									<a href="https://www.youtube.com/watch?v=QkkoHAzjnUs" class="play-button">
 										<img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt="">
 									</a>
 								</div>
@@ -492,7 +444,7 @@
 							</div>
 						</div>
 					</div>
-
+					
 					<!-- Single Footer Widget -->
 					<div class="col-12 col-sm-6 col-lg-3">
 						<div class="single-footer-widget mb-70 wow fadeInUp"
@@ -521,13 +473,11 @@
 							</div>
 							<div class="widget-content">
 								<nav>
+								<c:forEach var="g" items="${latestList }">
 									<ul>
-										<li><a href="#">Doom</a></li>
-										<li><a href="#">Grand Theft Auto</a></li>
-										<li><a href="#">Bloodborne</a></li>
-										<li><a href="#">God of war</a></li>
-										<li><a href="#">Persona 5</a></li>
+										<li><a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }">${g.title }</a></li>
 									</ul>
+								</c:forEach>
 								</nav>
 							</div>
 						</div>

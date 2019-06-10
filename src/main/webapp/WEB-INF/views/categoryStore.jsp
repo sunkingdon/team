@@ -313,32 +313,16 @@
                     <section class="widget widget-categories-cat">
                         <h3 class="widget-title widget-title__large">Store all categories</h3>
                         <div class="widget-content">
-                            <ul class="list-categories list-widget">
-                                <li>
-                                    <a class="genre" href="#">Action</a>
-                                </li>
-                                <li>
-                                    <a class="genre" href="#">Adventure</a>
-                                </li>
-                                <li>
-                                    <a class="genre" href="#">Casual</a>
-                                </li>
-                                <li>
-                                    <a class="genre" href="#">Racing</a>
-                                </li>
-                                <li>
-                                    <a class="genre" href="#">Rhythm</a>
-                                </li>
-                                <li>
-                                    <a class="genre" href="#">Simulation</a>
-                                </li>
-                                <li>
-                                    <a class="genre" href="#">Sports</a>
-                                </li>
-                                <li>
-                                    <a class="genre" href="#">Strategy</a>
-                                </li>
-                            </ul>
+                       		<ul class="list-categories list-widget">
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=액션">Action</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=어드벤쳐">Adventure</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=캐쥬얼">Casual</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=레이싱">Racing</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=리듬">Rhythm</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=시뮬레이션">Simulation</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=스포츠">Sports</a></li>
+								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=전략">Strategy</a></li>
+							</ul>
                         </div>
                     </section>
                     <!-- /Categories -->
