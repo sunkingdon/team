@@ -1,0 +1,142 @@
+
+
+img {
+    border: 0;
+}
+
+button {
+    color: inherit;
+    /* 1 */
+    
+    font: inherit;
+    /* 2 */
+    
+    margin: 0;
+    /* 3 */
+}
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+    overflow: visible;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button{
+    text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button{
+    -webkit-appearance: button;
+    /* 2 */
+    
+    cursor: pointer;
+    /* 3 */
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled]{
+    cursor: default;
+}
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td,
+th {
+    padding: 0;
+}
+
+
+table,
+th,
+td {
+    border: none;
+}
+table {
+    width: 100%;
+    display: table;
+}
+table.bordered > thead > tr,
+table.bordered > tbody > tr {
+    border-bottom: 1px solid #d0d0d0;
+}
+table.striped > tbody > tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+table.striped > tbody > tr > td {
+    border-radius: 0;
+}
+table.highlight > tbody > tr {
+    transition: background-color .25s ease;
+}
+table.highlight > tbody > tr:hover {
+    background-color: #f2f2f2;
+}
+table.centered thead tr th,
+table.centered tbody tr td {
+    text-align: center;
+}
+thead {
+    border-bottom: 1px solid #d0d0d0;
+}
+td,
+th {
+    padding: 15px 5px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+.btn-large{
+    font-size: 12px;
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 13px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: .5px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    background: #545454;
+}
+
+.btn-large:hover {
+    background: #8ab839;
+}

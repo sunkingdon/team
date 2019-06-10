@@ -237,16 +237,9 @@
                                         </ul>
                                     </div>
                                     <div class="form_cart">
-                                        <div class="form_cart__number">
-                                            <span>Quantity :</span>
-                                            <form action="#" class="add-to-cart" method="post" enctype="multipart/form-data">
-                                                <input class="cart-qty-box" type="number" name="qtybutton" value="0">
-                                                <input type="hidden" name="id" value="">
-                                            </form>
-                                        </div>
                                         <div class="container-cart-form-btn">
                                             <button class="cart-form-btn" onclick="pur_click();">
-                                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>Add to Cart
+                                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>Buy Now
                                             </button>
                                         </div>
                                     </div>
@@ -256,25 +249,6 @@
                                             <div class="posted_in">
                                                 <span>Category:</span>
                                                 <a href="${pageContext.request.contextPath}/categorylist.do?genrename=${g.genrename }" rel="tag">${g.genrename }</a>
-                                            </div>
-                                            <div class="tagged_as">
-                                                <span>Tags:</span>
-                                                <a href="#" rel="tag">Luxury</a>,
-                                                <a href="#" rel="tag">Skin Care</a>,
-                                                <a href="#" rel="tag">Men's Grooming</a>
-                                                <a href="#" rel="tag">Hair Care</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="product_social-sharing">
-                                        <div class="social-icons share-row">
-                                            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                                                <a class="a2a_button_facebook"></a>
-                                                <a class="a2a_button_twitter"></a>
-                                                <a class="a2a_button_google_plus"></a>
-                                                <a class="a2a_button_google_gmail"></a>
-                                                <a class="a2a_button_print"></a>
                                             </div>
                                         </div>
                                     </div>

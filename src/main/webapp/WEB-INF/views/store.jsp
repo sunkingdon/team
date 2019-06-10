@@ -44,16 +44,16 @@
 </head>
 
 <body>
-	<!-- Preloader (로딩 애니메이션)-->
-	<div class="preloader d-flex align-items-center justify-content-center">
-		<div class="spinner">
-			<div class="bounce1"></div>
-			<div class="bounce2"></div>
-			<div class="bounce3"></div>
-		</div>
-	</div>
 
-<<<<<<< HEAD
+    <!-- Preloader (로딩 애니메이션)-->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
     <!-- ##### Header 영역 시작 ##### -->
     <header class="header-area wow fadeInDown" data-wow-delay="500ms">
         <!-- Header 상단 영역 -->
@@ -77,16 +77,26 @@
                             </div>
                             <!-- Login 영역 -->
                             <div class="login-area">
-                              
+                            
 							<!-- login session -->
                             <c:choose>
                             <c:when test="${sessionScope.id eq null }">
                                 <a href="loginView"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
                             </c:when>
-                            <c:otherwise><a href="/project/myInfo.do?id=${sessionScope.id }">${sessionScope.name } 접속중</a>
-                            <button onclick="location.href='/project/logout'">로그아웃</button>
+                            
+                            <c:otherwise><a href="/project/myInfo.do?id=${sessionScope.id }"><span>Welcome, ${sessionScope.name }</span><i class="fa fa-user" aria-hidden="true"></i> </a>
+                            <button onclick="location.href='/project/logout.do'">Log out</button>
                             </c:otherwise>
                             </c:choose>
+                            <!--
+                            <div class="login-area dropdown">
+                                <a href="signin.html"><span>Welcome, Username</span> <i class="fas fa-user" aria-hidden="true"></i><i class="fa fa-caret-down"></i></a>
+                                <div class="dropdown-content">
+                                    <a href=""><span>정보수정</span><i class="fas fa-user-edit" aria-hidden="true"></i></a>
+                                    <a href=""><span>로그아웃</span><i class="fas fa-sign-out-alt" aria-hidden="true"></i></a>
+                                </div>
+                            </div> -->
+                            
                             </div>
                          
                         </div>
@@ -94,111 +104,52 @@
                 </div>
             </div>
         </div>
-=======
-	<!-- ##### Header 영역 시작 ##### -->
-	<header class="header-area wow fadeInDown" data-wow-delay="500ms">
-		<!-- Header 상단 영역 -->
-		<div class="top-header-area">
-			<div class="container h-100">
-				<div class="row h-100 align-items-center">
-					<div
-						class="col-12 d-flex align-items-center justify-content-between">
-						<!-- Logo 영역 -->
-						<div class="logo">
-							<a href="home.do"><img
-								src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png"
-								alt="gamespot"></a>
-						</div>
->>>>>>> branch 'master' of https://github.com/sunkingdon/team.git
 
-						<!-- Search & Login 영역 -->
-						<div class="search-login-area d-flex align-items-center">
-							<!-- 상단 Search 영역 -->
-							<div class="top-search-area">
-								<form action="#" method="post">
-									<input type="search" name="top-search" id="topSearch"
-										placeholder="Search">
-									<button type="submit" class="btn">
-										<i class="fa fa-search"></i>
-									</button>
-								</form>
-							</div>
-							<!-- Login 영역 -->
-							<div class="login-area">
+        <!-- Navbar 영역 -->
+        <div class="gamespot-main-menu" id="sticker">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="gamespotNav">
 
-								<!-- login session -->
-								<c:choose>
-									<c:when test="${sessionScope.id eq null }">
-										<a href="loginView"><span>Login / Register</span> <i
-											class="fa fa-lock" aria-hidden="true"></i></a>
-									</c:when>
-									<c:otherwise>
-										<a href="/project/myInfo?id=${sessionScope.id }">${sessionScope.name }
-											접속중</a>
-										<button onclick="location.href='/project/logout'">로그아웃</button>
-									</c:otherwise>
-								</c:choose>
-							</div>
+                        <!-- Navbar Toggler(모바일 화면시) -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                        <!-- Menu -->
+                        <div class="classy-menu">
 
-		<!-- Navbar 영역 -->
-		<div class="gamespot-main-menu" id="sticker">
-			<div class="classy-nav-container breakpoint-off">
-				<div class="container">
-					<!-- Menu -->
-					<nav class="classy-navbar justify-content-between" id="gamespotNav">
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
 
-						<!-- Navbar Toggler(모바일 화면시) -->
-						<div class="classy-navbar-toggler">
-							<span class="navbarToggler"><span></span><span></span><span></span></span>
-						</div>
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="home.do">Home</a></li>
+<!--                                     <li><a href="store.html">Store</a></li>                           -->
+                                    <li><a href="store.do">Store</a></li>                          
+                                    <li><a href="reviews">Reviews</a></li>
+                                    <li><a href="support.html">Support</li>
+                                </ul>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
 
-						<!-- Menu -->
-						<div class="classy-menu">
-
-							<!-- Close Button -->
-							<div class="classycloseIcon">
-								<div class="cross-wrap">
-									<span class="top"></span><span class="bottom"></span>
-								</div>
-							</div>
-
-							<!-- Nav Start -->
-							<div class="classynav">
-								<ul>
-									<li><a href="home.do">Home</a></li>
-									<!-- <li><a href="store.html">Store</a></li>                           -->
-									<li><a href="store.do">Store</a></li>
-									<li><a href="reviews">Reviews</a></li>
-									<li><a href="support.html">Support</li>
-								</ul>
-							</div>
-							<!-- Nav End -->
-						</div>
-
-						<!-- Nav 소셜미디어 아이콘 -->
-						<div class="top-social-info">
-								<a href="https://www.facebook.com/GamespotWeb-440364573418626"  target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
-								<i class="fa fa-facebook" aria-hidden="true"></i>
-							</a> 
-							<a href="https://twitter.com/hPKPXzq0fRwNZU3" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
-								<i class="fa fa-twitter" aria-hidden="true"></i>
-							</a> 
-							<a href="https://instagram.com/game__spot?igshid=1xachyxg6ydfl" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
-								<i class="fa fa-instagram" aria-hidden="true"></i>
-							</a>
-						</div>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
-	<!-- ##### Header Area End ##### -->
+                        <!-- Nav 소셜미디어 아이콘 -->
+                        <div class="top-social-info">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
 
 	<!-- ##### Breadcrumb Area Start ##### -->
 	<div class="breadcrumb-area bg-img bg-overlay"
@@ -217,36 +168,8 @@
 	<!-- ##### Breadcrumb Area End ##### -->
 
 	<!-- #### Store Area Start #### -->
+                                       
 
-<<<<<<< HEAD
-                                        </div>
-                                        <div class="product-caption">
-                                            <span class="posted_in"><a href="#" rel="tag">Strategy</a></span>
-                                            <h4 class="product-title">
-                                                <a href="gamesingle.do" title="">Total War: THREE KINGDOMS</a>
-                                            </h4>
-                                            <div class="product-form-cart">
-                                                <div class="product-price">
-                                                    <ins>
-                                                        <span class="amout">$58.00</span>
-                                                    </ins>
-                                                </div>
-                                                <a href="product_single.html" class="add_to_cart_button">
-                                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="product-block">
-                                        <div class="product-image ">
-                                            <div class="product-thumbnail">
-                                                <a href="gamesingle.do" title="">
-                                                    <img class="product-featured-image" src="${pageContext.request.contextPath}/resources/img/bg-img/store2.jpg"
-                                                        alt="">
-                                                </a>
-                                            </div>
-=======
 	<!-- Container -->
 	<div class="store-container">
 		<div class="row flex-row-reverse">
@@ -263,7 +186,7 @@
 							<option value="price-desc">high to low</option>
 						</select>
 					</div>
->>>>>>> refs/remotes/origin/master
+
 
 					<div class="toolbar-sorter">
 						<span>Genre : </span> <select name="orderby" class="orderby">
