@@ -13,10 +13,15 @@ public class ReviewController {
 		return "reviews";
 	}
 		
-		@RequestMapping("/reviewSingle")
-		public String selectReview(Model m) {
-			//List<GameVo> list = gameService.selectList();
-			//m.addAttribute("list",list);
-			return "review-single";
+	@RequestMapping("/reviewSingle")
+	public String singleView(Model m) {
+		return "reviewSingle";
 	}
+	
+	@RequestMapping("/writeReview")
+	public String writeView(Model m) {
+		return "writeReview";
+	}
+		
+		
 }
