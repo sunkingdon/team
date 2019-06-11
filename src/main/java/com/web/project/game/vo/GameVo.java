@@ -1,11 +1,13 @@
 package com.web.project.game.vo;
 
 public class GameVo {
+	// ItemVo
 	private int itemno;
 	private String title;
 	private String info;
 	private int price;
 	private String regdate;
+	private String link;
 	
 	public int getItemno() {
 		return itemno;
@@ -37,8 +39,14 @@ public class GameVo {
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
 	}
+	public String getLink() {
+		return link;
+	}
+	public void setLink(String link) {
+		this.link = link;
+	}
 	
-	// 카테고리 Vo
+	// CategoryVo
 	private String genrename;
 	private int genreno;
 	
@@ -55,7 +63,7 @@ public class GameVo {
 		this.genreno = genreno;
 	}
 	
-	// 이미지 Vo
+	// ImageVo
 	private int imgno;
 	private String path;
 	

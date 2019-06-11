@@ -43,6 +43,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         ORDER BY amount DESC)
         WHERE rownum BETWEEN 1 AND 8
 	</select>
+	
+	<select id="highSelect" resultType="com.web.project.game.vo.GameVo">
+		SELECT * FROM (SELECT i.path AS path, g.title AS title,g.price AS price, g.link AS link, c.genrename AS genrename
+		FROM item g, category c, image i
+        WHERE i.imgno=g.imgno AND c.genreno=g.genreno
+        ORDER BY price DESC)
+        WHERE rownum BETWEEN 1 AND 8
+	</select>
 
 </mapper>
 

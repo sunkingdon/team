@@ -1,19 +1,15 @@
 package com.web.project.emp.controller;
 
 import javax.servlet.http.Cookie;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-
 import org.springframework.web.bind.annotation.RequestMapping;
-
-
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.web.project.emp.service.EmpService;
 import com.web.project.emp.vo.EmpVo;
@@ -73,16 +69,14 @@ public class EmpController {
 					cookie.setMaxAge(60 * 60 * 24 * 7); // ��Ű 7�� ����
 				}
 				resp.addCookie(cookie);
-				///////////////////////////
 				return "home";
 			}
 
-		} catch (Exception e) { // EmpService���� ó���� Exception
+		} catch (Exception e) { 
 			req.setAttribute("message", e.getMessage());
 		}
 		return "login";
 	}
-	//��й�ȣ ã��
 	@RequestMapping("/findPw.do")
 	public String findPw(EmpVo empVo,Model m,HttpServletRequest req) {
 		try {
@@ -97,44 +91,38 @@ public class EmpController {
 		}
 		return "findPwpopuptest";
 	}
-	// �α׾ƿ�
 	@RequestMapping("/logout.do")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "home";
+		return "redirect:/home.do";
 	}
 
-	// ��ü ��ȸ
 	@RequestMapping("/list.do")
 	public String list(Model m) {
 		m.addAttribute("list", empService.selectList());
 		return "resulttest";
 	}
 
-	// ���� ���� ��ȸ
 	@RequestMapping("/myInfo.do")
 	public String myInfo(String id, Model m) {
 		m.addAttribute("empVo", empService.selectList(id));
 		return "myPagetest";
 	}
-	//ȸ������
 	@RequestMapping("/signUp.do")
 	public String signUp(EmpVo empVo,HttpServletRequest req) {
 	
 		empService.insert(empVo);
 		return "login";
 	}
-	//ȸ������
-	@RequestMapping("/update.do")
+	@RequestMapping(value = "/update.do", method = RequestMethod.POST)
 	public String update(EmpVo empVo) {
 		empService.update(empVo);
-		return "home";
+		return "redirect:/home.do";
 	}
-	//Ż��
 	@RequestMapping("/delete.do")
 	public String delete(EmpVo empVo,HttpSession session) {
 		empService.delete(empVo);
 		session.invalidate();
-		return "home";
+		return "redirect:/home.do";
 	}
 }

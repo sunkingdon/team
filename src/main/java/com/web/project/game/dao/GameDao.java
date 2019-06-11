@@ -39,4 +39,8 @@ public class GameDao {
 	public List<GameVo> mainList() {
 		return sqlSession.selectList("game.mainSelect");
 	}
+	
+	public List<GameVo> highList() {
+		return sqlSession.selectList("game.highSelect");
+	}
 }

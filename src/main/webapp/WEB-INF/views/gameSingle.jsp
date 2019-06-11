@@ -15,19 +15,15 @@
 
     <!-- Favicon (브라우저 탭에 로고 노출) -->
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/img/core-img/favicon.ico">
-
     <!-- font-awesome CSS -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/fonts/font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/fonts/iconic/css/material-design-iconic-font.min.css">
     <!-- animate CSS -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/animate.css">
-
     <!-- slick CSS -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/slick.css">
-
     <!--magnific-popup CSS -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/magnific-popup.css">
-
     <!-- Stylesheet(css파일 따로 작성, 임포트 해서 적용.) -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/style.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/game-single.css">
@@ -50,7 +46,7 @@
         </div>
     </div>
 
-    <!-- ##### Header 영역 시작 ##### -->
+    <!-- Header 영역 시작 -->
     <header class="header-area wow fadeInDown" data-wow-delay="500ms">
         <!-- Header 상단 영역 -->
         <div class="top-header-area">
@@ -142,10 +138,10 @@
             </div>
         </div>
     </header>
-    <!-- ##### Header Area End ##### -->
+    <!--  Header Area End  -->
     
-    <!-- ##### Breadcrumb Area Start ##### -->
-    <div class="breadcrumb-area bg-img bg-overlay" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/27.jpg);">
+    <!--  Breadcrumb Area Start  -->
+    <div class="breadcrumb-area bg-img bg-overlay" style="background-image: url(${pageContext.request.contextPath}/resources/image1/Call of Duty 4.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <!-- Breadcrumb Text -->
@@ -157,9 +153,9 @@
             </div>
         </div>
     </div>
-    <!-- ##### Breadcrumb Area End ##### -->
+    <!--  Breadcrumb Area End  -->
 
-    <!-- ##### Game-single Area Start #####-->
+    <!--  Game-single Area Start -->
     <c:forEach var="g" items="${singlelist }">
     <div class="main-content">
         <div class="single-product">
@@ -187,36 +183,19 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="main_image_product">
                                     <div class="slider slider-for">
+                                        <div><img src="${pageContext.request.contextPath}/resources/image2/${g.path }" alt=""></div>
+                                        <div><img src="${pageContext.request.contextPath}/resources/image1/${g.path }" alt=""></div>
                                         <div><img src="${pageContext.request.contextPath}/resources/image/${g.path }" alt=""></div>
-<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt=""></div> --%>
-<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/47.jpg" alt=""></div> --%>
-<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/48.jpg" alt=""></div> --%>
-<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/49.jpg" alt=""></div> --%>
-<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt=""></div> --%>
-<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt=""></div> --%>
-                                    </div>
-                                    <div class="slider slider-nav">
-                                        <div><img src="${pageContext.request.contextPath}/resources/image/${g.path }" alt=""></div>
-<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt=""></div> --%>
-<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/47.jpg" alt=""></div> --%>
-<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/48.jpg" alt=""></div> --%>
-<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/49.jpg" alt=""></div> --%>
-<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt=""></div> --%>
-<%--                                         <div><img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt=""></div> --%>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="product-caption clearfix">
-                                    <p>${g.info }</p>
                                     <div class="product-price">
                                         <ins>
                                             <span class="amout">${g.price }</span>
                                         </ins>
-                                        <del>
-                                            <span class="amout">$44.45</span>
-                                        </del>
-                                    </div><!-- /.product-price -->
+                                    </div>
 
                                     <div class="product-rating" data-rating="">
                                         <span class="star-rating">
@@ -342,15 +321,16 @@
                                                 </div>
                                             </div>
 
-                                            <div class="reviews_content clearfix">Lorem ipsum dolor sit amet,
-                                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                                                et dolore magna aliqua. Utenim ad minim veniam, quis nost rud
+                                            <div class="reviews_content clearfix">
+                                            	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                                            	incididunt ut laboreet dolore magna aliqua. Utenim ad minim veniam, quis nost rud
                                                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                 tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim
                                                 veniam, quis nost.</div>
                                         </div>
                                     </div>
+                                    
                                     <form class="form-product-review" action="" method="post">
                                         <h5>ADD YOUR REVIEW</h5>
                                         <div class="form-group">
@@ -365,29 +345,25 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label" for="comment">Your Review</label>
-                                            <textarea id="comment" class="form-control" name="comment" cols="45"
-                                                rows="8" aria-required="true"></textarea>
+                                            <textarea id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-md-6">
                                                 <label for="author" class="control-label">Name
                                                     <span class="required">*</span>
                                                 </label>
-                                                <input id="author" class="form-control" name="author" type="text"
-                                                    value="" size="30" aria-required="true">
+                                                <input id="author" class="form-control" name="author" type="text" value="" size="30" aria-required="true">
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="email" class="control-label">Password
                                                     <span class="required">*</span>
                                                 </label>
                                             
-                                                <input class="form-control" type="password" name="pass" value=""
-                                                    size="30" aria-required="true">
+                                                <input class="form-control" type="password" name="pass" value="" size="30" aria-required="true">
                                                     
                                             </div>
                                             <div class="form-submit col-md-12">
-                                                <input name="submit" type="submit" id="submit" class="btn btn-primary"
-                                                    value="Send">
+                                                <input name="submit" type="submit" id="submit" class="btn btn-primary" value="Send">
                                                 
                                             </div>
                                         </div>
@@ -397,6 +373,7 @@
                         </div>
                         <!--/product-tab-description -->
                     </div>
+                    
                     <div class="col-lg-3 col-md-4">
                         <div class="sidebar">
                             <div class="may_also">
@@ -659,17 +636,13 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-    <!-- ##### game-single Area End #####-->
+    <!--  game-single Area End -->
 
-
-
-
-    <!-- ##### Footer Area Start ##### -->
+    <!--  Footer Area Start  -->
     <footer class="footer-area">
         <!-- Main Footer Area -->
         <div class="main-footer-area section-padding-100-0">
@@ -683,10 +656,8 @@
                             </div>
                             <div class="widget-content">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit
-                                    arcu,
-                                    scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat
-                                    volutpat. Sed
-                                    efficitur diam ut interdum ultricies.</p>
+                                    arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat
+                                    volutpat. Sed efficitur diam ut interdum ultricies.</p>
                             </div>
                         </div>
                     </div>
@@ -721,13 +692,9 @@
                                 <nav>
                                     <ul>
                                         <li><a href="https://store.steampowered.com/" target="_blank">Steam</a></li>
-                                        <li><a href="https://store.playstation.com/" target="_blank">PlayStation</a>
-                                        </li>
-                                        <li><a href="http://blizzard.com" target="_blank">Blizzard
-                                                Entertainment</a>
-                                        </li>
-                                        <li><a href="https://www.origin.com/" target="_blank">Origin</a>
-                                        </li>
+                                        <li><a href="https://store.playstation.com/" target="_blank">PlayStation</a> </li>
+                                        <li><a href="http://blizzard.com" target="_blank">Blizzard Entertainment</a> </li>
+                                        <li><a href="https://www.origin.com/" target="_blank">Origin</a> </li>
                                     </ul>
                                 </nav>
                             </div>
@@ -742,13 +709,11 @@
                             </div>
                             <div class="widget-content">
                                 <nav>
-                                    <ul>
-                                        <li><a href="#">Doom</a></li>
-                                        <li><a href="#">Grand Theft Auto</a></li>
-                                        <li><a href="#">Bloodborne</a></li>
-                                        <li><a href="#">God of war</a></li>
-                                        <li><a href="#">Persona 5</a></li>
-                                    </ul>
+                             <c:forEach var="g" items="${latestList }">
+									<ul>
+										<li><a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }">${g.title }</a></li>
+									</ul>
+								</c:forEach>
                                 </nav>
                             </div>
                         </div>
@@ -761,41 +726,31 @@
                 <div class="row h-100 align-items-center">
                     <div class="col-12 col-sm-5">
                         <!-- Copywrite Text -->
-                        <p class="copywrite-text">
-                            Copyright &copy; All rights reserved | This Website is made with <i class="fa fa-heart-o"
-                                aria-hidden="true"></i> by Team2
+                        <p class="copywrite-text"> Copyright &copy; All rights reserved | This Website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Team2
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- ##### Footer Area End ##### -->
+    <!--  Footer Area End  -->
 
-    <!-- ##### All Javascript Script ##### -->
+    <!--  All Javascript Script  -->
     <!-- jQuery js -->
     <script src="${pageContext.request.contextPath}/resources/js/jquery/jquery-2.2.4.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
-
-
     <!-- waypoints js-->
     <script src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.js"></script>
-
     <!-- counterup js-->
     <script src="${pageContext.request.contextPath}/resources/js/jquery.counterup.min.js"></script>
-
     <!-- Popper js -->
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap/popper.min.js"></script>
-
     <!-- Bootstrap js -->
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap/bootstrap.min.js"></script>
-
     <!-- All Plugins js -->
     <script src="${pageContext.request.contextPath}/resources/js/plugins/plugins.js"></script>
-
     <!-- Active js -->
     <script src="${pageContext.request.contextPath}/resources/js/active.js"></script>
-
     <!-- custom js-->
     <script src="${pageContext.request.contextPath}/resources/js/custom.js"></script>
 </body>

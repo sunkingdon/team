@@ -25,19 +25,20 @@ public class GameController {
 	@Autowired
 	HttpServletRequest request;
 	
-	// 메인 페이지 
 	@RequestMapping(value= {"/", "home.do"})
 	public String home(Model m) {
 		List<GameVo> mainlist = gameService.mainList();
 		List<GameVo> latestlist = gameService.recentList();
 		List<GameVo> popularlist = gameService.popularList();
+		List<GameVo> highlist = gameService.highList();
+		
 		m.addAttribute("mainlist", mainlist);
 		m.addAttribute("latestList", latestlist);
 		m.addAttribute("popularList", popularlist);
+		m.addAttribute("highlist", highlist);
 		return "home";
 	}
 	
-	// store 페이지
 	@RequestMapping("/store.do")
 	public String selectList(Model m) {
 		List<GameVo> list = gameService.gameList();
@@ -45,7 +46,6 @@ public class GameController {
 		return "store";
 	}
 	
-	// 게임 상세 페이지
 	@RequestMapping("/gamesingle.do")
 	public String single(String title, Model m) {
 		System.out.println("title : " + title);
@@ -54,7 +54,6 @@ public class GameController {
 		return "gameSingle";
 	}
 	
-	// 카테고리별 게임 페이지
 	@RequestMapping("/categorylist.do")
 	public String category(String genrename, Model m) {
 		List<GameVo> categorylist = gameService.categoryList(genrename);

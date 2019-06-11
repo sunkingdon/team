@@ -42,10 +42,9 @@
 	href="${pageContext.request.contextPath}/resources/img/core-img/favicon.ico">
 
 <!-- Stylesheet(css파일 따로 작성, 임포트 해서 적용.) -->
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/style.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/user-info.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/user-info.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/popup.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/materialize.css">
 <script src="https://kit.fontawesome.com/4e530a2d6a.js"></script>
 
@@ -171,18 +170,37 @@
 				<div class="db-l-1">
 					<ul>
 						<li><img src="${pageContext.request.contextPath}/resources/img/authors/profile.jpg" alt="" /></li>
-						<li><i class="fas fa-user"></i> Username</li>
+						<li><i class="fas fa-user"></i> ${empVo.name }</li>
 					</ul>
 				</div>
 				<div class="db-l-2">
-					<ul>
-						<li><a href="myInfo.do"> <i class="fas fa-user"></i> User Information
-						</a></li>
-						<li><a href="userDelete"><i class="fas fa-user-times"></i> Delete Account</a></li>
-					</ul>
-				</div>
-			</div>
-			<!--CENTER SECTION-->
+                    <ul>
+                        <li>
+                            <a href="myInfo.do">
+                                <i class="fas fa-user"></i> User Information</a>
+                        </li>
+                        <li>
+                            <a href="#0" class="cd-popup-trigger"><i class="fas fa-user-times"></i> Delete Account</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <div class="cd-popup" role="alert">
+                       <div class="cd-popup-container">
+                            <h4>Are you sure you want to delete your account?</h4>
+                            <p> Enter your password.</p>
+                            <input type="password" class="pw" placeholder="Enter your password">
+                            <div class="cd-buttons">
+                                <button class="yes" onclick="">Yes</button>
+                                <button class="no" onclick="">No</button>
+                            </div>
+                            <a href="#0" class="cd-popup-close img-replace">Close</a>
+                        </div>
+                        <!-- cd-popup-container -->
+                    </div>
+                    <!-- cd-popup -->
+            </div>
+            <!--CENTER SECTION-->
 			<div class="db-2">
 				<div class="db-2-com db-2-main">
 					<h4>My Profile</h4>
@@ -192,7 +210,7 @@
 								<tr>
 									<td>User Name</td>
 									<td>:</td>
-									<td>Finn</td>
+									<td>${empVo.name }</td>
 								</tr>
 								<tr>
 									<td>Password</td>
@@ -369,19 +387,16 @@
 
 	<!-- ##### All Javascript Script ##### -->
 	<!-- jQuery-2.2.4 js -->
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery/jquery-2.2.4.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<!-- Popper js -->
-	<script
-		src="${pageContext.request.contextPath}/resources/js/bootstrap/popper.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/bootstrap/popper.min.js"></script>
 	<!-- Bootstrap js -->
-	<script
-		src="${pageContext.request.contextPath}/resources/js/bootstrap/bootstrap.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/bootstrap/bootstrap.min.js"></script>
 	<!-- All Plugins js -->
-	<script
-		src="${pageContext.request.contextPath}/resources/js/plugins/plugins.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/plugins/plugins.js"></script>
 	<!-- Active js -->
 	<script src="${pageContext.request.contextPath}/resources/js/active.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/popup.js"></script>
 </body>
 
 </html>

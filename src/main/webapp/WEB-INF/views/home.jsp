@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    <!-- ##### Header 영역 시작 ##### -->
+    <!--  Header 영역 시작  -->
     <header class="header-area wow fadeInDown" data-wow-delay="500ms">
         <!-- Header 상단 영역 -->
         <div class="top-header-area">
@@ -107,7 +107,6 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="home.do">Home</a></li>
-<!--                                     <li><a href="store.html">Store</a></li>                           -->
                                     <li><a href="store.do">Store</a></li>                          
                                     <li><a href="reviews">Reviews</a></li>
                                     <li><a href="support.html">Support</li>
@@ -115,27 +114,32 @@
                             </div>
                             <!-- Nav End -->
                         </div>
-
                         <!-- Nav 소셜미디어 아이콘 -->
                         <div class="top-social-info">
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </div>
+   							<a href="https://www.facebook.com/GamespotWeb-440364573418626"  target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
+                        		<i class="fa fa-facebook" aria-hidden="true"></i>
+                     		</a> 
+                     		<a href="https://twitter.com/hPKPXzq0fRwNZU3" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
+                       			<i class="fa fa-twitter" aria-hidden="true"></i>
+                     		</a> 
+                     		<a href="https://instagram.com/game__spot?igshid=1xachyxg6ydfl" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
+                        		<i class="fa fa-instagram" aria-hidden="true"></i>
+                     		</a>
+                     	</div>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <!-- ##### Header Area End ##### -->
+    <!--  Header Area End  -->
 
 
-	<!-- ##### Hero Area Start ##### -->
+	<!--  Hero Area Start  -->
 	<div class="hero-area">
 		<!-- Hero Post Slides -->
 		<div class="hero-post-slides owl-carousel">
 		<c:forEach var="g" items="${mainlist }">
-			<div class="single-slide bg-img bg-overlay" style="background-image: url(../resources/image/${g.path });">
+			<div class="single-slide bg-img bg-overlay" style="background-image: url('/project/resources/image/${g.path }');">
 				<!-- Blog Content -->
 				<div class="container h-100">
 					<div class="row h-100 align-items-center">
@@ -151,10 +155,10 @@
 		</c:forEach>
 		</div>
 	</div>
-	<!-- ##### Hero Area End ##### -->
+	<!-- Hero Area End -->
 
 
-	<!-- ##### Monthly Picks Area Start ##### -->
+	<!-- Monthly Picks Area Start -->
 	<section class="monthly-picks-area section-padding-100 bg-pattern">
 		<div class="container">
 			<div class="row">
@@ -221,194 +225,56 @@
 		</div>
 		</div>
 	</section>
-	<!-- ##### Monthly Picks Area End ##### -->
+	<!-- Monthly Picks Area End -->
 
-	<!-- ##### Video Area Start ##### -->
-	<div class="gamespot-video-area section-padding-100 bg-pattern2">
-		<div class="container">
-			<div class="row no-gutters">
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="gamespot-nav-btn">
-						<div class="nav flex-column" id="video-tab" role="tablist" aria-orientation="vertical">
-							<a class="nav-link active" id="video1" data-toggle="pill" href="#video-1" role="tab" aria-controls="video-1" aria-selected="true"> 
-							<!-- Single Video Widget -->
-								<div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="100ms">
-									<div class="video-thumbnail">
-										<img src="${pageContext.request.contextPath}/resources/img/bg-img/14.jpg" alt="">
-									</div>
-									<div class="video-text">
-										<p class="video-title mb-0">Assemble Your Squad and Join the Battle</p>
-										<span>Nintendo Wii, PS4, XBox 360</span>
-									</div>
-									<div class="video-rating">8.3/10</div>
-								</div>
-							</a> <a class="nav-link" id="video2" data-toggle="pill" href="#video-2" role="tab" aria-controls="video-2" aria-selected="false"> 
-							<!-- Single Video Widget -->
-								<div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="200ms">
-									<div class="video-thumbnail">
-										<img src="${pageContext.request.contextPath}/resources/img/bg-img/15.jpg" alt="">
-									</div>
-									<div class="video-text">
-										<p class="video-title mb-0">Tips to improve your game</p>
-										<span>Nintendo Wii, PS4, XBox 360</span>
-									</div>
-									<div class="video-rating">8.3/10</div>
-								</div>
-							</a> <a class="nav-link" id="video3" data-toggle="pill" href="#video-3" role="tab" aria-controls="video-3" aria-selected="false"> 
-								<!-- Single Video Widget -->
-								<div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="300ms">
-									<div class="video-thumbnail">
-										<img src="${pageContext.request.contextPath}/resources/img/bg-img/16.jpg" alt="">
-									</div>
-									<div class="video-text">
-										<p class="video-title mb-0">Game reviews: the best of 2018</p>
-										<span>Nintendo Wii, PS4, XBox 360</span>
-									</div>
-									<div class="video-rating">8.3/10</div>
-								</div>
-							</a> <a class="nav-link" id="video4" data-toggle="pill" href="#video-4" role="tab" aria-controls="video-4" aria-selected="false"> 
-								<!-- Single Video Widget -->
-								<div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="400ms">
-									<div class="video-thumbnail">
-										<img src="${pageContext.request.contextPath}/resources/img/bg-img/17.jpg" alt="">
-									</div>
-									<div class="video-text">
-										<p class="video-title mb-0">Assemble Your Squad and Join the Battle</p>
-										<span>Nintendo Wii, PS4, XBox 360</span>
-									</div>
-									<div class="video-rating">8.3/10</div>
-								</div>
-							</a> <a class="nav-link" id="video5" data-toggle="pill" href="#video-5" role="tab" aria-controls="video-5" aria-selected="false"> 
-							<!-- Single Video Widget -->
-								<div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="500ms">
-									<div class="video-thumbnail">
-										<img src="${pageContext.request.contextPath}/resources/img/bg-img/18.jpg" alt="">
-									</div>
-									<div class="video-text">
-										<p class="video-title mb-0">Tips to improve your game</p>
-										<span>Nintendo Wii, PS4, XBox 360</span>
-									</div>
-									<div class="video-rating">8.3/10</div>
-								</div>
-							</a> <a class="nav-link" id="video6" data-toggle="pill" href="#video-6" role="tab" aria-controls="video-6" aria-selected="false"> 
-								<!-- Single Video Widget -->
-								<div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="600ms">
-									<div class="video-thumbnail">
-										<img src="${pageContext.request.contextPath}/resources/img/bg-img/14.jpg" alt="">
-									</div>
-									<div class="video-text">
-										<p class="video-title mb-0">Game reviews: the best of 2018</p>
-										<span>Nintendo Wii, PS4, XBox 360</span>
-									</div>
-									<div class="video-rating">8.3/10</div>
-								</div>
-							</a> <a class="nav-link" id="video7" data-toggle="pill" href="#video-7" role="tab" aria-controls="video-7" aria-selected="false"> 
-							<!-- Single Video Widget -->
-								<div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="700ms">
-									<div class="video-thumbnail">
-										<img src="${pageContext.request.contextPath}/resources/img/bg-img/15.jpg" alt="">
-									</div>
-									<div class="video-text">
-										<p class="video-title mb-0">Tips to improve your game</p>
-										<span>Nintendo Wii, PS4, XBox 360</span>
-									</div>
-									<div class="video-rating">8.3/10</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
+  <!-- Video Area Start -->
+   <div class="gamespot-video-area section-padding-100 bg-pattern2">
+      <div class="container">
+         <div class="row no-gutters">
+            <div class="col-12 col-md-6 col-lg-4">
+               <div class="gamespot-nav-btn">
+                  <div class="nav flex-column" id="video-tab" role="tablist" aria-orientation="vertical">
+                     <c:forEach var="i" items="${highlist }" varStatus="status">
+                        <a class="${status.index == 0 ? 'nav-link active show' : 'nav-link'}" id="video${status.index }" data-toggle="pill" href="#$video-{status.index }" role="tab" aria-selected="${status.index == 0 ? true : false}" aria-controls="${status.index }" > 
+                           <!-- Single Video Widget -->
+                           <div class="single-video-widget d-flex wow fadeInUp" data-wow-delay="100ms">
+                              <div class="video-thumbnail">
+                                 <img src="${pageContext.request.contextPath}/resources/image/${i.path }" alt="">
+                              </div>
+                              <div class="video-text">
+                                 <p class="video-title mb-0">${i.title } </p>
+                                 <span>${i.genrename }</span>
+                              </div>
+                              <div class="video-rating">${i.price }</div>
+                           </div>
+                        </a> 
+                     </c:forEach>
+                  </div>
+               </div>
+            </div>
 
-				<div class="col-12 col-md-6 col-lg-8">
-					<div class="tab-content" id="video-tabContent">
-						<div class="tab-pane fade show active" id="video-1" role="tabpanel" aria-labelledby="video1">
-							<div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/image/;">
-								<!-- Play Button -->
-								<div class="play-btn">
-									<a href="https://www.youtube.com/watch?v=QkkoHAzjnUs" class="play-button">
-										<img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="video-2" role="tabpanel" aria-labelledby="video2">
-							<div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/46.jpg);">
-								<!-- Play Button -->
-								<div class="play-btn">
-									<a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button">
-										<img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="video-3" role="tabpanel" aria-labelledby="video3">
-							<div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/47.jpg);">
-								<!-- Play Button -->
-								<div class="play-btn">
-									<a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button">
-										<img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="video-4" role="tabpanel" aria-labelledby="video4">
-							<div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/48.jpg);">
-								<!-- Play Button -->
-								<div class="play-btn">
-									<a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button">
-										<img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="video-5" role="tabpanel" aria-labelledby="video5">
-							<div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/49.jpg);">
-								<!-- Play Button -->
-								<div class="play-btn">
-									<a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button">
-										<img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="video-6" role="tabpanel" aria-labelledby="video6">
-							<div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/45.jpg);">
-								<!-- Play Button -->
-								<div class="play-btn">
-									<a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button">
-										<img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="video-7" role="tabpanel" aria-labelledby="video7">
-							<div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/46.jpg);">
-								<!-- Play Button -->
-								<div class="play-btn">
-									<a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button">
-										<img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="video-8" role="tabpanel" aria-labelledby="video8">
-							<div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/47.jpg);">
-								<!-- Play Button -->
-								<div class="play-btn">
-									<a href="https://www.youtube.com/watch?v=7HKoqNJtMTQ" class="play-button">
-										<img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt="">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- ##### Video Area End ##### -->
+            <div class="col-12 col-md-6 col-lg-8">
+               <div class="tab-content" id="video-tabContent">
+                  <c:forEach var="i" items="${highlist }" varStatus="status">
+                     <div class="${status.index == 0 ? 'tab-pane fade show active' : 'tab-pane fade'}" id="${status.index }" role="tabpanel" aria-labelledby="${status.index }">
+                        <div class="video-playground bg-img" style="background-image: url(${pageContext.request.contextPath}/resources/image/;">
+                           <!-- Play Button -->
+                           <div class="play-btn">
+                              <a href="${i.link }" class="play-button"> 
+                              	<img src="img/core-img/play.png" alt="">
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </c:forEach>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Video Area End -->
 
-	<!-- ##### Footer Area Start ##### -->
+	<!-- Footer Area Start -->
 	<footer class="footer-area">
 		<!-- Main Footer Area -->
 		<div class="main-footer-area section-padding-100-0">
@@ -504,9 +370,9 @@
 			</div>
 		</div>
 	</footer>
-	<!-- ##### Footer Area End ##### -->
+	<!--  Footer Area End  -->
 
-	<!-- ##### All Javascript Script ##### -->
+	<!--  All Javascript Script  -->
 	<!-- jQuery-2.2.4 js -->
 	<script src="${pageContext.request.contextPath}/resources/js/jquery/jquery-2.2.4.min.js"></script>
 	<!-- Popper js -->

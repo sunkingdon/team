@@ -51,4 +51,8 @@ public class GameServiceImpl implements GameService{
 	public List<GameVo> mainList() {
 		return gameDao.mainList();
 	}
+	@Override
+	public List<GameVo> highList() {
+		return gameDao.highList();
+	}
 }

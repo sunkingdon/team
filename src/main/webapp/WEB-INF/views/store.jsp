@@ -13,7 +13,58 @@
 
 <!-- Title -->
 <title>GAMESPOT | Store</title>
-
+<!--  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+<!--   <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script type = "text/javascript">
+  var newJquery = $.noConflict(true);
+  
+  newJquery( function() {
+    var availableTags = [
+      "60 Seconds!",
+      "A Dance of Fire and Ice",
+      "A Hat in Time",
+      "Beat Saber",
+      "Call of Duty 4",
+      "Car Mechanic Simulator 2018",
+      "Dead by Daylight",
+      "Don't Starve",
+      "Everyday Golf VR",
+      "F1 2019 Anniversary Edition",
+      "Football Manager 2019",
+      "Forager",
+      "Gal Gun 2",
+      "Gang Beasts",
+      "Garden Flipper",
+      "Grand Theft Auto V",
+      "House Flipper",
+      "Just Shapes & Beats",
+      "Left 4 Dead 2",
+      "Lobotomy Corporation",
+      "MONSTER HUNTER WORLD",
+      "Moonlighter",
+   "Overcooked! 2",
+   "PLAYERUNKNOWN'S BATTLEGROUNDS",
+   "Portal 2",
+   "Princess Maker 3",
+   "Raft",
+   "RimWorld",
+   "Sid Meier's Civilization",
+   "Slay the Spire",
+   "SpyParty",
+   "Stardew Valley",
+   "Super Bunny Man",
+   "SUPERHOT",
+   "Team Sonic Racing",
+   "TEKKEN 7",
+   "The Binding of Isaac"
+    ];
+    newJquery( "#toolbar-search" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
 <!-- Favicon (브라우저 탭에 로고 노출) -->
 <link rel="icon" type="image/png" sizes="16x16"
 	href="${pageContext.request.contextPath}/resources/img/core-img/favicon.ico">
@@ -129,7 +180,6 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="home.do">Home</a></li>
-<!--                                     <li><a href="store.html">Store</a></li>                           -->
                                     <li><a href="store.do">Store</a></li>                          
                                     <li><a href="reviews">Reviews</a></li>
                                     <li><a href="support.html">Support</li>
@@ -187,23 +237,11 @@
 						</select>
 					</div>
 
-
 					<div class="toolbar-sorter">
-						<span>Genre : </span> <select name="orderby" class="orderby">
-							<option value="menu_order" selected="selected">filter</option>
-							<option value="popularity">popularity</option>
-							<option value="date">newness</option>
-							<option value="price">low to high</option>
-							<option value="price-desc">high to low</option>
-						</select>
-					</div>
-
-					<div class="toolbar-sorter">
-						<span>Search : </span>
+						<span for="toolbar-search">Search : </span>
 						<div class="top-search-area">
 							<form action="#" method="post">
-								<input type="search" name="top-search" class="toolbar-search"
-									placeholder="Search by title, genre, publisher, or developer..">
+								<input type="search" name="top-search" id="toolbar-search" class="toolbar-search" placeholder="Search by title, genre, publisher, or developer..">
 								<button type="submit" class="btn">
 									<i class="fa fa-search"></i>
 								</button>
@@ -242,7 +280,7 @@
 												</div>
 											</div>
 											<div class="product-caption">
-												<span class="posted_in"><a href="#" rel="tag">${g.genrename }</a></span>
+												<span class="posted_in"><a href="${pageContext.request.contextPath}categotylist.do?genrename=${g.genrename }" rel="tag">${g.genrename }</a></span>
 												<h4 class="product-title">
 													<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title="">${g.title }</a>
 												</h4>
@@ -286,7 +324,7 @@
 											</div>
 											<div class="col-lg-8 col-md-12 col-sm-12">
 												<div class="product-caption">
-													<span class="posted_in"><a href="#" rel="tag">${g.genrename }</a></span>
+													<span class="posted_in"><a href="${pageContext.request.contextPath}categotylist.do?genrename=${g.genrename }" rel="tag">${g.genrename }</a></span>
 													<div class="product-meta">
 														<h4 class="product-name">
 															<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title="">${g.title }</a>
@@ -316,14 +354,12 @@
 				<!-- /tab-content -->
 				<nav class="pagination clearfix">
 					<ul class="page-numbers">
-						<li><a class="prev page-numbers" href="#"><i
-								class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+						<li><a class="prev page-numbers" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
 						<li><span class="page-numbers current">1</span></li>
 						<li><a class="page-numbers" href="#">2</a></li>
 						<li><a class="page-numbers" href="#">3</a></li>
 						<li><a class="page-numbers" href="#">4</a></li>
-						<li><a class="next page-numbers" href="#"><i
-								class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+						<li><a class="next page-numbers" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
 					</ul>
 				</nav>
 				<!-- /pagination -->
@@ -332,8 +368,7 @@
 				<aside class="sidebar product-filter">
 					<!-- Categories -->
 					<section class="widget widget-categories-cat">
-						<h3 class="widget-title widget-title__large">Store all
-							categories</h3>
+						<h3 class="widget-title widget-title__large">Store all categories</h3>
 						<div class="widget-content">
 							<ul class="list-categories list-widget">
 								<li><a class="genre" href="${pageContext.request.contextPath}/categorylist.do?genrename=액션">Action</a></li>
@@ -352,44 +387,33 @@
 						<h3 class="widget-title widget-title__large">Refine by</h3>
 						<div class="widget-woof-content">
 
-
 							<!-- Color -->
 							<section class="widget section-price">
 								<h3 class="widget-title widget_collapse">Price</h3>
 								<div class="widget-content">
 									<form class="login100-form validate-form">
 										<div class="contact100-form-checkbox">
-											<input class="input-checkbox100" id="ckb1" type="checkbox"
-												name="price"> <label class="label-checkbox100"
-												for="ckb1"> $5 - $15 </label>
+											<input class="input-checkbox100" id="ckb1" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb1"> 5,000 - 10,000  &#8361; </label>
 										</div>
 									</form>
 									<form class="login100-form validate-form">
 										<div class="contact100-form-checkbox">
-											<input class="input-checkbox100" id="ckb2" type="checkbox"
-												name="price"> <label class="label-checkbox100"
-												for="ckb2"> $15 - $25 </label>
+											<input class="input-checkbox100" id="ckb2" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb2"> $15 - $25 </label>
 										</div>
 									</form>
 									<form class="login100-form validate-form">
 										<div class="contact100-form-checkbox">
-											<input class="input-checkbox100" id="ckb3" type="checkbox"
-												name="price"> <label class="label-checkbox100"
-												for="ckb3"> $25 - $35 </label>
+											<input class="input-checkbox100" id="ckb3" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb3"> $25 - $35 </label>
 										</div>
 									</form>
 									<form class="login100-form validate-form">
 										<div class="contact100-form-checkbox">
-											<input class="input-checkbox100" id="ckb4" type="checkbox"
-												name="price"> <label class="label-checkbox100"
-												for="ckb4"> $35 - $45 </label>
+											<input class="input-checkbox100" id="ckb4" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb4"> $35 - $45 </label>
 										</div>
 									</form>
 									<form class="login100-form validate-form">
 										<div class="contact100-form-checkbox">
-											<input class="input-checkbox100" id="ckb5" type="checkbox"
-												name="price"> <label class="label-checkbox100"
-												for="ckb5"> $45 - $55 </label>
+											<input class="input-checkbox100" id="ckb5" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb5"> $45 - $55 </label>
 										</div>
 									</form>
 								</div>
@@ -400,21 +424,12 @@
 							<section class="widget section-price widget_filter">
 								<h3 class="widget-title widget_collapse">Price range</h3>
 								<div class="widget-content">
-									<div
-										class="ps-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-										data-default-min="0" data-default-max="500" data-max="1000"
-										data-step="100" data-unit="$">
-										<div class="ui-slider-range ui-corner-all ui-widget-header"
-											style="left: 0%; width: 50%;"></div>
-										<span tabindex="0"
-											class="ui-slider-handle ui-corner-all ui-state-default"
-											style="left: 0%;"></span><span tabindex="0"
-											class="ui-slider-handle ui-corner-all ui-state-default"
-											style="left: 50%;"></span>
+									<div class="ps-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-default-min="0" data-default-max="500" data-max="1000" data-step="100" data-unit="$">
+										<div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 50%;"></div>
+										<span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
+										<span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 50%;"></span>
 									</div>
-									<p class="ps-slider__meta">
-										Price:<span class="ps-slider__value ps-slider__min">$0</span>-<span
-											class="ps-slider__value ps-slider__max">$500</span>
+									<p class="ps-slider__meta"> Price:<span class="ps-slider__value ps-slider__min">$0</span>-<span class="ps-slider__value ps-slider__max">$500</span>
 									</p>
 								</div>
 							</section>
@@ -425,13 +440,7 @@
 			</div>
 		</div>
 	</div>
-
 	<!-- #### End archive-product #### -->
-
-
-
-
-
 
 	<!-- ##### Footer Area Start ##### -->
 	<footer class="footer-area">
@@ -444,9 +453,7 @@
 						<div class="single-footer-widget mb-70 wow fadeInUp"
 							data-wow-delay="100ms">
 							<div class="widget-title">
-								<a href="home.do"><img
-									src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png"
-									alt=""></a>
+								<a href="home.do"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt=""></a>
 							</div>
 							<div class="widget-content">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -502,22 +509,17 @@
 						</div>
 					</div>
 
-					<!-- Single Footer Widget -->
+			<!-- Single Footer Widget -->
 					<div class="col-12 col-sm-6 col-lg-3">
-						<div class="single-footer-widget mb-70 wow fadeInUp"
-							data-wow-delay="700ms">
-							<div class="widget-title">
-								<h4>What’s new</h4>
-							</div>
+						<div class="single-footer-widget mb-70 wow fadeInUp" data-wow-delay="700ms">
+							<div class="widget-title"><h4>What’s new</h4></div>
 							<div class="widget-content">
 								<nav>
-									<ul>
-										<li><a href="#">Doom</a></li>
-										<li><a href="#">Grand Theft Auto</a></li>
-										<li><a href="#">Bloodborne</a></li>
-										<li><a href="#">God of war</a></li>
-										<li><a href="#">Persona 5</a></li>
-									</ul>
+									<c:forEach var="g" items="${latestList }">
+										<ul>
+											<li><a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }">${g.title }</a></li>
+										</ul>
+									</c:forEach>
 								</nav>
 							</div>
 						</div>
@@ -525,55 +527,47 @@
 				</div>
 			</div>
 		</div>
+		
 		<div class="copywrite-content">
 			<div class="container h-100">
 				<div class="row h-100 align-items-center">
 					<div class="col-12 col-sm-5">
 						<!-- Copywrite Text -->
-						<p class="copywrite-text">
-							Copyright &copy; All rights reserved | This Website is made with
+						<p class="copywrite-text"> Copyright &copy; All rights reserved | This Website is made with
 							<i class="fa fa-heart-o" aria-hidden="true"></i> by Team2
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 	</footer>
 	<!-- ##### Footer Area End ##### -->
 
 	<!-- ##### All Javascript Script ##### -->
 	<!-- jQuery js -->
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery/jquery-2.2.4.min.js"></script>
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
-
+	<script src="${pageContext.request.contextPath}/resources/js/jquery/jquery-2.2.4.min.js"></script>
+<%-- 	<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script> --%>
 
 	<!-- waypoints js-->
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.js"></script>
+<%-- 	<script src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.js"></script> --%>
 
 	<!-- counterup js-->
-	<script
-		src="${pageContext.request.contextPath}/resources/js/jquery.counterup.min.js"></script>
+<%-- 	<script src="${pageContext.request.contextPath}/resources/js/jquery.counterup.min.js"></script> --%>
 
 	<!-- Popper js -->
-	<script
-		src="${pageContext.request.contextPath}/resources/js/bootstrap/popper.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/bootstrap/popper.min.js"></script>
 
 	<!-- Bootstrap js -->
-	<script
-		src="${pageContext.request.contextPath}/resources/js/bootstrap/bootstrap.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/bootstrap/bootstrap.min.js"></script>
 
 	<!-- All Plugins js -->
-	<script
-		src="${pageContext.request.contextPath}/resources/js/plugins/plugins.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/plugins/plugins.js"></script>
 
 	<!-- Active js -->
 	<script src="${pageContext.request.contextPath}/resources/js/active.js"></script>
 
 	<!-- custom js-->
-	<script src="${pageContext.request.contextPath}/resources/js/custom.js"></script>
+<%-- 	<script src="${pageContext.request.contextPath}/resources/js/custom.js"></script> --%>
 </body>
-
 </html>
