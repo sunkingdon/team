@@ -186,13 +186,14 @@
                     
                 </div>
                 <div class="cd-popup" role="alert">
-                        <div class="cd-popup-container">
+                       <div class="cd-popup-container">
                             <h4>Are you sure you want to delete your account?</h4>
+                            <p> Enter your password.</p>
                             <input type="password" class="pw" placeholder="Enter your password">
-                            <ul class="cd-buttons">
-                                <li><a href="#0">Yes</a></li>
-                                <li><a href="#0">No</a></li>
-                            </ul>
+                            <div class="cd-buttons">
+                                <button class="yes" onclick="">Yes</button>
+                                <button class="no" onclick="">No</button>
+                            </div>
                             <a href="#0" class="cd-popup-close img-replace">Close</a>
                         </div>
                         <!-- cd-popup-container -->
