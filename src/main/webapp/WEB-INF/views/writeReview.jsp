@@ -154,30 +154,16 @@
                     <form class="review-form">
                         <div class="row-1">
                             <div class="review-head-1">
-                                <span>Genre : </span>
-                                <select name="orderby" class="orderby">
-                                    <option value="menu_order" selected="selected">filter</option>
-                                    <option value="1">Action</option>
-                                    <option value="2">Adventure</option>
-                                    <option value="3">Casual</option>
-                                    <option value="4">Racing</option>
-                                    <option value="5">Rhythm</option>
-                                    <option value="6">Simulation</option>
-                                    <option value="7">Sports</option>
-                                    <option value="8">Strategy</option>
-                                </select>
-                                <input type="text" placeholder="Title">
+                                <span>Title : </span>
+                                <input type="text" placeholder="Enter Title" required>
                             </div>
                             <div class="review-textarea">
                                 <textarea id="editor-container" placeholder="Message"></textarea>
                                 <button class="review-cancel">Cancel</button>
                                 <button class="review-send">Send</button>
-                                
-
                             </div>
                         </div>
                     </form>
-
                 </div>
                 <!-- sidebar -->
                 <div class="col-lg-4 col-md-7 sidebar pt-5 pt-lg-0">

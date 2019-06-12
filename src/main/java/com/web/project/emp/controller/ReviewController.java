@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ReviewController {
 	@RequestMapping("/reviews")
-	public String selectList(Model m) {
+	public String selectList() {
 		//List<GameVo> list = gameService.selectList();
 		//m.addAttribute("list",list);
 		return "reviews";
 	}
 		
 	@RequestMapping("/reviewSingle")
-	public String singleView(Model m) {
+	public String singleView() {
 		return "reviewSingle";
 	}
 	
 	@RequestMapping("/writeReview")
-	public String writeView(Model m) {
+	public String writeView() {
 		return "writeReview";
 	}
 		

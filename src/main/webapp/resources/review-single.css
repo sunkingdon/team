@@ -185,6 +185,31 @@
 
 .review-form input[type=text] {
 	margin-left: 10px;
+	width: 91%;
+	height: 30px;
+	outline-color: #8AB839;
+	border: 1px solid #d6dee7;
+	padding: 15px;
+	font-size: 14px;
+	margin-bottom: 24px;
+}
+.review-head-1 span {
+	display: inline-block;
+	font-size: 20px;
+	float: left;
+	margin-right: 5px;
+}
+
+
+.review-title {
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+
+
+
+.review-form input[type=text] {
+	margin-left: 10px;
 	width: 73%;
 	height: 30px;
 	outline-color: #8AB839;
