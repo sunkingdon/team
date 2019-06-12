@@ -132,13 +132,13 @@
 						<!-- Nav 소셜미디어 아이콘 -->
 						<div class="top-social-info">
 								<a href="https://www.facebook.com/GamespotWeb-440364573418626"  target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
-                        		<i class="fa fa-facebook" aria-hidden="true"></i>
+                        		<i class="fab fa-facebook-f" aria-hidden="true"></i>
                      		</a> 
                      		<a href="https://twitter.com/hPKPXzq0fRwNZU3" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
-                       			<i class="fa fa-twitter" aria-hidden="true"></i>
+                       			<i class="fab fa-twitter" aria-hidden="true"></i>
                      		</a> 
                      		<a href="https://instagram.com/game__spot?igshid=1xachyxg6ydfl" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
-                        		<i class="fa fa-instagram" aria-hidden="true"></i>
+                        		<i class="fab fa-instagram"" aria-hidden="true"></i>
                      		</a>
 						</div>
 					</nav>
@@ -148,14 +148,14 @@
 	</header>
 	<!-- ##### Header Area End ##### -->
 
-	<!-- ##### User info Area Start #####-->
+	 <!-- ##### User info Area Start #####-->
     <section>
         <div class="db">
             <!--LEFT SECTION-->
             <div class="db-l">
                 <div class="db-l-1">
                     <ul>
-                        <li><img src="img/authors/profile.jpg" alt="" /></li>
+                        <li><img src="${pageContext.request.contextPath}/resources/img/authors/profile.jpg" alt="" /></li>
                         <li><i class="fas fa-user"></i> Username</li>
                     </ul>
                 </div>
@@ -169,22 +169,22 @@
                             <a href="#0" class="cd-popup-trigger"><i class="fas fa-user-times"></i> Delete Account</a>
                         </li>
                     </ul>
-                    
+
                 </div>
                 <div class="cd-popup" role="alert">
-                        <div class="cd-popup-container">
-                            <h4>Are you sure you want to delete your account?</h4>
-                            <p> Enter your password.</p>
-                            <input type="password" class="pw" placeholder="Enter your password">
-                            <div class="cd-buttons">
-                                <button class="yes" onclick="">Yes</button>
-                                <button class="no" onclick="">No</button>
-                            </div>
-                            <a href="#0" class="cd-popup-close img-replace">Close</a>
+                    <div class="cd-popup-container">
+                        <h4>Are you sure you want to delete your account?</h4>
+                        <p> Enter your password.</p>
+                        <input type="password" class="pw" placeholder="Enter your password">
+                        <div class="cd-buttons">
+                            <button class="yes" onclick="">Yes</button>
+                            <button class="no" onclick="">No</button>
                         </div>
-                        <!-- cd-popup-container -->
+                        <a href="#0" class="cd-popup-close img-replace">Close</a>
                     </div>
-                    <!-- cd-popup -->
+                    <!-- cd-popup-container -->
+                </div>
+                <!-- cd-popup -->
             </div>
             <!--CENTER SECTION-->
             <div class="db-2">
@@ -239,7 +239,7 @@
                                 <div class="title">
                                     <div class="review">
                                         <input type="checkbox" name="delete" id="delete">
-                                        <span>Review</span> This is review
+                                        <span class="review">Review</span> This is review
                                     </div>
                                 </div>
                                 <div class="date">
@@ -265,9 +265,33 @@
                 </div>
             </div>
 
+            <div class="db-2">
+                <div class="db-2-sort">
+                    <div class="sorting">
+                        <h4>Purchase History</h4>
+                    </div>
+                    <div class="db-2-main-com">
+                        <div class="db-2-main-2">
+                            <div class="board-flex">
+                                <div class="title">
+                                    <div class="review">
+                                        <input type="checkbox" name="delete" id="delete">
+                                        <span class="num">1</span><span class="genre">장르</span> 게임이름
+                                    </div>
+                                </div>
+                                <div class="date">
+                                    10/06/19
+                                </div>
+                            </div>
+                        </div>
+                        <div class="db-mak-pay-bot">
+                            <a href="db-my-profile-edit.html" class="btn-large">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
 
     <!-- ##### User info Area Start #####-->
 
