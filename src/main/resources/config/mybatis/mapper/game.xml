@@ -62,9 +62,28 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 페이징 처리  -->
 	 <select id="pagingSelect" parameterType="com.web.project.game.vo.PagingVo" resultType="com.web.project.game.vo.GameVo">
-	 	SELECT i.path AS path, g.title AS title, c.genrename AS genrename, g.price AS price, g.info AS info
-		FROM item g, category c, image i
-		WHERE i.imgno=g.imgno AND c.genreno=g.genreno and g.itemno BETWEEN #{begin} AND #{end}
+		SELECT * FROM (
+            SELECT  rownum as rn, path, itemno, title, genrename, price, info FROM (
+                SELECT i.path AS path, g.itemno as itemno, g.title AS title, c.genrename AS genrename, g.price AS price, g.info AS info
+                FROM item g, category c, image i, amount a
+                WHERE i.imgno=g.imgno AND a.itemno = g.itemno AND c.genreno=g.genreno AND a.genreno = c.genreno
+		        <choose>
+					<when test="filter == 'highTolow'">
+						ORDER BY g.price DESC
+					</when>
+					<when test="filter == 'lowToHigh'">
+						ORDER BY g.price ASC
+					</when>
+					<when test="filter == 'date'">
+						ORDER BY g.regdate DESC
+					</when>
+					<when test="filter == 'popularity'">
+						ORDER BY a.amount DESC
+					</when>
+				</choose>
+        	)
+       		) 
+        WHERE rn BETWEEN #{begin} AND #{end}
     </select>
     
     <select id="pagingSelectTotal" resultType="java.lang.Integer">

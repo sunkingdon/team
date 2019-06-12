@@ -4,7 +4,14 @@ public class PagingVo {
 	private int currentPage;
 	private int begin;
 	private int end;
+	private String filter;
 
+	public String getFilter() {
+		return filter;
+	}
+	public void setFilter(String filter) {
+		this.filter = filter;
+	}
 	public int getCurrentPage() {
 		return currentPage;
 	}

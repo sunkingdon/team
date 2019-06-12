@@ -55,10 +55,14 @@ public class GameController {
 		int end = currentPage * 9;
 		int begin = end - (9 - 1);
 		int total = gameService.getTotalCount();
-
+		
+		// 필터
+		String filter = request.getParameter("filter");
+		
 		pageingvo.setCurrentPage(currentPage);
 		pageingvo.setBegin(begin);
 		pageingvo.setEnd(end);
+		pageingvo.setFilter(filter);
 
 		request.setAttribute("pagelist", gameService.pagingList(pageingvo));
 		request.setAttribute("totalPage", (total - 1) / 9 + 1);
@@ -66,6 +70,7 @@ public class GameController {
 		// 게임 리스트 출력
 		List<GameVo> list = gameService.gameList();
 		m.addAttribute("list", list);
+		m.addAttribute("filter", filter);
 		
 		// 최신 게임 리스트 출력
 		List<GameVo> latestlist = gameService.recentList();

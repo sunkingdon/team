@@ -35,7 +35,7 @@
     <script type="text/javascript">
     	function addToCart(){
    			alert("구매가 성공적으로 완료되었습니다. ");
-   			location.href="mypage";
+   			location.href="pur.do";
    		}
 		//	대현이가 마이페이지 내가 구매한 게임 목록으로 가게끔 수정
     </script>
