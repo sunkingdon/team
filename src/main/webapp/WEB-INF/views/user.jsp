@@ -25,6 +25,8 @@
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/user-info.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/materialize.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/popup.css">
+
 <script src="https://kit.fontawesome.com/4e530a2d6a.js"></script>
 
 </head>
@@ -147,102 +149,127 @@
 	<!-- ##### Header Area End ##### -->
 
 	<!-- ##### User info Area Start #####-->
-	<section>
-		<div class="db">
-			<!--LEFT SECTION-->
-			<div class="db-l">
-				<div class="db-l-1">
-					<ul>
-						<li><img src="${pageContext.request.contextPath}/resources/img/authors/profile.jpg" alt="" /></li>
-						<li><i class="fas fa-user"></i> Username</li>
-					</ul>
-				</div>
-				<div class="db-l-2">
-					<ul>
-						<li><a href="myInfo.do"> <i class="fas fa-user"></i> User Information
-						</a></li>
-						<li><a href="userDelete"><i class="fas fa-user-times"></i> Delete Account</a></li>
-					</ul>
-				</div>
-			</div>
-			<!--CENTER SECTION-->
-			<div class="db-2">
-				<div class="db-2-com db-2-main">
-					<h4>My Profile</h4>
-					<div class="db-2-main-com db-2-main-com-table">
-						<table class="responsive-table">
-							<tbody>
-								<tr>
-									<td>User Name</td>
-									<td>:</td>
-									<td>Finnk</td>
-								</tr>
-								<tr>
-									<td>Password</td>
-									<td>:</td>
-									<td>mypasswordtour</td>
-								</tr>
-								<tr>
-									<td>Eamil</td>
-									<td>:</td>
-									<td>Adventuretime@gmail.com</td>
-								</tr>
-								<tr>
-									<td>Date of birth</td>
-									<td>:</td>
-									<td>03 Jun 1990</td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="db-mak-pay-bot">
-							<a href="" class="btn-large">Edit my profile</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="db-2">
-				<div class="db-2-sort">
-					<div class="sorting">
-						<h4>My Board</h4>
-						<div class="sorter">
-							<select name="orderby" class="orderby">
-								<option value="menu_order" selected="selected">filter</option>
-								<option value="review">Review</option>
-								<option value="comment">Comment</option>
-							</select>
-						</div>
-					</div>
-					<div class="db-2-main-com">
-						<div class="db-2-main-2">
-							<div class="board-flex">
-								<div class="title">
-									<div class="review">
-										<input type="checkbox" name="delete" id="delete"> <span>Review</span>
-										This is review
-									</div>
-								</div>
-								<div class="date">10/06/19</div>
-							</div>
-							<div class="board-flex">
-								<div class="title">
-									<div class="comment">
-										<input type="checkbox" name="delete" id="delete"> <span>Comment</span>
-										This is comment
-									</div>
-								</div>
-								<div class="date">10/06/19</div>
-							</div>
-							<div class="db-mak-pay-bot">
-								<a href="" class="btn-large">Delete</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- ##### User info Area Start #####-->
+    <section>
+        <div class="db">
+            <!--LEFT SECTION-->
+            <div class="db-l">
+                <div class="db-l-1">
+                    <ul>
+                        <li><img src="img/authors/profile.jpg" alt="" /></li>
+                        <li><i class="fas fa-user"></i> Username</li>
+                    </ul>
+                </div>
+                <div class="db-l-2">
+                    <ul>
+                        <li>
+                            <a href="myInfo.do">
+                                <i class="fas fa-user"></i> User Information</a>
+                        </li>
+                        <li>
+                            <a href="#0" class="cd-popup-trigger"><i class="fas fa-user-times"></i> Delete Account</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <div class="cd-popup" role="alert">
+                        <div class="cd-popup-container">
+                            <h4>Are you sure you want to delete your account?</h4>
+                            <p> Enter your password.</p>
+                            <input type="password" class="pw" placeholder="Enter your password">
+                            <div class="cd-buttons">
+                                <button class="yes" onclick="">Yes</button>
+                                <button class="no" onclick="">No</button>
+                            </div>
+                            <a href="#0" class="cd-popup-close img-replace">Close</a>
+                        </div>
+                        <!-- cd-popup-container -->
+                    </div>
+                    <!-- cd-popup -->
+            </div>
+            <!--CENTER SECTION-->
+            <div class="db-2">
+                <div class="db-2-com db-2-main">
+                    <h4>My Profile</h4>
+                    <div class="db-2-main-com db-2-main-com-table">
+                        <table class="responsive-table">
+                            <tbody>
+                                <tr>
+                                    <td>User Name</td>
+                                    <td>:</td>
+                                    <td>Tony Stark</td>
+                                </tr>
+                                <tr>
+                                    <td>Password</td>
+                                    <td>:</td>
+                                    <td>mypasswordtour</td>
+                                </tr>
+                                <tr>
+                                    <td>Eamil</td>
+                                    <td>:</td>
+                                    <td>sam_anderson@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>Date of birth</td>
+                                    <td>:</td>
+                                    <td>03 Jun 1990</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="db-mak-pay-bot">
+                            <a href="db-my-profile-edit.html" class="btn-large">Edit my profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="db-2">
+                <div class="db-2-sort">
+                    <div class="sorting">
+                        <h4>My Board</h4>
+                        <div class="sorter">
+                            <select name="orderby" class="orderby">
+                                <option value="menu_order" selected="selected">filter</option>
+                                <option value="review">Review</option>
+                                <option value="comment">Comment</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="db-2-main-com">
+                        <div class="db-2-main-2">
+                            <div class="board-flex">
+                                <div class="title">
+                                    <div class="review">
+                                        <input type="checkbox" name="delete" id="delete">
+                                        <span>Review</span> This is review
+                                    </div>
+                                </div>
+                                <div class="date">
+                                    10/06/19
+                                </div>
+                            </div>
+                            <div class="board-flex">
+                                <div class="title">
+                                    <div class="comment">
+                                        <input type="checkbox" name="delete" id="delete">
+                                        <span>Comment</span> This is comment
+                                    </div>
+                                </div>
+                                <div class="date">
+                                    10/06/19
+                                </div>
+                            </div>
+                            <div class="db-mak-pay-bot">
+                                <a href="db-my-profile-edit.html" class="btn-large">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </section>
+
+
+    <!-- ##### User info Area Start #####-->
 
 	<!-- ##### Footer Area Start ##### -->
 	<footer class="footer-area">
@@ -363,6 +390,7 @@
 		src="${pageContext.request.contextPath}/resources/js/plugins/plugins.js"></script>
 	<!-- Active js -->
 	<script src="${pageContext.request.contextPath}/resources/js/active.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/popup.js"></script>
 </body>
 
 </html>
