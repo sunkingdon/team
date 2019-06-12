@@ -215,6 +215,38 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <!-- <tbody>
+                                <tr>
+                                    <td>User Name</td>
+                                    <td>:</td>
+                                    <td>Tony Stark</td>
+                                </tr>
+                                <tr>
+                                    <td>Password</td>
+                                    <td>:</td>
+                                    <td><input type="password" class="edit-pw" placeholder="New password"></td>
+                                </tr>
+                                <tr>
+                                    <td>Password Confirm</td>
+                                    <td>:</td>
+                                    <td><input type="password" class="edit-pw" placeholder="Password Confirm"></td>
+                                </tr>
+                                <tr>
+                                    <td>Eamil</td>
+                                    <td>:</td>
+                                    <td><input type="email" class="edit-email" placeholder="Enter email"></td>
+                                </tr>
+                                <tr>
+                                    <td>Date of birth</td>
+                                    <td>:</td>
+                                    <td>03 Jun 1990</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="db-mak-pay-bot">
+                            <a href="db-my-profile-edit.html" class="btn-comfirm">Comfirm</a>
+                            <a href="db-my-profile-edit.html" class="btn-cancel">Cancel</a>
+                        </div> -->
                         <div class="db-mak-pay-bot">
                             <a href="db-my-profile-edit.html" class="btn-large">Edit my profile</a>
                         </div>
@@ -292,7 +324,8 @@
             </div>
         </div>
     </section>
-
+	
+	
     <!-- ##### User info Area Start #####-->
 
 	<!-- ##### Footer Area Start ##### -->

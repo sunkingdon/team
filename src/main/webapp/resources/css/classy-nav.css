@@ -306,7 +306,6 @@ img {
 
 /* Desktop Area CSS */
 .breakpoint-off .classynav {
-  margin-top:20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
