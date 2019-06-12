@@ -66,6 +66,7 @@
                             <button onclick="location.href='/project/logout.do'">Log out</button>
                             </c:otherwise>
                             </c:choose>
+                            
                             <!--
                             <div class="login-area dropdown">
                                 <a href="signin.html"><span>Welcome, Username</span> <i class="fas fa-user" aria-hidden="true"></i><i class="fa fa-caret-down"></i></a>
@@ -108,7 +109,6 @@
                                     <li><a href="home.do">Home</a></li>
                                     <li><a href="store.do">Store</a></li>                          
                                     <li><a href="reviews">Reviews</a></li>
-                                    <li><a href="support.html">Support</li>
                                 </ul>
                             </div>
                             <!-- Nav End -->

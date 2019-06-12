@@ -149,6 +149,7 @@ xpopup
   width: 30px;
   height: 30px;
 }
+
 .cd-popup-container .cd-popup-close::before,
 .cd-popup-container .cd-popup-close::after {
   content: "";

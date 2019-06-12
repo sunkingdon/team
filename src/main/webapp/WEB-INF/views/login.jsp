@@ -159,7 +159,7 @@
                     <form class="login100-form validate-form" action="/project/login.do" method="post">
                         <span class="login100-form-logo">
                             <img src="${pageContext.request.contextPath}/resources/img/core-img/logo.png">
-                        </span>
+                        </span> 
     
                         <span class="login100-form-title p-b-34 p-t-27">
                             Log in
