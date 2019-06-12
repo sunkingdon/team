@@ -9,6 +9,7 @@ import com.web.project.game.dao.CategoryDao;
 import com.web.project.game.dao.GameDao;
 import com.web.project.game.dao.ImageDao;
 import com.web.project.game.vo.GameVo;
+import com.web.project.game.vo.PagingVo;
 
 @Service("gameService")
 public class GameServiceImpl implements GameService{
@@ -54,5 +55,15 @@ public class GameServiceImpl implements GameService{
 	@Override
 	public List<GameVo> highList() {
 		return gameDao.highList();
+	}
+
+	@Override
+	public int getTotalCount() {
+		return gameDao.getTotalCount();
+	}
+	
+	@Override
+	public List<GameVo> pagingList(PagingVo vo){
+		return gameDao.pagingList(vo);
 	}
 }

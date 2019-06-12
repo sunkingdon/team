@@ -109,7 +109,6 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="home.do">Home</a></li>
-<!--                                     <li><a href="store.html">Store</a></li>                           -->
                                     <li><a href="store.do">Store</a></li>                          
                                     <li><a href="reviews">Reviews</a></li>
                                     <li><a href="support.html">Support</li>
@@ -120,10 +119,16 @@
 
                         <!-- Nav 소셜미디어 아이콘 -->
                         <div class="top-social-info">
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </div>
+                           	<a href="https://www.facebook.com/GamespotWeb-440364573418626"  target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
+                        		<i class="fa fa-facebook" aria-hidden="true"></i>
+                     		</a> 
+                     		<a href="https://twitter.com/hPKPXzq0fRwNZU3" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
+                       			<i class="fa fa-twitter" aria-hidden="true"></i>
+                     		</a> 
+                     		<a href="https://instagram.com/game__spot?igshid=1xachyxg6ydfl" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
+                        		<i class="fa fa-instagram" aria-hidden="true"></i>
+                     		</a>
+                     	</div>
                     </nav>
                 </div>
             </div>
@@ -132,7 +137,7 @@
     <!-- ##### Header Area End ##### -->
     
     <!-- ##### Breadcrumb Area Start ##### -->
-    <div class="breadcrumb-area bg-img bg-overlay" style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/27.jpg);">
+    <div class="breadcrumb-area bg-img bg-overlay" style="background-image: url('/project/resources/image/Dead by Daylight.jpg');">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <!-- Breadcrumb Text -->
@@ -163,19 +168,8 @@
                             <option value="price">low to high</option>
                             <option value="price-desc">high to low</option>
                         </select>
-                    </div>
-
-                    <div class="toolbar-sorter">
-                        <span>Genre : </span>
-                        <select name="orderby" class="orderby">
-                            <option value="menu_order" selected="selected">filter</option>
-                            <option value="popularity">popularity</option>
-                            <option value="date">newness</option>
-                            <option value="price">low to high</option>
-                            <option value="price-desc">high to low</option>
-                        </select>
-                    </div>
-
+  					</div>
+  					
                     <div class="toolbar-sorter">
                         <span>Search : </span>
                         <div class="top-search-area">
@@ -214,20 +208,20 @@
 										<div class="product-block">
 											<div class="product-image ">
 												<div class="product-thumbnail">
-													<a href="product_single.html" title=""> 
+													<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title=""> 
 														<img class="product-featured-image" src="${pageContext.request.contextPath}/resources/image/${g.path}" alt="">
 													</a>
 												</div>
 											</div>
 											<div class="product-caption">
-												<span class="posted_in"><a href="${pageContext.request.contextPath}/categorylist.do" rel="tag">${g.genrename }</a></span>
+												<span class="posted_in"><a href="${pageContext.request.contextPath}/categorylist.do?${g.genrename }" rel="tag">${g.genrename }</a></span>
 												<h4 class="product-title">
-													<a href="gamesingle.do" title="">${g.title }</a>
+													<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title="">${g.title }</a>
 												</h4>
 												<div class="product-form-cart">
 													<div class="product-price">
 														<ins>
-															<span class="amout">${g.price } &#8361; </span>
+															<span class="amout">&#8361; ${g.price }</span>
 														</ins>
 													</div>
 													<a href="product_single.html" class="add_to_cart_button">
@@ -255,10 +249,8 @@
 											<div class="col-lg-4 col-md-12 col-sm-12">
 												<figure class="product-image">
 													<div class="product-thumbnail">
-														<a href="#" title=""> <img
-															class="product-featured-image"
-															src="${pageContext.request.contextPath}/resources/image/${g.path }"
-															alt="">
+														<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title=""> 
+															<img class="product-featured-image" src="${pageContext.request.contextPath}/resources/image/${g.path }" alt="">
 														</a>
 													</div>
 												</figure>
@@ -266,14 +258,14 @@
 											</div>
 											<div class="col-lg-8 col-md-12 col-sm-12">
 												<div class="product-caption">
-													<span class="posted_in"><a href="#" rel="tag">${g.genrename }</a></span>
+													<span class="posted_in"><a href="${pageContext.request.contextPath}/categorylist.do?${g.genrename }" rel="tag">${g.genrename }</a></span>
 													<div class="product-meta">
 														<h4 class="product-name">
-															<a href="product_single.html" title="">${g.title }</a>
+															<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title="">${g.title }</a>
 														</h4>
 														<div class="product-price">
 															<ins>
-																<span class="amout">${g.price } &#8361;</span>
+																<span class="amout">&#8361; ${g.price }</span>
 															</ins>
 														</div>
 													</div>
@@ -338,41 +330,31 @@
                                     <form class="login100-form validate-form">
                                         <div class="contact100-form-checkbox">
                                             <input class="input-checkbox100" id="ckb1" type="checkbox" name="price">
-                                            <label class="label-checkbox100" for="ckb1">
-                                                $5 - $15
-                                            </label>
+                                            <label class="label-checkbox100" for="ckb1"> $5 - $15  </label>
                                         </div>
                                     </form>
                                     <form class="login100-form validate-form">
                                         <div class="contact100-form-checkbox">
                                             <input class="input-checkbox100" id="ckb2" type="checkbox" name="price">
-                                            <label class="label-checkbox100" for="ckb2">
-                                                $15 - $25
-                                            </label>
+                                            <label class="label-checkbox100" for="ckb2"> $15 - $25 </label>
                                         </div>
                                     </form>
                                     <form class="login100-form validate-form">
                                         <div class="contact100-form-checkbox">
                                             <input class="input-checkbox100" id="ckb3" type="checkbox" name="price">
-                                            <label class="label-checkbox100" for="ckb3">
-                                                $25 - $35
-                                            </label>
+                                            <label class="label-checkbox100" for="ckb3"> $25 - $35 </label>
                                         </div>
                                     </form>
                                     <form class="login100-form validate-form">
                                         <div class="contact100-form-checkbox">
                                             <input class="input-checkbox100" id="ckb4" type="checkbox" name="price">
-                                            <label class="label-checkbox100" for="ckb4">
-                                                $35 - $45
-                                            </label>
+                                            <label class="label-checkbox100" for="ckb4"> $35 - $45 </label>
                                         </div>
                                     </form>
                                     <form class="login100-form validate-form">
                                         <div class="contact100-form-checkbox">
                                             <input class="input-checkbox100" id="ckb5" type="checkbox" name="price">
-                                            <label class="label-checkbox100" for="ckb5">
-                                                $45 - $55
-                                            </label>
+                                            <label class="label-checkbox100" for="ckb5"> $45 - $55 </label>
                                         </div>
                                     </form>
                                 </div>
@@ -383,19 +365,13 @@
                             <section class="widget section-price widget_filter">
                                 <h3 class="widget-title widget_collapse">Price range</h3>
                                 <div class="widget-content">
-                                    <div class="ps-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-                                        data-default-min="0" data-default-max="500" data-max="1000" data-step="100"
-                                        data-unit="$">
-                                        <div class="ui-slider-range ui-corner-all ui-widget-header"
-                                            style="left: 0%; width: 50%;"></div><span tabindex="0"
-                                            class="ui-slider-handle ui-corner-all ui-state-default"
-                                            style="left: 0%;"></span><span tabindex="0"
-                                            class="ui-slider-handle ui-corner-all ui-state-default"
-                                            style="left: 50%;"></span>
+                                    <div class="ps-slider ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-default-min="0" data-default-max="500" data-max="1000" data-step="100" data-unit="$">
+                                        <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 50%;"></div>
+                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
+                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 50%;"></span>
                                     </div>
-                                    <p class="ps-slider__meta">Price:<span
-                                            class="ps-slider__value ps-slider__min">$0</span>-<span
-                                            class="ps-slider__value ps-slider__max">$500</span></p>
+                                    <p class="ps-slider__meta">Price:
+                                    <span class="ps-slider__value ps-slider__min">$0</span>-<span class="ps-slider__value ps-slider__max">$500</span></p>
                                 </div>
                             </section>
                             <!--/Price -->
@@ -407,11 +383,6 @@
     </div>
 
     <!-- #### End archive-product #### -->
-
-
-
-
-
 
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area">
@@ -427,10 +398,8 @@
                             </div>
                             <div class="widget-content">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit
-                                    arcu,
-                                    scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat
-                                    volutpat. Sed
-                                    efficitur diam ut interdum ultricies.</p>
+                                    arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat
+                                    volutpat. Sedefficitur diam ut interdum ultricies.</p>
                             </div>
                         </div>
                     </div>
@@ -465,13 +434,9 @@
                                 <nav>
                                     <ul>
                                         <li><a href="https://store.steampowered.com/" target="_blank">Steam</a></li>
-                                        <li><a href="https://store.playstation.com/" target="_blank">PlayStation</a>
-                                        </li>
-                                        <li><a href="http://blizzard.com" target="_blank">Blizzard
-                                                Entertainment</a>
-                                        </li>
-                                        <li><a href="https://www.origin.com/" target="_blank">Origin</a>
-                                        </li>
+                                        <li><a href="https://store.playstation.com/" target="_blank">PlayStation</a></li>
+                                        <li><a href="http://blizzard.com" target="_blank">Blizzard Entertainment</a></li>
+                                        <li><a href="https://www.origin.com/" target="_blank">Origin</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -486,13 +451,11 @@
                             </div>
                             <div class="widget-content">
                                 <nav>
-                                    <ul>
-                                        <li><a href="#">Doom</a></li>
-                                        <li><a href="#">Grand Theft Auto</a></li>
-                                        <li><a href="#">Bloodborne</a></li>
-                                        <li><a href="#">God of war</a></li>
-                                        <li><a href="#">Persona 5</a></li>
-                                    </ul>
+                              	<c:forEach var="g" items="${latestList }">
+									<ul>
+										<li><a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }">${g.title }</a></li>
+									</ul>
+								</c:forEach>
                                 </nav>
                             </div>
                         </div>
@@ -505,9 +468,8 @@
                 <div class="row h-100 align-items-center">
                     <div class="col-12 col-sm-5">
                         <!-- Copywrite Text -->
-                        <p class="copywrite-text">
-                            Copyright &copy; All rights reserved | This Website is made with <i class="fa fa-heart-o"
-                                aria-hidden="true"></i> by Team2
+                        <p class="copywrite-text"> 
+                        	Copyright &copy; All rights reserved | This Website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Team2
                         </p>
                     </div>
                 </div>

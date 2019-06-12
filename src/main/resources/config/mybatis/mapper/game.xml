@@ -51,6 +51,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         ORDER BY price DESC)
         WHERE rownum BETWEEN 1 AND 8
 	</select>
+	
+	<!-- 페이징 처리  -->
+	 <select id="pagingSelect" parameterType="com.web.project.game.vo.PagingVo" resultType="com.web.project.game.vo.GameVo">
+	 	SELECT i.path AS path, g.title AS title, c.genrename AS genrename, g.price AS price, g.info AS info
+		FROM item g, category c, image i
+		WHERE i.imgno=g.imgno AND c.genreno=g.genreno and g.itemno BETWEEN #{begin} AND #{end}
+    </select>
+    
+    <select id="pagingSelectTotal" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM item
+    </select>
 
 </mapper>
 

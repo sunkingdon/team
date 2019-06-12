@@ -1042,8 +1042,8 @@ img {
   position: relative;
   z-index: 1;
 }
-.product-featured-image > img {
-	height: 250px;
+.product-featured-image {
+	height: 220px;
 }
 
 

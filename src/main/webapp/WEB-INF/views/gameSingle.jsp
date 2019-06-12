@@ -115,7 +115,6 @@
                                     <li><a href="home.do">Home</a></li>
                                     <li><a href="store.do">Store</a></li>                          
                                     <li><a href="reviews">Reviews</a></li>
-                                    <li><a href="support.html">Support</li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -141,7 +140,7 @@
     <!--  Header Area End  -->
     
     <!--  Breadcrumb Area Start  -->
-    <div class="breadcrumb-area bg-img bg-overlay" style="background-image: url(${pageContext.request.contextPath}/resources/image1/Call of Duty 4.jpg);">
+    	<div class="breadcrumb-area bg-img bg-overlay" style="background-image: url('/project/resources/image/Dead by Daylight.jpg');">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <!-- Breadcrumb Text -->
@@ -152,7 +151,7 @@
                 </div>
             </div>
         </div>
-    </div>
+        </div>
     <!--  Breadcrumb Area End  -->
 
     <!--  Game-single Area Start -->
@@ -185,7 +184,6 @@
                                     <div class="slider slider-for">
                                         <div><img src="${pageContext.request.contextPath}/resources/image2/${g.path }" alt=""></div>
                                         <div><img src="${pageContext.request.contextPath}/resources/image1/${g.path }" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/image/${g.path }" alt=""></div>
                                     </div>
                                 </div>
                             </div>
@@ -233,49 +231,47 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-     </c:forEach>
-                        <!-- product-tab-description -->
-                        <div class="product-description-tabs">
-                            <ul class="nav">
-                                <li><a data-toggle="tab" href="#tab_description" class="active">Description</a></li>
-                                <li><a data-toggle="tab" href="#tab_reviews">Customer Reviews (2)</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div id="tab_description" class="tab-pane fade show active">
-                                    pre-shaving, soak clean towel with hot water. For post-shaving, use cold
-                                    water instead. Ring out excess water and spray towel with the product. Apply to face
-                                    for 30 seconds, avoiding eye area. Do not rinse. Product can also be used without a
-                                    towel. Spray directly onto face after shaving, avoiding eye area. Do not rinse.
-                                    After shaving, apply a small amount to the face and neck area, massaging in until
-                                    completely absorbed.
-                                    <div class="tab_description_info pt-20">
-                                        <div class="pb-10">Description</div>
-                                        <i>
-                                            New shave duo featuring shave tonic & after shave balm shave tonic:
-                                        </i>
-                                    </div>
-                                    <div class="tab_description_info pt-20">
-                                        <div class="pb-10">Benefits</div>
-                                        <i>
-                                            Nourishing post-shave moisturizer for men with aloe and tea tree oil
-                                        </i>
-                                    </div>
-                                    <div class="tab_description_info pt-20">
-                                        <div class="pb-10">Suggested Use</div>
-                                        <i>
-                                            Helps soothe and protect skin from shaving irritation, dryness and razor
-                                            burn.
-                                        </i>
-                                    </div>
-                                </div>
-                                <div id="tab_information" class="tab-pane fade">
-                                    For use pre-shaving, soak clean towel with hot water. For post-shaving, use cold
-                                    water instead. Ring out excess water and spray towel with the product. Apply to face
-                                    for 30 seconds, avoiding eye area. Do not rinse. Product can also be used without a
-                                    towel. Spray directly onto face after shaving, avoiding eye area. Do not rinse.
-                                    After shaving, apply a small amount to the face and neck area, massaging in until
-                                    completely absorbed.
+                  		</div>
+                  	</div>
+                  </div>
+              </div>
+           </div>
+         </div>		
+     	</c:forEach>
+        <!-- product-tab-description -->
+        <div class="product-description-tabs">
+        	<ul class="nav">
+            	<li><a data-toggle="tab" href="#tab_description" class="active">Description</a></li>
+                <li><a data-toggle="tab" href="#tab_reviews">Customer Reviews (2)</a></li>
+            </ul>
+      		<div class="tab-content">
+        		<div id="tab_description" class="tab-pane fade show active">
+           	 	pre-shaving, soak clean towel with hot water. For post-shaving, use cold
+            	water instead. Ring out excess water and spray towel with the product. Apply to face
+            	for 30 seconds, avoiding eye area. Do not rinse. Product can also be used without a
+            	towel. Spray directly onto face after shaving, avoiding eye area. Do not rinse.
+            	After shaving, apply a small amount to the face and neck area, massaging in until
+            	completely absorbed.
+            	<div class="tab_description_info pt-20">
+            		<div class="pb-10">Description</div>
+                	<i> New shave duo featuring shave tonic & after shave balm shave tonic: </i>
+            	</div>
+            	<div class="tab_description_info pt-20">
+            		<div class="pb-10">Benefits</div>
+                	<i> Nourishing post-shave moisturizer for men with aloe and tea tree oil </i>
+            	</div>
+            	<div class="tab_description_info pt-20">
+               		<div class="pb-10">Suggested Use</div>
+                  	<i> Helps soothe and protect skin from shaving irritation, dryness and razor burn. </i>
+            	</div>
+            </div>
+                <div id="tab_information" class="tab-pane fade">
+                 For use pre-shaving, soak clean towel with hot water. For post-shaving, use cold
+                water instead. Ring out excess water and spray towel with the product. Apply to face
+                 for 30 seconds, avoiding eye area. Do not rinse. Product can also be used without a
+                 towel. Spray directly onto face after shaving, avoiding eye area. Do not rinse.
+                 After shaving, apply a small amount to the face and neck area, massaging in until
+                 completely absorbed.
                                 </div>
                                 <div id="tab_reviews" class="tab-pane fade">
                                     <div class="rattings-wrapper">
@@ -331,6 +327,7 @@
                                         </div>
                                     </div>
                                     
+                                    
                                     <form class="form-product-review" action="" method="post">
                                         <h5>ADD YOUR REVIEW</h5>
                                         <div class="form-group">
@@ -372,7 +369,7 @@
                             </div>
                         </div>
                         <!--/product-tab-description -->
-                    </div>
+                    
                     
                     <div class="col-lg-3 col-md-4">
                         <div class="sidebar">
@@ -381,146 +378,7 @@
                                 <p>Extra 12% off on Credit/Debit Card</p>
                             </div>
                             <ul class="product-list-siderbar">
-                                <li>
-                                    <div class="inner">
-                                        <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <h3 class="product-title">
-                                                <a href="#">Game 1</a>
-                                            </h3>
-                                            <div class="star-rating">
-                                                <span class="product-rating" data-rating="">
-                                                    <span class="star-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </span>
-                                                </span>
-                                                <div class="product-price">
-                                                    <ins>
-                                                        <span class="amout">$14.38</span>
-                                                    </ins>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inner">
-                                        <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <h3 class="product-title">
-                                                <a href="#">Game 1</a>
-                                            </h3>
-                                            <div class="star-rating">
-                                                <span class="product-rating" data-rating="">
-                                                    <span class="star-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="product-price">
-                                                <ins>
-                                                    <span class="amout">$14.38</span>
-                                                </ins>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inner">
-                                        <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/47.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <h3 class="product-title">
-                                                <a href="#">Game 1</a>
-                                            </h3>
-                                            <div class="star-rating">
-                                                <span class="product-rating" data-rating="">
-                                                    <span class="star-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="product-price">
-                                                <ins>
-                                                    <span class="amout">$14.38</span>
-                                                </ins>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inner">
-                                        <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/47.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <h3 class="product-title">
-                                                <a href="#">Game 1</a>
-                                            </h3>
-                                            <div class="star-rating">
-                                                <span class="product-rating" data-rating="">
-                                                    <span class="star-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="product-price">
-                                                <ins>
-                                                    <span class="amout">$14.38</span>
-                                                </ins>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inner">
-                                        <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/48.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <h3 class="product-title">
-                                                <a href="#">Game 1</a>
-                                            </h3>
-                                            <div class="star-rating">
-                                                <span class="product-rating" data-rating="">
-                                                    <span class="star-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="product-price">
-                                                <ins>
-                                                    <span class="amout">$14.38</span>
-                                                </ins>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                     
                                 <li>
                                     <div class="inner">
                                         <a class="product-thumbnail" href="#">
@@ -549,99 +407,13 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="inner">
-                                        <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/45.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <h3 class="product-title">
-                                                <a href="#">Game 1</a>
-                                            </h3>
-                                            <div class="star-rating">
-                                                <span class="product-rating" data-rating="">
-                                                    <span class="star-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="product-price">
-                                                <ins>
-                                                    <span class="amout">$14.38</span>
-                                                </ins>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inner">
-                                        <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <h3 class="product-title">
-                                                <a href="#">Game 1</a>
-                                            </h3>
-                                            <div class="star-rating">
-                                                <span class="product-rating" data-rating="">
-                                                    <span class="star-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="product-price">
-                                                <ins>
-                                                    <span class="amout">$14.38</span>
-                                                </ins>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="inner">
-                                        <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/46.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <h3 class="product-title">
-                                                <a href="#">Game 1</a>
-                                            </h3>
-                                            <div class="star-rating">
-                                                <span class="product-rating" data-rating="">
-                                                    <span class="star-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                            <div class="product-price">
-                                                <ins>
-                                                    <span class="amout">$14.38</span>
-                                                </ins>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
                             </ul>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!--  game-single Area End -->
 
+
+<!-- *********************** Footer ***************************** -->
     <!--  Footer Area Start  -->
     <footer class="footer-area">
         <!-- Main Footer Area -->

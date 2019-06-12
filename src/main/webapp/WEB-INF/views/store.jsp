@@ -7,16 +7,12 @@
 <meta charset="UTF-8">
 <meta name="description" content="">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- 상위 4줄은 반드시 head 최상위에 위치해야함. -->
 
 <!-- Title -->
 <title>GAMESPOT | Store</title>
-<!--  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
-<!--   <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
   <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
   <script type = "text/javascript">
   var newJquery = $.noConflict(true);
   
@@ -44,58 +40,51 @@
       "Lobotomy Corporation",
       "MONSTER HUNTER WORLD",
       "Moonlighter",
-   "Overcooked! 2",
-   "PLAYERUNKNOWN'S BATTLEGROUNDS",
-   "Portal 2",
-   "Princess Maker 3",
-   "Raft",
-   "RimWorld",
-   "Sid Meier's Civilization",
-   "Slay the Spire",
-   "SpyParty",
-   "Stardew Valley",
-   "Super Bunny Man",
-   "SUPERHOT",
-   "Team Sonic Racing",
-   "TEKKEN 7",
-   "The Binding of Isaac"
+      "Overcooked! 2",
+      "PLAYERUNKNOWN'S BATTLEGROUNDS",
+      "Portal 2",
+      "Princess Maker 3",
+      "Raft",
+      "RimWorld",
+      "Sid Meier's Civilization",
+      "Slay the Spire",
+      "SpyParty",
+      "Stardew Valley",
+      "Super Bunny Man",
+      "SUPERHOT",
+      "Team Sonic Racing",
+      "TEKKEN 7",
+      "The Binding of Isaac"
     ];
     newJquery( "#toolbar-search" ).autocomplete({
       source: availableTags
     });
   } );
   </script>
+  
 <!-- Favicon (브라우저 탭에 로고 노출) -->
-<link rel="icon" type="image/png" sizes="16x16"
-	href="${pageContext.request.contextPath}/resources/img/core-img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/img/core-img/favicon.ico">
 
 <!-- font-awesome CSS -->
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/fonts/font-awesome-4.7.0/css/font-awesome.css">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/fonts/iconic/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/fonts/font-awesome-4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/fonts/iconic/css/material-design-iconic-font.min.css">
 <!-- animate CSS -->
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/animate.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/animate.css">
 
 <!-- slick CSS -->
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/slick.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/slick.css">
 
 <!--magnific-popup CSS -->
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/magnific-popup.css">
 
 <!-- Stylesheet(css파일 따로 작성, 임포트 해서 적용.) -->
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/style.css">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/store.css">
-
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/style.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/store.css">
 </head>
 
 <body>
-
+	<c:set var = "currentPage" value = "${param.page != null ? param.page:1 }" />
+	
     <!-- Preloader (로딩 애니메이션)-->
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="spinner">
@@ -105,7 +94,7 @@
         </div>
     </div>
 
-    <!-- ##### Header 영역 시작 ##### -->
+    <!--  Header 영역 시작  -->
     <header class="header-area wow fadeInDown" data-wow-delay="500ms">
         <!-- Header 상단 영역 -->
         <div class="top-header-area">
@@ -147,9 +136,7 @@
                                     <a href=""><span>로그아웃</span><i class="fas fa-sign-out-alt" aria-hidden="true"></i></a>
                                 </div>
                             </div> -->
-                            
                             </div>
-                         
                         </div>
                     </div>
                 </div>
@@ -189,21 +176,26 @@
                         </div>
 
                         <!-- Nav 소셜미디어 아이콘 -->
-                        <div class="top-social-info">
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </div>
+                         <div class="top-social-info">
+   							<a href="https://www.facebook.com/GamespotWeb-440364573418626"  target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
+                        		<i class="fa fa-facebook" aria-hidden="true"></i>
+                     		</a> 
+                     		<a href="https://twitter.com/hPKPXzq0fRwNZU3" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
+                       			<i class="fa fa-twitter" aria-hidden="true"></i>
+                     		</a> 
+                     		<a href="https://instagram.com/game__spot?igshid=1xachyxg6ydfl" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
+                        		<i class="fa fa-instagram" aria-hidden="true"></i>
+                     		</a>
+                     	</div>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <!-- ##### Header Area End ##### -->
+    <!--  Header Area End  -->
 
-	<!-- ##### Breadcrumb Area Start ##### -->
-	<div class="breadcrumb-area bg-img bg-overlay"
-		style="background-image: url(${pageContext.request.contextPath}/resources/img/bg-img/27.jpg);">
+	<!--  Breadcrumb Area Start  -->
+	<div class="breadcrumb-area bg-img bg-overlay" style="background-image: url('/project/resources/image/Dead by Daylight.jpg');">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
 				<!-- Breadcrumb Text -->
@@ -215,18 +207,15 @@
 			</div>
 		</div>
 	</div>
-	<!-- ##### Breadcrumb Area End ##### -->
+	<!--  Breadcrumb Area End  -->
 
-	<!-- #### Store Area Start #### -->
-                                       
-
+	<!--  Store Area Start  -->
 	<!-- Container -->
 	<div class="store-container">
 		<div class="row flex-row-reverse">
 			<div class="col-lg-9 col-md-8">
 				<!-- product-shorting -->
-				<div
-					class="product-shorting d-flex align-items-center justify-content-between">
+				<div class="product-shorting d-flex align-items-center justify-content-between">
 					<div class="toolbar-sorter">
 						<span>Sort by : </span> <select name="orderby" class="orderby">
 							<option value="menu_order" selected="selected">filter</option>
@@ -251,13 +240,16 @@
 
 					<div class="grid-list-view">
 						<ul class="nav nav-tabs" role="tablist">
-							<li class="nav-item"><a class="nav-link active"
-								href="#grid-view" role="tab" data-toggle="tab"> <i
-									class="fa fa-th"></i>
-							</a></li>
-							<li class="nav-item"><a class="nav-link" href="#list-view" role="tab" data-toggle="tab"> 
-								<i class="fa fa-list-ul"></i>
-							</a></li>
+							<li class="nav-item">
+								<a class="nav-link active" href="#grid-view" role="tab" data-toggle="tab"> 
+									<i class="fa fa-th"></i>
+								</a>
+								</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#list-view" role="tab" data-toggle="tab"> 
+									<i class="fa fa-list-ul"></i>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -269,7 +261,7 @@
 						id="grid-view">
 						<div class="product products-grid">
 							<div class="row row-products">
-								<c:forEach var="g" items="${list}">
+								<c:forEach var="g" items="${pagelist }">
 									<div class="col-lg-4 col-md-6 col-sm-6">
 										<div class="product-block">
 											<div class="product-image ">
@@ -287,7 +279,7 @@
 												<div class="product-form-cart">
 													<div class="product-price">
 														<ins>
-															<span class="amout">${g.price } &#8361; </span>
+															<span class="amout">&#8361; ${g.price }</span>
 														</ins>
 													</div>
 													<a href="product_single.html" class="add_to_cart_button">
@@ -302,14 +294,12 @@
 						</div>
 					</div>
 
-
 					<!-- ***************************************************************************************************************************** -->
-
 
 					<div role="tabpanel" class="tab-pane fade" id="list-view">
 						<div class="product products-list">
 							<div class="row row-products">
-								<c:forEach var="g" items="${list }">
+								<c:forEach var="g" items="${pagelist }">
 									<div class="col-md-12 product-block-list">
 										<div class="row">
 											<div class="col-lg-4 col-md-12 col-sm-12">
@@ -331,7 +321,7 @@
 														</h4>
 														<div class="product-price">
 															<ins>
-																<span class="amout">${g.price } &#8361;</span>
+																<span class="amout">&#8361; ${g.price }</span>
 															</ins>
 														</div>
 													</div>
@@ -354,16 +344,38 @@
 				<!-- /tab-content -->
 				<nav class="pagination clearfix">
 					<ul class="page-numbers">
-						<li><a class="prev page-numbers" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
-						<li><span class="page-numbers current">1</span></li>
-						<li><a class="page-numbers" href="#">2</a></li>
-						<li><a class="page-numbers" href="#">3</a></li>
-						<li><a class="page-numbers" href="#">4</a></li>
-						<li><a class="next page-numbers" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+					    <c:if test = "${currentPage > 3 }">
+							<li><a class="prev page-numbers" href="store.do?page=${currentPage-3 }"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+      					</c:if>
+      					<c:if test = "${currentPage > 2 }">
+         					<li><a class="page-numbers" href="store.do?page=${currentPage-2 }">${currentPage-2 }</a></li>
+      					</c:if>
+      					<c:if test = "${currentPage > 1 }">
+         					<li><a class="page-numbers" href="store.do?page=${currentPage-1 }">${currentPage-1 }</a></li>
+     	 				</c:if>
+     	 					<li><span class="page-numbers current">${currentPage }</span></li>
+     	 				<c:if test = "${currentPage < totalPage }">
+         					<li><a class="page-numbers" href="store.do?page=${currentPage+1 }">${currentPage+1 }</a></li>
+      					</c:if>
+      					<c:if test = "${currentPage+1 < totalPage }">
+         					<li><a class="page-numbers" href="store.do?page=${currentPage+2 }">${currentPage+2 }</a></li>
+      					</c:if>
+      					<c:if test = "${currentPage+2 < totalPage }">
+         					<li><a class="next page-numbers" href="store.do?page=${currentPage+3 }"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+      					</c:if>
+
+<!-- 						<li><a class="prev page-numbers" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li> --!>
+<!-- 						<li><span class="page-numbers current">1</span></li> -->
+<!-- 						<li><a class="page-numbers" href="#">2</a></li> -->
+<!-- 						<li><a class="page-numbers" href="#">3</a></li> -->
+<!-- 						<li><a class="page-numbers" href="#">4</a></li> -->
+<!-- 						<li><a class="next page-numbers"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li> -->
+					
 					</ul>
 				</nav>
 				<!-- /pagination -->
 			</div>
+			
 			<div class="col-lg-3 col-md-4">
 				<aside class="sidebar product-filter">
 					<!-- Categories -->
@@ -393,27 +405,27 @@
 								<div class="widget-content">
 									<form class="login100-form validate-form">
 										<div class="contact100-form-checkbox">
-											<input class="input-checkbox100" id="ckb1" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb1"> 5,000 - 10,000  &#8361; </label>
+											<input class="input-checkbox100" id="ckb1" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb1">$5 - $15</label>
 										</div>
 									</form>
 									<form class="login100-form validate-form">
 										<div class="contact100-form-checkbox">
-											<input class="input-checkbox100" id="ckb2" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb2"> $15 - $25 </label>
+											<input class="input-checkbox100" id="ckb2" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb2">$15 - $25</label>
 										</div>
 									</form>
 									<form class="login100-form validate-form">
 										<div class="contact100-form-checkbox">
-											<input class="input-checkbox100" id="ckb3" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb3"> $25 - $35 </label>
+											<input class="input-checkbox100" id="ckb3" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb3">$25 - $35</label>
 										</div>
 									</form>
 									<form class="login100-form validate-form">
 										<div class="contact100-form-checkbox">
-											<input class="input-checkbox100" id="ckb4" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb4"> $35 - $45 </label>
+											<input class="input-checkbox100" id="ckb4" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb4">$35 - $45</label>
 										</div>
 									</form>
 									<form class="login100-form validate-form">
 										<div class="contact100-form-checkbox">
-											<input class="input-checkbox100" id="ckb5" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb5"> $45 - $55 </label>
+											<input class="input-checkbox100" id="ckb5" type="checkbox" name="price"> <label class="label-checkbox100" for="ckb5">$45 - $55</label>
 										</div>
 									</form>
 								</div>
@@ -421,6 +433,7 @@
 							<!--/Color -->
 
 							<!-- Price -->
+							<!-- 가격 범위 선택 부분 -->
 							<section class="widget section-price widget_filter">
 								<h3 class="widget-title widget_collapse">Price range</h3>
 								<div class="widget-content">
@@ -429,7 +442,7 @@
 										<span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span>
 										<span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 50%;"></span>
 									</div>
-									<p class="ps-slider__meta"> Price:<span class="ps-slider__value ps-slider__min">$0</span>-<span class="ps-slider__value ps-slider__max">$500</span>
+									<p class="ps-slider__meta"> Price:<span class="ps-slider__value ps-slider__min">$ 0</span>-<span class="ps-slider__value ps-slider__max">$ 55</span>
 									</p>
 								</div>
 							</section>
@@ -440,9 +453,9 @@
 			</div>
 		</div>
 	</div>
-	<!-- #### End archive-product #### -->
+	<!--  End archive-product  -->
 
-	<!-- ##### Footer Area Start ##### -->
+	<!--  Footer Area Start  -->
 	<footer class="footer-area">
 		<!-- Main Footer Area -->
 		<div class="main-footer-area section-padding-100-0">
@@ -487,20 +500,16 @@
 
 					<!-- Single Footer Widget -->
 					<div class="col-12 col-sm-6 col-lg-3">
-						<div class="single-footer-widget mb-70 wow fadeInUp"
-							data-wow-delay="500ms">
+						<div class="single-footer-widget mb-70 wow fadeInUp" data-wow-delay="500ms">
 							<div class="widget-title">
 								<h4>Usefull Links</h4>
 							</div>
 							<div class="widget-content">
 								<nav>
 									<ul>
-										<li><a href="https://store.steampowered.com/"
-											target="_blank">Steam</a></li>
-										<li><a href="https://store.playstation.com/"
-											target="_blank">PlayStation</a></li>
-										<li><a href="http://blizzard.com" target="_blank">Blizzard
-												Entertainment</a></li>
+										<li><a href="https://store.steampowered.com/" target="_blank">Steam</a></li>
+										<li><a href="https://store.playstation.com/" target="_blank">PlayStation</a></li>
+										<li><a href="http://blizzard.com" target="_blank">Blizzard Entertainment</a></li>
 										<li><a href="https://www.origin.com/" target="_blank">Origin</a>
 										</li>
 									</ul>
@@ -542,9 +551,9 @@
 		</div>
 	</div>
 	</footer>
-	<!-- ##### Footer Area End ##### -->
+	<!--  Footer Area End  -->
 
-	<!-- ##### All Javascript Script ##### -->
+	<!--  All Javascript Script  -->
 	<!-- jQuery js -->
 	<script src="${pageContext.request.contextPath}/resources/js/jquery/jquery-2.2.4.min.js"></script>
 <%-- 	<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script> --%>

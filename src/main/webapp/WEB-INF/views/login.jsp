@@ -130,7 +130,6 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="home.do">Home</a></li>
-<!--                                     <li><a href="store.html">Store</a></li>                           -->
                                     <li><a href="store.do">Store</a></li>                          
                                     <li><a href="reviews">Reviews</a></li>
                                     <li><a href="support.html">Support</li>
@@ -141,10 +140,16 @@
 
                         <!-- Nav 소셜미디어 아이콘 -->
                         <div class="top-social-info">
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </div>
+                            	<a href="https://www.facebook.com/GamespotWeb-440364573418626"  target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
+                        		<i class="fa fa-facebook" aria-hidden="true"></i>
+                     		</a> 
+                     		<a href="https://twitter.com/hPKPXzq0fRwNZU3" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
+                       			<i class="fa fa-twitter" aria-hidden="true"></i>
+                     		</a> 
+                     		<a href="https://instagram.com/game__spot?igshid=1xachyxg6ydfl" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
+                        		<i class="fa fa-instagram" aria-hidden="true"></i>
+                     		</a>
+                     	</div>
                     </nav>
                 </div>
             </div>
@@ -272,13 +277,11 @@
                             </div>
                             <div class="widget-content">
                                 <nav>
-                                    <ul>
-                                        <li><a href="#">Doom</a></li>
-                                        <li><a href="#">Grand Theft Auto</a></li>
-                                        <li><a href="#">Bloodborne</a></li>
-                                        <li><a href="#">God of war</a></li>
-                                        <li><a href="#">Persona 5</a></li>
-                                    </ul>
+                                   <c:forEach var="g" items="${latestList }">
+										<ul>
+											<li><a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }">${g.title }</a></li>
+										</ul>
+									</c:forEach>
                                 </nav>
                             </div>
                         </div>

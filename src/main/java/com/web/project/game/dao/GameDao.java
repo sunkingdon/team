@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.web.project.game.vo.GameVo;
+import com.web.project.game.vo.PagingVo;
 
 @Repository("gameDao")
 public class GameDao {
@@ -42,5 +43,13 @@ public class GameDao {
 	
 	public List<GameVo> highList() {
 		return sqlSession.selectList("game.highSelect");
+	}
+
+	public int getTotalCount() {
+		return sqlSession.selectOne("game.pagingSelectTotal");
+	}
+
+	public List<GameVo> pagingList(PagingVo vo) {
+		return sqlSession.selectList("game.pagingSelect", vo);
 	}
 }

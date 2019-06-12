@@ -3,6 +3,7 @@ package com.web.project.game.service;
 import java.util.List;
 
 import com.web.project.game.vo.GameVo;
+import com.web.project.game.vo.PagingVo;
 
 public interface GameService {
 	public List<GameVo> mainList();
@@ -19,4 +20,8 @@ public interface GameService {
 	
 	public List<GameVo> highList();
 	
+	// 페이징 처리
+	public int getTotalCount();
+	
+	public List<GameVo> pagingList(PagingVo vo);
 }

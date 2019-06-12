@@ -18,7 +18,6 @@ import com.web.project.emp.vo.EmpVo;
 public class EmpController {
 	@Autowired
 	EmpService empService;
-
 	
 	//�α�����
 	@RequestMapping("/loginView")
@@ -69,7 +68,7 @@ public class EmpController {
 					cookie.setMaxAge(60 * 60 * 24 * 7); // ��Ű 7�� ����
 				}
 				resp.addCookie(cookie);
-				return "home";
+				return "redirect:/home.do";
 			}
 
 		} catch (Exception e) { 
