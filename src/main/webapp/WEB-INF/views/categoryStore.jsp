@@ -214,7 +214,7 @@
 												</div>
 											</div>
 											<div class="product-caption">
-												<span class="posted_in"><a href="${pageContext.request.contextPath}/categorylist.do?${g.genrename }" rel="tag">${g.genrename }</a></span>
+												<span class="posted_in"><a href="${pageContext.request.contextPath}/categorylist.do?genrename=${g.genrename }" rel="tag">${g.genrename }</a></span>
 												<h4 class="product-title">
 													<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title="">${g.title }</a>
 												</h4>
@@ -258,7 +258,7 @@
 											</div>
 											<div class="col-lg-8 col-md-12 col-sm-12">
 												<div class="product-caption">
-													<span class="posted_in"><a href="${pageContext.request.contextPath}/categorylist.do?${g.genrename }" rel="tag">${g.genrename }</a></span>
+													<span class="posted_in"><a href="${pageContext.request.contextPath}/categorylist.do?genrename=${g.genrename }" rel="tag">${g.genrename }</a></span>
 													<div class="product-meta">
 														<h4 class="product-name">
 															<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title="">${g.title }</a>

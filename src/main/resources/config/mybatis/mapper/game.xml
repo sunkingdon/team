@@ -17,10 +17,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<select id="categorySelect" resultType="com.web.project.game.vo.GameVo" parameterType="java.lang.String">
-		SELECT g.title AS title, g.price AS price, c.genrename AS genrename,i.path AS path 
+		SELECT g.title AS title, g.info AS info, g.price AS price, c.genrename AS genrename,i.path AS path 
 		FROM item g, category c, image i 
 		WHERE i.imgno=g.imgno AND c.genreno=g.genreno AND c.genrename=#{genrename }
 	</select>
+	
+	<select id="sameCategorySelect" resultType="com.web.project.game.vo.GameVo" parameterType="java.lang.String">
+    	SELECT * FROM (SELECT g.title AS title,g.price AS price, c.genrename AS genrename,  i.path AS path
+		FROM item g, image i, category c
+        WHERE i.imgno=g.imgno and c.genreno=g.genreno and c.genrename=#{genrename }
+        ORDER BY itemno ASC)
+        WHERE rownum BETWEEN 1 AND 5
+    </select>
 
 	<select id="singleSelect" resultType="com.web.project.game.vo.GameVo" parameterType="java.lang.String">
 		SELECT g.title AS title, g.price AS price, g.info AS info, c.genrename AS genrename, i.path AS path
@@ -62,6 +70,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <select id="pagingSelectTotal" resultType="java.lang.Integer">
         SELECT COUNT(*) FROM item
     </select>
-
+    
 </mapper>
 

@@ -109,7 +109,6 @@
                                     <li><a href="home.do">Home</a></li>
                                     <li><a href="store.do">Store</a></li>                          
                                     <li><a href="reviews">Reviews</a></li>
-                                    <li><a href="support.html">Support</li>
                                 </ul>
                             </div>
                             <!-- Nav End -->

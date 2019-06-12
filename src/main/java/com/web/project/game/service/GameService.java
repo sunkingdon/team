@@ -14,6 +14,8 @@ public interface GameService {
 	
 	public List<GameVo> categoryList(String genrename);
 	
+	public List<GameVo> sameCategorySelect(String genrename);
+	
 	public List<GameVo> singleList(String title);
 	
 	public List<GameVo> gameList();

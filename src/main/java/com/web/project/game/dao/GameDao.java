@@ -33,6 +33,10 @@ public class GameDao {
 		return sqlSession.selectList("game.categorySelect",genrename);
 	}
 
+	public List<GameVo> sameCategorySelect(String genrename) {
+		return sqlSession.selectList("game.sameCategorySelect", genrename);
+	}
+	
 	public List<GameVo> singleList(String title) {
 		return sqlSession.selectList("game.singleSelect", title);
 	}
@@ -45,10 +49,11 @@ public class GameDao {
 		return sqlSession.selectList("game.highSelect");
 	}
 
+	// 페이징 처리
 	public int getTotalCount() {
 		return sqlSession.selectOne("game.pagingSelectTotal");
 	}
-
+	
 	public List<GameVo> pagingList(PagingVo vo) {
 		return sqlSession.selectList("game.pagingSelect", vo);
 	}

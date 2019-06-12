@@ -28,12 +28,19 @@ public class GameController {
 
 	@RequestMapping(value = { "/", "home.do" })
 	public String home(Model m) {
+		// 메인 (배너) 게임 리스트
 		List<GameVo> mainlist = gameService.mainList();
 		m.addAttribute("mainlist", mainlist);
+		
+		// 최신 게임 리스트
 		List<GameVo> latestlist = gameService.recentList();
 		m.addAttribute("latestList", latestlist);
+		
+		// 인기있는 게임 리스트 
 		List<GameVo> popularlist = gameService.popularList();
 		m.addAttribute("popularList", popularlist);
+		
+		// 가격이 높은 게임 리스트
 		List<GameVo> highlist = gameService.highList();
 		m.addAttribute("highlist", highlist);
 
@@ -52,15 +59,14 @@ public class GameController {
 		pageingvo.setCurrentPage(currentPage);
 		pageingvo.setBegin(begin);
 		pageingvo.setEnd(end);
-		System.out.println(pageingvo.getBegin());
-		System.out.println(pageingvo.getEnd());
-		System.out.println(pageingvo.getCurrentPage());
+
 		request.setAttribute("pagelist", gameService.pagingList(pageingvo));
 		request.setAttribute("totalPage", (total - 1) / 9 + 1);
 
 		// 게임 리스트 출력
 		List<GameVo> list = gameService.gameList();
 		m.addAttribute("list", list);
+		
 		// 최신 게임 리스트 출력
 		List<GameVo> latestlist = gameService.recentList();
 		m.addAttribute("latestList", latestlist);
@@ -69,19 +75,32 @@ public class GameController {
 	}
 
 	@RequestMapping("/gamesingle.do")
-	public String single(String title, Model m) {
+	public String single(String title,String name, Model m) {
+		// 게임 상세 리스트 
 		List<GameVo> singleList = gameService.singleList(title);
 		m.addAttribute("singlelist", singleList);
+		
+		System.out.println();
+		
+		
+		// 최신 게임 리스트
 		List<GameVo> latestlist = gameService.recentList();
 		m.addAttribute("latestList", latestlist);
+		
+		// 같은 장르의 게임 리스트 
+		List<GameVo> samecategorylist = gameService.sameCategorySelect(singleList.get(0).getGenrename());
+		m.addAttribute("samecategorylist", samecategorylist);
 
 		return "gameSingle";
 	}
 
 	@RequestMapping("/categorylist.do")
 	public String category(String genrename, Model m) {
+		// 카테고리별 게임 리스트
 		List<GameVo> categorylist = gameService.categoryList(genrename);
 		m.addAttribute("categorylist", categorylist);
+		
+		// 최신 게임 리스트
 		List<GameVo> latestlist = gameService.recentList();
 		m.addAttribute("latestList", latestlist);
 

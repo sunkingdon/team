@@ -5,9 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.web.project.game.dao.CategoryDao;
 import com.web.project.game.dao.GameDao;
-import com.web.project.game.dao.ImageDao;
 import com.web.project.game.vo.GameVo;
 import com.web.project.game.vo.PagingVo;
 
@@ -15,10 +13,6 @@ import com.web.project.game.vo.PagingVo;
 public class GameServiceImpl implements GameService{
 	@Autowired
 	private GameDao gameDao;
-	@Autowired
-	private CategoryDao categoryDao;
-	@Autowired
-	private ImageDao imageDao;
 	
 	public void setGameDao(GameDao d) {
 		gameDao = d;
@@ -27,6 +21,10 @@ public class GameServiceImpl implements GameService{
 	@Override 
 	public List<GameVo> categoryList(String genrename) {
 		return gameDao.categoryList(genrename);
+	}
+	@Override 
+	public List<GameVo> sameCategorySelect(String genrename) {
+		return gameDao.sameCategorySelect(genrename);
 	}
 	
 	@Override

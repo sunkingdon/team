@@ -15,25 +15,30 @@
 
     <!-- Favicon (브라우저 탭에 로고 노출) -->
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/img/core-img/favicon.ico">
+
     <!-- font-awesome CSS -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/fonts/font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/fonts/iconic/css/material-design-iconic-font.min.css">
     <!-- animate CSS -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/animate.css">
+
     <!-- slick CSS -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/slick.css">
+
     <!--magnific-popup CSS -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/magnific-popup.css">
+
     <!-- Stylesheet(css파일 따로 작성, 임포트 해서 적용.) -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/style.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/game-single.css">
-
-	<script>
-		function pur_click() {
-			alert("구매가 성공적으로 완료되었습니다.");
-			location.href="${pageContext.request.contextPath}/pur.do";
-		}
-	</script>
+    
+    <script type="text/javascript">
+    	function addToCart(){
+   			alert("구매가 성공적으로 완료되었습니다. ");
+   			location.href="mypage";
+   		}
+		//	대현이가 마이페이지 내가 구매한 게임 목록으로 가게끔 수정
+    </script>
 </head>
 
 <body>
@@ -46,7 +51,7 @@
         </div>
     </div>
 
-    <!-- Header 영역 시작 -->
+    <!-- ##### Header 영역 시작 ##### -->
     <header class="header-area wow fadeInDown" data-wow-delay="500ms">
         <!-- Header 상단 영역 -->
         <div class="top-header-area">
@@ -55,15 +60,13 @@
                     <div class="col-12 d-flex align-items-center justify-content-between">
                         <!-- Logo 영역 -->
                         <div class="logo">
-                            <a href="home.do">
-                           	 	<img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt="gamespot">
-                            </a>
+                            <a href="home.do"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt="gamespot"></a>
                         </div>
-		
+
                         <!-- Search & Login 영역 -->
                         <div class="search-login-area d-flex align-items-center">
                             <!-- 상단 Search 영역 -->
-                            <div class="top-search-area"> 
+                            <div class="top-search-area">
                                 <form action="#" method="post">
                                     <input type="search" name="top-search" id="topSearch" placeholder="Search">
                                     <button type="submit" class="btn"><i class="fa fa-search"></i></button>
@@ -71,24 +74,20 @@
                             </div>
                             <!-- Login 영역 -->
                             <div class="login-area">
-                              
-							<!-- login session -->
-                            <c:choose>
-                            <c:when test="${sessionScope.id eq null }">
-                                <a href="loginView"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
-                            </c:when>
-                            <c:otherwise><a href="/project/myInfo?id=${sessionScope.id }">${sessionScope.name } 접속중</a>
-                            <button onclick="location.href='/project/logout'">로그아웃</button>
-                            </c:otherwise>
-                            </c:choose>
+             	               <c:choose>
+                            		<c:when test="${sessionScope.id eq null }">
+                                		<a href="loginView"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
+                            		</c:when>
+                            		<c:otherwise><a href="/project/myInfo?id=${sessionScope.id }">${sessionScope.name } 접속중</a>
+                        				<button onclick="location.href='/project/logout'">로그아웃</button>
+                            		</c:otherwise>
+                            	</c:choose>
                             </div>
-                         
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Navbar 영역 -->
         <div class="gamespot-main-menu" id="sticker">
             <div class="classy-nav-container breakpoint-off">
@@ -96,7 +95,7 @@
                     <!-- Menu -->
                     <nav class="classy-navbar justify-content-between" id="gamespotNav">
 
-                        <!-- Navbar Toggler(모바일 화면시) -->
+                        <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
                             <span class="navbarToggler"><span></span><span></span><span></span></span>
                         </div>
@@ -113,8 +112,8 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="home.do">Home</a></li>
-                                    <li><a href="store.do">Store</a></li>                          
-                                    <li><a href="reviews">Reviews</a></li>
+                                    <li><a href="store.do">Store</a></li>
+                                    <li><a href="reviews.html">Reviews</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -122,7 +121,7 @@
 
                         <!-- Nav 소셜미디어 아이콘 -->
                         <div class="top-social-info">
-                            	<a href="https://www.facebook.com/GamespotWeb-440364573418626"  target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
+                               <a href="https://www.facebook.com/GamespotWeb-440364573418626"  target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
 								<i class="fa fa-facebook" aria-hidden="true"></i>
 							</a> 
 							<a href="https://twitter.com/hPKPXzq0fRwNZU3" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
@@ -131,16 +130,16 @@
 							<a href="https://instagram.com/game__spot?igshid=1xachyxg6ydfl" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
 								<i class="fa fa-instagram" aria-hidden="true"></i>
 							</a>
-                        </div>
+						</div>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <!--  Header Area End  -->
-    
-    <!--  Breadcrumb Area Start  -->
-    	<div class="breadcrumb-area bg-img bg-overlay" style="background-image: url('/project/resources/image/Dead by Daylight.jpg');">
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="breadcrumb-area bg-img bg-overlay" style="background-image: url('/project/resources/image/Dead by Daylight.jpg');">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <!-- Breadcrumb Text -->
@@ -151,11 +150,10 @@
                 </div>
             </div>
         </div>
-        </div>
-    <!--  Breadcrumb Area End  -->
-
-    <!--  Game-single Area Start -->
-    <c:forEach var="g" items="${singlelist }">
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+    <!-- =====================================
+	    	==== Start single-product -->
     <div class="main-content">
         <div class="single-product">
             <!-- Container -->
@@ -165,7 +163,9 @@
                     <div class="col-lg-9 col-md-8 product-info">
                         <div class="product-header">
                             <div class="product-header__left">
-                                <h1 class="product-title"> ${g.title } </h1>
+                                <h1 class="product-title">
+                                   ${singlelist[0].title }
+                                </h1><!-- /.product-title-->
                             </div>
                             <div class="product-header__right">
                                 <div class="product-nav">
@@ -182,8 +182,8 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="main_image_product">
                                     <div class="slider slider-for">
-                                        <div><img src="${pageContext.request.contextPath}/resources/image2/${g.path }" alt=""></div>
-                                        <div><img src="${pageContext.request.contextPath}/resources/image1/${g.path }" alt=""></div>
+                                       <div><img src="${pageContext.request.contextPath}/resources/image2/${singlelist[0].path }" alt=""></div>
+                                       <div><img src="${pageContext.request.contextPath}/resources/image1/${singlelist[0].path }" alt=""></div>
                                     </div>
                                 </div>
                             </div>
@@ -191,9 +191,9 @@
                                 <div class="product-caption clearfix">
                                     <div class="product-price">
                                         <ins>
-                                            <span class="amout">${g.price }</span>
+                                            <span class="amout">&#8361; ${singlelist[0].price }</span>
                                         </ins>
-                                    </div>
+                                    </div><!-- /.product-price -->
 
                                     <div class="product-rating" data-rating="">
                                         <span class="star-rating">
@@ -215,8 +215,8 @@
                                     </div>
                                     <div class="form_cart">
                                         <div class="container-cart-form-btn">
-                                            <button class="cart-form-btn" onclick="pur_click();">
-                                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>Buy Now
+                                            <button class="cart-form-btn" onclick="addToCart()">
+                                                <i class="fa fa-shopping-basket" aria-hidden="true"></i>Add to Cart
                                             </button>
                                         </div>
                                     </div>
@@ -225,53 +225,54 @@
                                         <div class="product_meta">
                                             <div class="posted_in">
                                                 <span>Category:</span>
-                                                <a href="${pageContext.request.contextPath}/categorylist.do?genrename=${g.genrename }" rel="tag">${g.genrename }</a>
+                                                <a href="${pageContext.request.contextPath}/categorylist.do?genrename=${singlelist[0].genrename }" rel="tag">${singlelist[0].genrename }</a>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+
+                                    <div class="product_social-sharing">
+                                        <div class="social-icons share-row">
+                                        </div>
+                                    </div>
+                                </div><!-- /.product-meta -->
                             </div>
-                  		</div>
-                  	</div>
-                  </div>
-              </div>
-           </div>
-         </div>		
-     	</c:forEach>
-        <!-- product-tab-description -->
-        <div class="product-description-tabs">
-        	<ul class="nav">
-            	<li><a data-toggle="tab" href="#tab_description" class="active">Description</a></li>
-                <li><a data-toggle="tab" href="#tab_reviews">Customer Reviews (2)</a></li>
-            </ul>
-      		<div class="tab-content">
-        		<div id="tab_description" class="tab-pane fade show active">
-           	 	pre-shaving, soak clean towel with hot water. For post-shaving, use cold
-            	water instead. Ring out excess water and spray towel with the product. Apply to face
-            	for 30 seconds, avoiding eye area. Do not rinse. Product can also be used without a
-            	towel. Spray directly onto face after shaving, avoiding eye area. Do not rinse.
-            	After shaving, apply a small amount to the face and neck area, massaging in until
-            	completely absorbed.
-            	<div class="tab_description_info pt-20">
-            		<div class="pb-10">Description</div>
-                	<i> New shave duo featuring shave tonic & after shave balm shave tonic: </i>
-            	</div>
-            	<div class="tab_description_info pt-20">
-            		<div class="pb-10">Benefits</div>
-                	<i> Nourishing post-shave moisturizer for men with aloe and tea tree oil </i>
-            	</div>
-            	<div class="tab_description_info pt-20">
-               		<div class="pb-10">Suggested Use</div>
-                  	<i> Helps soothe and protect skin from shaving irritation, dryness and razor burn. </i>
-            	</div>
-            </div>
-                <div id="tab_information" class="tab-pane fade">
-                 For use pre-shaving, soak clean towel with hot water. For post-shaving, use cold
-                water instead. Ring out excess water and spray towel with the product. Apply to face
-                 for 30 seconds, avoiding eye area. Do not rinse. Product can also be used without a
-                 towel. Spray directly onto face after shaving, avoiding eye area. Do not rinse.
-                 After shaving, apply a small amount to the face and neck area, massaging in until
-                 completely absorbed.
+                        </div>
+                        <!-- product-tab-description -->
+                        <div class="product-description-tabs">
+                            <ul class="nav">
+                                <li><a data-toggle="tab" href="#tab_description" class="active">Description</a></li>
+                                <li><a data-toggle="tab" href="#tab_reviews">Customer Reviews (2)</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab_description" class="tab-pane fade show active">
+                                   ${singlelist[0].info }
+                                    <div class="tab_description_info pt-20">
+                                        <div class="pb-10">Description</div>
+                                        <i>
+                                            New shave duo featuring shave tonic & after shave balm shave tonic:
+                                        </i>
+                                    </div>
+                                    <div class="tab_description_info pt-20">
+                                        <div class="pb-10">Benefits</div>
+                                        <i>
+                                            Nourishing post-shave moisturizer for men with aloe and tea tree oil
+                                        </i>
+                                    </div>
+                                    <div class="tab_description_info pt-20">
+                                        <div class="pb-10">Suggested Use</div>
+                                        <i>
+                                            Helps soothe and protect skin from shaving irritation, dryness and razor
+                                            burn.
+                                        </i>
+                                    </div>
+                                </div>
+                                <div id="tab_information" class="tab-pane fade">
+                                    For use pre-shaving, soak clean towel with hot water. For post-shaving, use cold
+                                    water instead. Ring out excess water and spray towel with the product. Apply to face
+                                    for 30 seconds, avoiding eye area. Do not rinse. Product can also be used without a
+                                    towel. Spray directly onto face after shaving, avoiding eye area. Do not rinse.
+                                    After shaving, apply a small amount to the face and neck area, massaging in until
+                                    completely absorbed.
                                 </div>
                                 <div id="tab_reviews" class="tab-pane fade">
                                     <div class="rattings-wrapper">
@@ -317,18 +318,17 @@
                                                 </div>
                                             </div>
 
-                                            <div class="reviews_content clearfix">
-                                            	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                                            	incididunt ut laboreet dolore magna aliqua. Utenim ad minim veniam, quis nost rud
+                                            <div class="reviews_content clearfix">Lorem ipsum dolor sit amet,
+                                                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                                                et dolore magna aliqua. Utenim ad minim veniam, quis nost rud
                                                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                 tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim
                                                 veniam, quis nost.</div>
                                         </div>
                                     </div>
-                                    
-                                    
-                                    <form class="form-product-review" action="" method="post">
+                                    <form class="form-product-review"
+                                        action="http://themes.fuznet.com/punibor/html/v_black/do_action" method="post">
                                         <h5>ADD YOUR REVIEW</h5>
                                         <div class="form-group">
                                             <label class="control-label">Your Rating</label>
@@ -342,26 +342,30 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label" for="comment">Your Review</label>
-                                            <textarea id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+                                            <textarea id="comment" class="form-control" name="comment" cols="45"
+                                                rows="8" aria-required="true"></textarea>
                                         </div>
                                         <div class="row">
                                             <div class="form-group col-md-6">
                                                 <label for="author" class="control-label">Name
                                                     <span class="required">*</span>
                                                 </label>
-                                                <input id="author" class="form-control" name="author" type="text" value="" size="30" aria-required="true">
+                                                <input id="author" class="form-control" name="author" type="text"
+                                                    value="" size="30" aria-required="true">
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="email" class="control-label">Password
+                                                <label for="email" class="control-label">Email
                                                     <span class="required">*</span>
                                                 </label>
-                                            
-                                                <input class="form-control" type="password" name="pass" value="" size="30" aria-required="true">
-                                                    
+                                                <input id="email" class="form-control" name="email" type="text" value=""
+                                                    size="30" aria-required="true">
                                             </div>
                                             <div class="form-submit col-md-12">
-                                                <input name="submit" type="submit" id="submit" class="btn btn-primary" value="Send">
-                                                
+                                                <input name="submit" type="submit" id="submit" class="btn btn-primary"
+                                                    value="Send">
+                                                <input type="hidden" name="comment_post_ID" value=""
+                                                    id="comment_post_ID">
+                                                <input type="hidden" name="comment_parent" id="comment_parent" value="">
                                             </div>
                                         </div>
                                     </form>
@@ -369,8 +373,7 @@
                             </div>
                         </div>
                         <!--/product-tab-description -->
-                    
-                    
+                    </div>
                     <div class="col-lg-3 col-md-4">
                         <div class="sidebar">
                             <div class="may_also">
@@ -378,15 +381,15 @@
                                 <p>Extra 12% off on Credit/Debit Card</p>
                             </div>
                             <ul class="product-list-siderbar">
-                     
+                            <c:forEach var="g" items="${samecategorylist }">
                                 <li>
                                     <div class="inner">
-                                        <a class="product-thumbnail" href="#">
-                                            <img src="${pageContext.request.contextPath}/resources/img/bg-img/49.jpg" alt="">
+                               			<a class="product-thumbnail" href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }">
+                                            <img src="${pageContext.request.contextPath}/resources/image/${g.path }" alt="">
                                         </a>
                                         <div class="product-content">
                                             <h3 class="product-title">
-                                                <a href="#">Game 1</a>
+                                                <a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }">${g.title }</a>
                                             </h3>
                                             <div class="star-rating">
                                                 <span class="product-rating" data-rating="">
@@ -398,23 +401,26 @@
                                                         <i class="fa fa-star"></i>
                                                     </span>
                                                 </span>
-                                            </div>
-                                            <div class="product-price">
-                                                <ins>
-                                                    <span class="amout">$14.38</span>
-                                                </ins>
+                                                <div class="product-price">
+                                                    <ins>
+                                                       <span class="amout">&#8361; ${g.price }</span>
+                                                    </ins>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
+                                </c:forEach>
                             </ul>
                         </div>
                     </div>
-    <!--  game-single Area End -->
-
-
-<!-- *********************** Footer ***************************** -->
-    <!--  Footer Area Start  -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =====================================
+                    ==== End single-product -->
+    <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area">
         <!-- Main Footer Area -->
         <div class="main-footer-area section-padding-100-0">
@@ -424,12 +430,14 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-70 wow fadeInUp" data-wow-delay="100ms">
                             <div class="widget-title">
-                                <a href="home.do"><img src="${pageContext.request.contextPath}/resources/img/core-img/logo2.png" alt=""></a>
+                                <a href="index.html"><img src="img/core-img/logo2.png" alt=""></a>
                             </div>
                             <div class="widget-content">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris velit
-                                    arcu, scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat
-                                    volutpat. Sed efficitur diam ut interdum ultricies.</p>
+                                    arcu,
+                                    scelerisque dignissim massa quis, mattis facilisis erat. Aliquam erat
+                                    volutpat. Sed
+                                    efficitur diam ut interdum ultricies.</p>
                             </div>
                         </div>
                     </div>
@@ -464,9 +472,13 @@
                                 <nav>
                                     <ul>
                                         <li><a href="https://store.steampowered.com/" target="_blank">Steam</a></li>
-                                        <li><a href="https://store.playstation.com/" target="_blank">PlayStation</a> </li>
-                                        <li><a href="http://blizzard.com" target="_blank">Blizzard Entertainment</a> </li>
-                                        <li><a href="https://www.origin.com/" target="_blank">Origin</a> </li>
+                                        <li><a href="https://store.playstation.com/" target="_blank">PlayStation</a>
+                                        </li>
+                                        <li><a href="http://blizzard.com" target="_blank">Blizzard
+                                                Entertainment</a>
+                                        </li>
+                                        <li><a href="https://www.origin.com/" target="_blank">Origin</a>
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>
@@ -481,11 +493,11 @@
                             </div>
                             <div class="widget-content">
                                 <nav>
-                             <c:forEach var="g" items="${latestList }">
-									<ul>
-										<li><a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }">${g.title }</a></li>
-									</ul>
-								</c:forEach>
+                                     <c:forEach var="g" items="${latestList }">
+										<ul>
+											<li><a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }">${g.title }</a></li>
+										</ul>
+									</c:forEach>
                                 </nav>
                             </div>
                         </div>
@@ -498,16 +510,18 @@
                 <div class="row h-100 align-items-center">
                     <div class="col-12 col-sm-5">
                         <!-- Copywrite Text -->
-                        <p class="copywrite-text"> Copyright &copy; All rights reserved | This Website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Team2
+                        <p class="copywrite-text">
+                            Copyright &copy; All rights reserved | This Website is made with <i class="fa fa-heart-o"
+                                aria-hidden="true"></i> by Team2
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <!--  Footer Area End  -->
+    <!-- ##### Footer Area End ##### -->
 
-    <!--  All Javascript Script  -->
+   <!--  All Javascript Script  -->
     <!-- jQuery js -->
     <script src="${pageContext.request.contextPath}/resources/js/jquery/jquery-2.2.4.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
