@@ -142,6 +142,9 @@
     <!-- Page section -->
     <section class="page-section recent-game-page spad">
         <div class="container">
+        	<div class="write-bnt">
+                <button class="writeReview" onclick="location.href='/project/writeReview'">Write a review</button>
+            </div>
             <div class="row">
                 <div class="col-lg-8">
                     <div class="row">
