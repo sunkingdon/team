@@ -61,6 +61,38 @@
   Recent Game Section
 ------------------------*/
 
+.write-bnt {
+  width: 65.8%;
+  
+}
+
+.writeReview {
+  display: block;
+  outline-style:none;
+  background: #fff;
+  color: #545454;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 3px;
+  border: 0.5px solid #545454;
+  float: center;
+  padding: 7px 12px;
+  margin-bottom: 20px;
+}
+
+.writeReview:hover {
+  background: #8ab839;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 3px;
+  border: 0.5px solid #8ab839;
+  float: center;
+  padding: 7px 12px;
+  margin-bottom: 20px;
+}
+
+
 .recent-game-item .rgi-thumb {
   height: 204px;
   padding: 25px 28px;

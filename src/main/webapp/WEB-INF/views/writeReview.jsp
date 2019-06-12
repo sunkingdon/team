@@ -17,14 +17,24 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/img/core-img/favicon.ico">
 
     <!-- Stylesheet(css파일 따로 작성, 임포트 해서 적용.) -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/animate.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/reviews.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/review-single.css">
 
+    <!-- 텍스트 편집기 -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
 
 </head>
 
 <body>
-   <!-- Preloader (로딩 애니메이션)-->
+   
+ <!-- Preloader (로딩 애니메이션)-->
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="spinner">
             <div class="bounce1"></div>
@@ -109,16 +119,10 @@
 
                         <!-- Nav 소셜미디어 아이콘 -->
                         <div class="top-social-info">
-                       		<a href="https://www.facebook.com/GamespotWeb-440364573418626"  target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook">
-                        		<i class="fa fa-facebook" aria-hidden="true"></i>
-                     		</a> 
-                     		<a href="https://twitter.com/hPKPXzq0fRwNZU3" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter">
-                       			<i class="fa fa-twitter" aria-hidden="true"></i>
-                     		</a> 
-                     		<a href="https://instagram.com/game__spot?igshid=1xachyxg6ydfl" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram">
-                        		<i class="fa fa-instagram" aria-hidden="true"></i>
-                     		</a>
-                     	</div>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -141,149 +145,29 @@
     </div>
     <!-- ##### Breadcrumb Area End ##### -->
 
-   
-
-    <!-- ##### Game Review Area Start ##### -->
-
     <!-- Page section -->
-    <section class="page-section recent-game-page spad">
+    <section class="page-section single-blog-page spad">
         <div class="container">
-        	<div class="write-bnt">
-                <button class="writeReview" onclick="location.href='/project/writeReview'">Write a review</button>
-            </div>
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/recent-game/1.jpg">
-
-                                </div>
-                                <div class="rgi-content">
-                                    <a href="reviewSingle">
-                                    <h5>Susce pulvinar metus nulla, vel facilisis sem </h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet,
-                                        consectetur elit. </p></a>
-                                    <a href="#" class="comment">3 Comments</a>
-
-                                </div>
+                    <h4 class="review-title">Write a review</h4>
+                    <form class="review-form">
+                        <div class="row-1">
+                            <div class="review-head-1">
+                                <span>Title : </span>
+                                <input type="text" placeholder="Enter Title" required>
+                            </div>
+                            <div class="review-textarea">
+                                <textarea id="editor-container" placeholder="Message"></textarea>
+                                <button class="review-cancel">Cancel</button>
+                                <button class="review-send">Send</button>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/recent-game/2.jpg">
-
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Susce pulvinar metus nulla, vel facilisis sem </h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet,
-                                        consectetur elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/recent-game/3.jpg">
-
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Susce pulvinar metus nulla, vel facilisis sem </h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet,
-                                        consectetur elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/recent-game/4.jpg">
-
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Suspendisse ut justo tem por, rutrum</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet,
-                                        consectetur elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/recent-game/5.jpg">
-
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Susce pulvinar metus nulla, vel facilisis sem </h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet,
-                                        consectetur elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/recent-game/6.jpg">
-
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Susce pulvinar metus nulla, vel facilisis sem </h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet,
-                                        consectetur elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/recent-game/7.jpg">
-
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Suspendisse ut justo tem por, rutrum</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet,
-                                        consectetur elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="recent-game-item">
-                                <div class="rgi-thumb set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/recent-game/8.jpg">
-
-                                </div>
-                                <div class="rgi-content">
-                                    <h5>Susce pulvinar metus nulla, vel facilisis sem </h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisc ing ipsum dolor sit amet,
-                                        consectetur elit. </p>
-                                    <a href="#" class="comment">3 Comments</a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ### Pagination Area ### -->
-                    <nav class="pagination clearfix">
-                        <ul class="page-numbers">
-                            <li><a class="prev page-numbers" href="#"><i class="fa fa-angle-left"
-                                        aria-hidden="true"></i></a></li>
-                            <li><span class="page-numbers current">1</span></li>
-                            <li><a class="page-numbers" href="#">2</a></li>
-                            <li><a class="page-numbers" href="#">3</a></li>
-                            <li><a class="page-numbers" href="#">4</a></li>
-                            <li><a class="next page-numbers" href="#"><i class="fa fa-angle-right"
-                                        aria-hidden="true"></i></a></li>
-                        </ul>
-                    </nav>
+                    </form>
                 </div>
                 <!-- sidebar -->
                 <div class="col-lg-4 col-md-7 sidebar pt-5 pt-lg-0">
+                    <!-- widget -->
                     <div class="widget-item">
                         <h4 class="widget-title">Latest Posts</h4>
                         <div class="latest-blog">
@@ -342,13 +226,12 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
     <!-- Page section end -->
-    <!-- ##### Game Review Area End ##### -->
+
 
       <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area">
@@ -423,11 +306,13 @@
                             </div>
                             <div class="widget-content">
                                 <nav>
-                            <c:forEach var="g" items="${latestList }">
-										<ul>
-											<li><a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }">${g.title }</a></li>
-										</ul>
-									</c:forEach>
+                                    <ul>
+                                        <li><a href="#">Doom</a></li>
+                                        <li><a href="#">Grand Theft Auto</a></li>
+                                        <li><a href="#">Bloodborne</a></li>
+                                        <li><a href="#">God of war</a></li>
+                                        <li><a href="#">Persona 5</a></li>
+                                    </ul>
                                 </nav>
                             </div>
                         </div>
@@ -450,8 +335,17 @@
         </div>
     </footer>
     <!-- ##### Footer Area End ##### -->
-
     <!-- ##### All Javascript Script ##### -->
+
+    
+        <script>
+      $('#editor-container').summernote({
+        tabsize: 2,
+        height: 400
+        
+      });
+    </script>
+      
     <!-- jQuery-2.2.4 js -->
     <script src="${pageContext.request.contextPath}/resources/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
