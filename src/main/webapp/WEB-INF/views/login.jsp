@@ -29,16 +29,10 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/util.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/main.css">
-    
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/login-popup.css">
     <title>GAMESPOT | Sign in</title>
 <!--     비밀번호 찾기 팝업 -->
- <script>
- function popup(){
-	 var url="findPw";
-	 var name="popup";
-	 window.open(url,name,"width=300,height=150")
- }
- </script>
+
  <style type="text/css">
  p{color:white;}
  </style>
@@ -197,12 +191,26 @@
                         </div>
     					
                         <div class="text-center p-t-50">
-                            <a class="txt1" onclick="popup()">Forgot Password</a> | <a class="txt1" href="signupView">Sign Up</a>
+                            <a class="cd-popup-trigger" href="#0">Forgot Password</a> | <a class="txt1" href="signUp.do">Sign Up</a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+        <div class="cd-popup" role="alert">
+                <div class="cd-popup-container">
+                    <h4>Get help signing in</h4>
+                    <p> Enter the email address associated with your account to find password</p>
+                    <input type="email" class="email" placeholder="Enter your email">
+                    <div class="cd-buttons">
+                        <button class="yes" onclick="">Yes</button>
+                        <button class="no" onclick="">No</button>
+                    </div>
+                    <a href="#0" class="cd-popup-close img-replace">Close</a>
+                </div>
+                <!-- cd-popup-container -->
+            </div>
+            <!-- cd-popup -->
         
     
         <div id="dropDownSelect1"></div>
@@ -330,6 +338,7 @@
     <!-- Active js -->
     <script src="${pageContext.request.contextPath}/resources/js/active.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/popup.js"></script>
 </body>
 </body>
 

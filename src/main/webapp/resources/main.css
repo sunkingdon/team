@@ -112,7 +112,14 @@ iframe {
 
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
+
 .txt1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.5;
+}
+.cd-popup-trigger {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   color: #fff;

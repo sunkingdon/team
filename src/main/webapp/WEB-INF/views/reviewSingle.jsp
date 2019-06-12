@@ -153,7 +153,7 @@
 						<ul class="comment-list">
 							<li>
 								<div class="comment">
-									<div class="comment-avator set-bg" data-setbg="img/authors/1.jpg"></div>
+									<div class="comment-avator set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/authors/1.jpg"></div>
 									<div class="comment-content">
 										<h5>James Smith <span>June 21, 2018</span></h5>
 										<p>Donec venenatis at eros sit amet aliquam. Donec vel orci efficitur, dictum nisl vitae, scelerisque nibh. Curabitur eget ipsum pulvinar nunc gravida interdum. </p>
@@ -163,7 +163,7 @@
 							</li>
 							<li>
 								<div class="comment">
-									<div class="comment-avator set-bg" data-setbg="img/authors/2.jpg"></div>
+									<div class="comment-avator set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/authors/2.jpg"></div>
 									<div class="comment-content">
 										<h5>James Smith <span>June 21, 2018</span></h5>
 										<p>Donec venenatis at eros sit amet aliquam. Donec vel orci efficitur, dictum nisl vitae, scelerisque nibh. Curabitur eget ipsum pulvinar nunc gravida interdum. </p>
@@ -198,7 +198,7 @@
 						<h4 class="widget-title">Latest Posts</h4>
 						<div class="latest-blog">
 							<div class="lb-item">
-								<div class="lb-thumb set-bg" data-setbg="img/latest-blog/1.jpg"></div>
+								<div class="lb-thumb set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/latest-blog/1.jpg"></div>
 								<div class="lb-content">
 									<div class="lb-date">June 21, 2018</div>
 									<p>Ipsum dolor sit amet, consectetur adipisc ing consecips</p>
@@ -206,7 +206,7 @@
 								</div>
 							</div>
 							<div class="lb-item">
-								<div class="lb-thumb set-bg" data-setbg="img/latest-blog/2.jpg"></div>
+								<div class="lb-thumb set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/latest-blog/2.jpg"></div>
 								<div class="lb-content">
 									<div class="lb-date">June 21, 2018</div>
 									<p>Ipsum dolor sit amet, consectetur adipisc ing consecips</p>
@@ -214,7 +214,7 @@
 								</div>
 							</div>
 							<div class="lb-item">
-								<div class="lb-thumb set-bg" data-setbg="img/latest-blog/3.jpg"></div>
+								<div class="lb-thumb set-bg" data-setbg="${pageContext.request.contextPath}/resources/img/latest-blog/3.jpg"></div>
 								<div class="lb-content">
 									<div class="lb-date">June 21, 2018</div>
 									<p>Ipsum dolor sit amet, consectetur adipisc ing consecips</p>
@@ -375,6 +375,8 @@
     <script src="${pageContext.request.contextPath}/resources/js/reviews.js"></script>
 </body>
 
+
 </html>
-</body>
-</html>
+
+
+

@@ -105,13 +105,13 @@ public class EmpController {
 	@RequestMapping("/myInfo.do")
 	public String myInfo(String id, Model m) {
 		m.addAttribute("empVo", empService.selectList(id));
-		return "myPagetest";
+		return "user";
 	}
 	@RequestMapping("/signUp.do")
 	public String signUp(EmpVo empVo,HttpServletRequest req) {
 	
 		empService.insert(empVo);
-		return "login";
+		return "signup";
 	}
 	@RequestMapping(value = "/update.do", method = RequestMethod.POST)
 	public String update(EmpVo empVo) {
