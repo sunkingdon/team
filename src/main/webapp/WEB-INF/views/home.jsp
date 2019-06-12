@@ -57,15 +57,21 @@
                             <div class="login-area">
                             
 							<!-- login session -->
-                            <c:choose>
-                            <c:when test="${sessionScope.id eq null }">
+                                   <c:choose>
+                             <c:when test="${sessionScope.id eq null }">
                                 <a href="loginView"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
                             </c:when>
-                            
-                            <c:otherwise><a href="/project/myInfo.do?id=${sessionScope.id }"><span>Welcome, ${sessionScope.name }</span><i class="fa fa-user" aria-hidden="true"></i> </a>
-                            <button onclick="location.href='/project/logout.do'">Log out</button>
+                            <c:otherwise>
+                            <div class="login-area dropdown">
+                                <a href="/project/myInfo.do?id=${sessionScope.id }"><span>Welcome, ${sessionScope.name }</span> <i class="fas fa-user" aria-hidden="true"></i><i class="fa fa-caret-down"></i></a>
+                                <div class="dropdown-content">
+                                    
+                                    <a href="/project/logout.do"><span>로그아웃</span><i class="fas fa-sign-out-alt" aria-hidden="true"></i></a>
+                                </div>
+                            </div> 
                             </c:otherwise>
                             </c:choose>
+
                             
                             <!--
                             <div class="login-area dropdown">

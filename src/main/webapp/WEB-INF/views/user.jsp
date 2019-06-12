@@ -72,20 +72,21 @@
 							<div class="login-area">
 
 								<!-- login session -->
-								<c:choose>
-									<c:when test="${sessionScope.id eq null }">
-										<a href="loginView"><span>Login / Register</span> <i
-											class="fa fa-lock" aria-hidden="true"></i></a>
-									</c:when>
+								         <c:choose>
+                             <c:when test="${sessionScope.id eq null }">
+                                <a href="loginView"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
+                            </c:when>
+                            <c:otherwise>
+                            <div class="login-area dropdown">
+                                <a href="/project/myInfo.do?id=${sessionScope.id }"><span>Welcome, ${sessionScope.name }</span> <i class="fas fa-user" aria-hidden="true"></i><i class="fa fa-caret-down"></i></a>
+                                <div class="dropdown-content">
+                                    
+                                    <a href="/project/logout.do"><span>로그아웃</span><i class="fas fa-sign-out-alt" aria-hidden="true"></i></a>
+                                </div>
+                            </div> 
+                            </c:otherwise>
+                            </c:choose>
 
-									<c:otherwise>
-										<a href="/project/myInfo.do?id=${sessionScope.id }"><span>Welcome,
-												${sessionScope.name }</span><i class="fa fa-user"
-											aria-hidden="true"></i> </a>
-										<button onclick="location.href='/project/logout.do'">Log
-											out</button>
-									</c:otherwise>
-								</c:choose>
 
 							</div>
 
@@ -155,13 +156,13 @@
                 <div class="db-l-1">
                     <ul>
                         <li><img src="${pageContext.request.contextPath}/resources/img/authors/profile.jpg" alt="" /></li>
-                        <li><i class="fas fa-user"></i> Username</li>
+                        <li><i class="fas fa-user"></i> ${empVo.id }</li>
                     </ul>
                 </div>
                 <div class="db-l-2">
                     <ul>
                         <li>
-                            <a href="myInfo.do">
+                            <a href="myInfo.do?id=${sessionScope.id }">
                                 <i class="fas fa-user"></i> User Information</a>
                         </li>
                         <li>
@@ -171,17 +172,20 @@
 
                 </div>
                 <div class="cd-popup" role="alert">
+                    <form action="delete.do">
                     <div class="cd-popup-container">
                         <h4>Are you sure you want to delete your account?</h4>
                         <p> Enter your password.</p>
-                        <input type="password" class="pw" placeholder="Enter your password">
+                        <input type="hidden" name="id" value="${sessionScope.id }">
+                        <input type="password" class="pw" placeholder="Enter your password" name="pw">
                         <div class="cd-buttons">
-                            <button class="yes" onclick="">Yes</button>
+                            <button class="yes" type="submit">Yes</button>
                             <button class="no" onclick="">No</button>
                         </div>
                         <a href="#0" class="cd-popup-close img-replace">Close</a>
                     </div>
                     <!-- cd-popup-container -->
+                    </form>
                 </div>
                 <!-- cd-popup -->
             </div>
@@ -189,28 +193,29 @@
             <div class="db-2">
                 <div class="db-2-com db-2-main">
                     <h4>My Profile</h4>
+                    <form action="update.do" method="post">
                     <div class="db-2-main-com db-2-main-com-table">
                         <table class="responsive-table">
                             <tbody>
                                 <tr>
                                     <td>User Name</td>
                                     <td>:</td>
-                                    <td>Tony Stark</td>
+                                    <td>${empVo.name }</td>
                                 </tr>
                                 <tr>
                                     <td>Password</td>
                                     <td>:</td>
-                                    <td>mypasswordtour</td>
+                                    <td><input type="text" name="pw" value="${empVo.pw }"></td>
                                 </tr>
                                 <tr>
                                     <td>Eamil</td>
                                     <td>:</td>
-                                    <td>sam_anderson@gmail.com</td>
+                                    <td><input type="text" name="email" value="${empVo.email }"></td>
                                 </tr>
                                 <tr>
                                     <td>Date of birth</td>
                                     <td>:</td>
-                                    <td>03 Jun 1990</td>
+                                    <td>${empVo.birth }</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -246,10 +251,12 @@
                             <a href="db-my-profile-edit.html" class="btn-comfirm">Comfirm</a>
                             <a href="db-my-profile-edit.html" class="btn-cancel">Cancel</a>
                         </div> -->
+                        <input type="hidden" name="id" value="${sessionScope.id }">
                         <div class="db-mak-pay-bot">
-                            <a href="db-my-profile-edit.html" class="btn-large">Edit my profile</a>
+                            <button class="btn-large" type="submit">Edit my profile</button>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
             <div class="db-2">

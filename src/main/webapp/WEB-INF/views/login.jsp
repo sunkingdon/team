@@ -36,6 +36,13 @@
  <style type="text/css">
  p{color:white;}
  </style>
+ <script>
+ function findPw(){
+	 var url="findPw";
+	 var name="popup";
+	 window.open(url,name,"width=300,height=150")
+ }
+ </script>
 </head>
 
 <body>
@@ -74,15 +81,21 @@
                             <div class="login-area">
                             
 							<!-- login session -->
-                            <c:choose>
-                            <c:when test="${sessionScope.id eq null }">
+                                     <c:choose>
+                             <c:when test="${sessionScope.id eq null }">
                                 <a href="loginView"><span>Login / Register</span> <i class="fa fa-lock" aria-hidden="true"></i></a>
                             </c:when>
-                            
-                            <c:otherwise><a href="/project/myInfo.do?id=${sessionScope.id }"><span>Welcome, ${sessionScope.name }</span><i class="fa fa-user" aria-hidden="true"></i> </a>
-                            <button onclick="location.href='/project/logout.do'">Log out</button>
+                            <c:otherwise>
+                            <div class="login-area dropdown">
+                                <a href="/project/myInfo.do?id=${sessionScope.id }"><span>Welcome, ${sessionScope.name }</span> <i class="fas fa-user" aria-hidden="true"></i><i class="fa fa-caret-down"></i></a>
+                                <div class="dropdown-content">
+                                    
+                                    <a href="/project/logout.do"><span>로그아웃</span><i class="fas fa-sign-out-alt" aria-hidden="true"></i></a>
+                                </div>
+                            </div> 
                             </c:otherwise>
                             </c:choose>
+
                             <!--
                             <div class="login-area dropdown">
                                 <a href="signin.html"><span>Welcome, Username</span> <i class="fas fa-user" aria-hidden="true"></i><i class="fa fa-caret-down"></i></a>
@@ -190,25 +203,25 @@
                         </div>
     					
                         <div class="text-center p-t-50">
-                            <a class="cd-popup-trigger" href="#0">Forgot Password</a> | <a class="txt1" href="signUp.do">Sign Up</a>
+                            <a class="cd-popup-trigger" onclick="findPw()">Forgot Password</a> | <a class="txt1" href="signupView">Sign Up</a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="cd-popup" role="alert">
-                <div class="cd-popup-container">
-                    <h4>Get help signing in</h4>
-                    <p> Enter the email address associated with your account to find password</p>
-                    <input type="email" class="email" placeholder="Enter your email">
-                    <div class="cd-buttons">
-                        <button class="yes" onclick="">Yes</button>
-                        <button class="no" onclick="">No</button>
-                    </div>
-                    <a href="#0" class="cd-popup-close img-replace">Close</a>
-                </div>
-                <!-- cd-popup-container -->
-            </div>
+<!--         <div class="cd-popup" role="alert"> -->
+<!--                 <div class="cd-popup-container"> -->
+<!--                     <h4>Get help signing in</h4> -->
+<!--                     <p> Enter the email address associated with your account to find password</p> -->
+<!--                     <input type="email" class="email" placeholder="Enter your email"> -->
+<!--                     <div class="cd-buttons"> -->
+<!--                         <button class="yes" onclick="">Yes</button> -->
+<!--                         <button class="no" onclick="">No</button> -->
+<!--                     </div> -->
+<!--                     <a href="#0" class="cd-popup-close img-replace">Close</a> -->
+<!--                 </div> -->
+<!--                 cd-popup-container -->
+<!--             </div> -->
             <!-- cd-popup -->
         
     
