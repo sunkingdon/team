@@ -5072,6 +5072,7 @@ ul.columns li {
 	margin-bottom: 30px;
 	padding: 13px 20px;
 	font-size: 12px;
+	display: flex;
 }
 
 @media ( max-width : 767.98px) {
@@ -5090,6 +5091,7 @@ ul.columns li {
 	display: -ms-flexbox;
 	display: flex;
 	align-items: center;
+
 }
 
 .product-shorting .grid-list-view ul.nav {
@@ -5135,32 +5137,43 @@ ul.columns li {
 	text-transform: uppercase;
 }
 
-.toolbar-sorter {
+.toolbar-sorter-1 {
 	display: flex;
 	align-items: center;
+	
 }
 
-.toolbar-sorter select {
+.toolbar-sorter-1 select {
 	color: #e1e1e1;
 }
 
 /* :: 4.0 Header 영역 CSS */
-.toolbar-sorter .top-search-area {
-	position: relative;
-	z-index: 1;
+.grid-list-view {
+	margin-left: 30px;
+}
+.toolbar-sorter-2 {
+	display: flex;
+	align-items: center;
+	margin-left: 210px;
 }
 
-.toolbar-sorter .top-search-area form {
+.toolbar-sorter-2 .top-search-area {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+}
+
+.toolbar-sorter-2 .top-search-area form {
 	position: relative;
 	z-index: 1;
 	width: 320px;
 }
 
 @media only screen and (max-width: 767px) {
-	.toolbar-sorter .top-search-area form {
+	.toolbar-sorter-2 .top-search-area form {
 		width: 320px;
 	}
-	.toolbar-sorter .top-search-area form button {
+	.toolbar-sorter-2 .top-search-area form button {
 		position: relative;
 		top: 0;
 		right: 0;
@@ -5173,10 +5186,10 @@ ul.columns li {
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-	.toolbar-sorter .top-search-area form {
+	.toolbar-sorter-2 .top-search-area form {
 		width: 320px;
 	}
-	.toolbar-sorter .top-search-area form button {
+	.toolbar-sorter-2 .top-search-area form button {
 		position: relative;
 		top: 0;
 		right: 0;
@@ -5189,10 +5202,10 @@ ul.columns li {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-	.toolbar-sorter .top-search-area form {
+	.toolbar-sorter-2 .top-search-area form {
 		width: 320px;
 	}
-	.toolbar-sorter .top-search-area form button {
+	.toolbar-sorter-2 .top-search-area form button {
 		position: relative;
 		top: 0;
 		right: 0;
@@ -5204,7 +5217,7 @@ ul.columns li {
 	}
 }
 
-.toolbar-sorter .top-search-area form input {
+.toolbar-sorter-2 .top-search-area form input {
 	margin-left: 10px;
 	-webkit-transition-duration: 500ms;
 	transition-duration: 500ms;
@@ -5221,11 +5234,11 @@ ul.columns li {
 	outline-color: #8ab839;
 }
 
-.toolbar-sorter .top-search-area form input:focus {
+.toolbar-sorter-2 .top-search-area form input:focus {
 	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.15);
 }
 
-.toolbar-sorter .top-search-area form button {
+.toolbar-sorter-2 .top-search-area form button {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -5236,7 +5249,7 @@ ul.columns li {
 	cursor: pointer;
 }
 
-.toolbar-sorter .top-search-area form button:hover, .toolbar-sorter .top-search-area form button:focus
+.toolbar-sorter-2 .top-search-area form button:hover, .toolbar-sorter-2 .top-search-area form button:focus
 	{
 	color: #8ab839;
 	box-shadow: none;

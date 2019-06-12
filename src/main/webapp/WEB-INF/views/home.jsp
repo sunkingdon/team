@@ -260,7 +260,7 @@
                            <!-- Play Button -->
                            <div class="play-btn">
                               <a href="${i.link }" class="play-button"> 
-                              	<img src="img/core-img/play.png" alt="">
+                              	<img src="${pageContext.request.contextPath}/resources/img/core-img/play.png" alt="">
                               </a>
                            </div>
                         </div>

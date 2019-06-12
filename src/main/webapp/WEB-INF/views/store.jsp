@@ -12,54 +12,72 @@
 
 <!-- Title -->
 <title>GAMESPOT | Store</title>
-  <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script type = "text/javascript">
-  var newJquery = $.noConflict(true);
+	<script src="${pageContext.request.contextPath}/resources/js/jquery/jquery-2.2.4.min.js"></script>
+<!-- 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
   
-  newJquery( function() {
-    var availableTags = [
-      "60 Seconds!",
-      "A Dance of Fire and Ice",
-      "A Hat in Time",
-      "Beat Saber",
-      "Call of Duty 4",
-      "Car Mechanic Simulator 2018",
-      "Dead by Daylight",
-      "Don't Starve",
-      "Everyday Golf VR",
-      "F1 2019 Anniversary Edition",
-      "Football Manager 2019",
-      "Forager",
-      "Gal Gun 2",
-      "Gang Beasts",
-      "Garden Flipper",
-      "Grand Theft Auto V",
-      "House Flipper",
-      "Just Shapes & Beats",
-      "Left 4 Dead 2",
-      "Lobotomy Corporation",
-      "MONSTER HUNTER WORLD",
-      "Moonlighter",
-      "Overcooked! 2",
-      "PLAYERUNKNOWN'S BATTLEGROUNDS",
-      "Portal 2",
-      "Princess Maker 3",
-      "Raft",
-      "RimWorld",
-      "Sid Meier's Civilization",
-      "Slay the Spire",
-      "SpyParty",
-      "Stardew Valley",
-      "Super Bunny Man",
-      "SUPERHOT",
-      "Team Sonic Racing",
-      "TEKKEN 7",
-      "The Binding of Isaac"
-    ];
-    newJquery( "#toolbar-search" ).autocomplete({
-      source: availableTags
-    });
-  } );
+  <script type = "text/javascript">
+//   var newJquery = $.noConflict(true);
+  
+//   newJquery( function() {
+//     var availableTags = [
+//       "60 Seconds!",
+//       "A Dance of Fire and Ice",
+//       "A Hat in Time",
+//       "Beat Saber",
+//       "Call of Duty 4",
+//       "Car Mechanic Simulator 2018",
+//       "Dead by Daylight",
+//       "Don't Starve",
+//       "Everyday Golf VR",
+//       "F1 2019 Anniversary Edition",
+//       "Football Manager 2019",
+//       "Forager",
+//       "Gal Gun 2",
+//       "Gang Beasts",
+//       "Garden Flipper",
+//       "Grand Theft Auto V",
+//       "House Flipper",
+//       "Just Shapes & Beats",
+//       "Left 4 Dead 2",
+//       "Lobotomy Corporation",
+//       "MONSTER HUNTER WORLD",
+//       "Moonlighter",
+//       "Overcooked! 2",
+//       "PLAYERUNKNOWN'S BATTLEGROUNDS",
+//       "Portal 2",
+//       "Princess Maker 3",
+//       "Raft",
+//       "RimWorld",
+//       "Sid Meier's Civilization",
+//       "Slay the Spire",
+//       "SpyParty",
+//       "Stardew Valley",
+//       "Super Bunny Man",
+//       "SUPERHOT",
+//       "Team Sonic Racing",
+//       "TEKKEN 7",
+//       "The Binding of Isaac"
+//     ];
+//     newJquery( "#toolbar-search" ).autocomplete({
+//       source: availableTags
+//     });
+//   } );
+  
+	$(function() {
+		  $("#sortFilter").change(function(){
+			  
+				var filter = this.value;
+				
+				var url = "${pageContext.request.contextPath}/store.do";    
+				
+				url += '?filter=' + filter;
+				
+				window.location.href = url;
+			
+		  });
+	});
+
+  
   </script>
   
 <!-- Favicon (브라우저 탭에 로고 노출) -->
@@ -169,7 +187,6 @@
                                     <li><a href="home.do">Home</a></li>
                                     <li><a href="store.do">Store</a></li>                          
                                     <li><a href="reviews">Reviews</a></li>
-                                    <li><a href="support.html">Support</li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
@@ -211,50 +228,49 @@
 
 	<!--  Store Area Start  -->
 	<!-- Container -->
-	<div class="store-container">
-		<div class="row flex-row-reverse">
-			<div class="col-lg-9 col-md-8">
-				<!-- product-shorting -->
-				<div class="product-shorting d-flex align-items-center justify-content-between">
-					<div class="toolbar-sorter">
-						<span>Sort by : </span> <select name="orderby" class="orderby">
-							<option value="menu_order" selected="selected">filter</option>
-							<option value="popularity">popularity</option>
-							<option value="date">newness</option>
-							<option value="price">low to high</option>
-							<option value="price-desc">high to low</option>
+    <div class="store-container">
+        <div class="row flex-row-reverse">
+            <div class="col-lg-9 col-md-8">
+                <!-- product-shorting -->
+                <div class="product-shorting">
+                    <div class="toolbar-sorter-1">
+                        <span>Sort by : </span> 
+						<select id="sortFilter" name="orderby" class="orderby">
+							<option value="menu_order" ${filter eq 'menu_order' ? 'selected' : ''}>filter</option>
+							<option value="popularity" ${filter eq 'popularity' ? 'selected' : ''}>popularity</option>
+							<option value="date" ${filter eq 'date' ? 'selected' : ''}>newness</option>
+							<option value="lowToHigh" ${filter eq 'lowToHigh' ? 'selected' : ''}>low to high</option>
+							<option value="highTolow" ${filter eq 'highTolow' ? 'selected' : ''}>high to low</option>
 						</select>
-					</div>
+                    </div>
+                    <div class="toolbar-sorter-2">
+                        <span class="store-search">Search : </span>
+                        <div class="top-search-area">
+                            <form action="#" method="post">
+                                <input type="search" name="top-search" class="toolbar-search"
+                                    placeholder="Search by title">
+                                <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="grid-list-view">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#grid-view" role="tab" data-toggle="tab">
+                                            <i class="fa fa-th"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#list-view" role="tab" data-toggle="tab">
+                                            <i class="fa fa-list-ul"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
 
-					<div class="toolbar-sorter">
-						<span for="toolbar-search">Search : </span>
-						<div class="top-search-area">
-							<form action="#" method="post">
-								<input type="search" name="top-search" id="toolbar-search" class="toolbar-search" placeholder="Search by title, genre, publisher, or developer..">
-								<button type="submit" class="btn">
-									<i class="fa fa-search"></i>
-								</button>
-							</form>
-						</div>
-					</div>
-
-					<div class="grid-list-view">
-						<ul class="nav nav-tabs" role="tablist">
-							<li class="nav-item">
-								<a class="nav-link active" href="#grid-view" role="tab" data-toggle="tab"> 
-									<i class="fa fa-th"></i>
-								</a>
-								</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#list-view" role="tab" data-toggle="tab"> 
-									<i class="fa fa-list-ul"></i>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<!--/product-shorting -->
-
+                    
+                </div>
+                <!--/product-shorting -->
 				<!-- tab-content -->
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade show active"
@@ -272,7 +288,7 @@
 												</div>
 											</div>
 											<div class="product-caption">
-												<span class="posted_in"><a href="${pageContext.request.contextPath}categotylist.do?genrename=${g.genrename }" rel="tag">${g.genrename }</a></span>
+												<span class="posted_in"><a href="${pageContext.request.contextPath}/categorylist.do?genrename=${g.genrename }" rel="tag">${g.genrename }</a></span>
 												<h4 class="product-title">
 													<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title="">${g.title }</a>
 												</h4>
@@ -283,7 +299,7 @@
 														</ins>
 													</div>
 													<a href="product_single.html" class="add_to_cart_button">
-														<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+														<i class="fa fa-shopping-basket" aria-hidden="true"></i> 
 													</a>
 												</div>
 											</div>
@@ -314,7 +330,7 @@
 											</div>
 											<div class="col-lg-8 col-md-12 col-sm-12">
 												<div class="product-caption">
-													<span class="posted_in"><a href="${pageContext.request.contextPath}categotylist.do?genrename=${g.genrename }" rel="tag">${g.genrename }</a></span>
+													<span class="posted_in"><a href="${pageContext.request.contextPath}/categorylist.do?genrename=${g.genrename }" rel="tag">${g.genrename }</a></span>
 													<div class="product-meta">
 														<h4 class="product-name">
 															<a href="${pageContext.request.contextPath}/gamesingle.do?title=${g.title }" title="">${g.title }</a>
@@ -345,23 +361,23 @@
 				<nav class="pagination clearfix">
 					<ul class="page-numbers">
 					    <c:if test = "${currentPage > 3 }">
-							<li><a class="prev page-numbers" href="store.do?page=${currentPage-3 }"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+							<li><a class="prev page-numbers" href="store.do?page=${currentPage-3 }&filter=${filter ne '' and filter ne null ? filter : ''}"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
       					</c:if>
       					<c:if test = "${currentPage > 2 }">
-         					<li><a class="page-numbers" href="store.do?page=${currentPage-2 }">${currentPage-2 }</a></li>
+         					<li><a class="page-numbers" href="store.do?page=${currentPage-2 }&filter=${filter ne '' and filter ne null ? filter : ''}">${currentPage-2 }</a></li>
       					</c:if>
       					<c:if test = "${currentPage > 1 }">
-         					<li><a class="page-numbers" href="store.do?page=${currentPage-1 }">${currentPage-1 }</a></li>
+         					<li><a class="page-numbers" href="store.do?page=${currentPage-1 }&filter=${filter ne '' and filter ne null ? filter : ''}">${currentPage-1 }</a></li>
      	 				</c:if>
      	 					<li><span class="page-numbers current">${currentPage }</span></li>
      	 				<c:if test = "${currentPage < totalPage }">
-         					<li><a class="page-numbers" href="store.do?page=${currentPage+1 }">${currentPage+1 }</a></li>
+         					<li><a class="page-numbers" href="store.do?page=${currentPage+1 }&filter=${filter ne '' and filter ne null ? filter : ''}">${currentPage+1 }</a></li>
       					</c:if>
       					<c:if test = "${currentPage+1 < totalPage }">
-         					<li><a class="page-numbers" href="store.do?page=${currentPage+2 }">${currentPage+2 }</a></li>
+         					<li><a class="page-numbers" href="store.do?page=${currentPage+2 }&filter=${filter ne '' and filter ne null ? filter : ''}">${currentPage+2 }</a></li>
       					</c:if>
       					<c:if test = "${currentPage+2 < totalPage }">
-         					<li><a class="next page-numbers" href="store.do?page=${currentPage+3 }"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+         					<li><a class="next page-numbers" href="store.do?page=${currentPage+3 }&filter=${filter ne '' and filter ne null ? filter : ''}"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
       					</c:if>
 
 <!-- 						<li><a class="prev page-numbers" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li> --!>
@@ -555,7 +571,6 @@
 
 	<!--  All Javascript Script  -->
 	<!-- jQuery js -->
-	<script src="${pageContext.request.contextPath}/resources/js/jquery/jquery-2.2.4.min.js"></script>
 <%-- 	<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script> --%>
 
 	<!-- waypoints js-->
